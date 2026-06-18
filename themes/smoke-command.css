@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.26 · Built for Typora
+   Version 2.27 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2161,7 +2161,7 @@ pre.md-meta-block::after {
 #write .md-fences[lang="mermaid"],
 #write .md-fences[lang="sequence"],
 #write .md-fences[lang="flow"] {
-  background-color: #C8B6DB !important;
+  background-color: #D8C9E6 !important;
   border-color: #8C73A5 !important;
   border-radius: 12px;
 }
@@ -2200,7 +2200,7 @@ svg[id^=mermaid] .edgeLabel p {
 }
 
 svg[id^=mermaid] .edgeLabel rect {
-  fill: #C8B6DB !important;
+  fill: #D8C9E6 !important;
   fill-opacity: 1 !important;
   stroke: transparent !important;
   rx: 4px;
@@ -2219,9 +2219,9 @@ svg[id^=mermaid] .node circle,
 svg[id^=mermaid] .node ellipse,
 svg[id^=mermaid] .node polygon,
 svg[id^=mermaid] .node path {
-  fill: #D8C9E6 !important;
+  fill: #C8B6DB !important;
   stroke: #7A5F96 !important;
-  filter: drop-shadow(0 3px 6px rgba(75, 42, 123, 0.18));
+  filter: drop-shadow(0 4px 8px rgba(75, 42, 123, 0.22));
 }
 
 svg[id^=mermaid] .nodeLabel,
