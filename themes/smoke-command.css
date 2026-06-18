@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 1.1 · Built for Typora
+   Version 1.9 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -154,9 +154,9 @@
   --max-width: 1128px;
 
   /* --- Product-level Smoke Command surfaces --- */
-  --bg: #DED2E8;                 /* Smoked Lilac */
+  --bg: #BCA8D0;                 /* Worn Amethyst */
   --surface: #E9E0F1;            /* Rune Mist */
-  --surface-readable: #FFFFFF;   /* White */
+  --surface-readable: #D2C2E2;   /* Veil Amethyst */
   --surface-raised: #F3EEF8;     /* High Rune */
   --surface-tint: #D2C2E2;       /* Veil Amethyst */
   --surface-sunken: #C8B6DB;     /* Inset Lilac */
@@ -165,7 +165,10 @@
   --border-strong: #9F86B8;      /* Iron Amethyst */
 
   /* --- Product-level Smoke Command text --- */
-  --text: #17111F;               /* Void Ink */
+  --text-prose: #773CC0;
+  --text-prose-hover: #6D28D9;
+  --text-prose-alt: #4B3764;     /* Warden Violet */
+  --text: var(--text-prose);
   --text-muted: #554A60;         /* Grave Plum */
   --text-dim: #7A6D86;           /* Weathered Plum */
   --text-inverse: #F5F1FF;       /* Moon Ink */
@@ -372,6 +375,7 @@ html, body {
   font-optical-sizing: auto;
   margin: 0;
   word-spacing: normal;
+  color: var(--text-color);
 }
 
 #write figcaption {
@@ -399,6 +403,11 @@ html, body {
   font-weight: 700;
   font-size: 1.4rem;
   color: var(--link);
+  background-color: var(--surface-readable);
+  border: 1px solid rgba(75, 42, 123, 0.18);
+  box-shadow:
+    0 10px 18px rgba(75, 42, 123, 0.22),
+    0 2px 4px rgba(75, 42, 123, 0.18);
 }
 
 #write h3 {
@@ -681,7 +690,7 @@ pre.md-meta-block {
 }
 
 #write em {
-  color: #B9A3E8;
+  color: var(--text-prose);
 }
 
 
@@ -1396,17 +1405,29 @@ body .md-table-resize-popover .md-grid-board a:hover {
 }
 
 #write a {
-  color: #A78BFA;
+  color: var(--link);
+  text-decoration-color: rgba(91, 33, 182, 0.45);
+  text-shadow: none;
 }
 
 #write a:not(.md-toc-inner):hover,
 #write a:visited:hover {
-  color: #E7DCF5;
-  text-shadow: 0 0 8px rgba(167, 139, 250, 0.42);
+  color: var(--text-prose-hover);
+  text-decoration-color: var(--text-prose-hover);
+  text-shadow: 0 1px 0 rgba(75, 42, 123, 0.16);
+}
+
+#write a:not(.md-toc-inner)::before {
+  background-color: var(--link);
+}
+
+#write a:hover:not(.md-toc-inner)::before,
+#write a:visited:hover:not(.md-toc-inner)::before {
+  background-color: var(--text-prose-hover);
 }
 
 #write a:visited {
-  color: #B9A3E8;
+  color: var(--primary);
   text-shadow: none;
 }
 
@@ -1451,13 +1472,24 @@ body .md-table-resize-popover .md-grid-board a:hover {
 }
 
 #write strong {
-  color: #C4B5FD;
-  text-shadow: 0 0 4px rgba(167, 139, 250, 0.18);
+  color: var(--primary);
+  text-shadow: none;
 }
 
 #write strong:hover {
-  border-bottom-color: #C4B5FD;
-  text-shadow: 0 0 10px rgba(196, 181, 253, 0.42);
+  color: var(--text-prose-hover);
+  border-bottom-color: var(--text-prose-hover);
+  text-shadow: none;
+}
+
+#write strong em,
+#write em strong {
+  color: var(--link);
+}
+
+#write strong em:hover,
+#write em strong:hover {
+  color: var(--text-prose-hover);
 }
 
 #write mark {
