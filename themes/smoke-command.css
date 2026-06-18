@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.23 · Built for Typora
+   Version 2.24 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2161,7 +2161,7 @@ pre.md-meta-block::after {
 #write .md-fences[lang="mermaid"],
 #write .md-fences[lang="sequence"],
 #write .md-fences[lang="flow"] {
-  background-color: #21152F !important;
+  background-color: #D8C9E6 !important;
   border-color: #8C73A5 !important;
   border-radius: 12px;
 }
@@ -2193,14 +2193,14 @@ svg[id^=mermaid] .edgeLabel,
 svg[id^=mermaid] .edgeLabel .label,
 svg[id^=mermaid] .edgeLabel span,
 svg[id^=mermaid] .edgeLabel p {
-  color: #C4B5FD !important;
+  color: #E879F9 !important;
   background-color: transparent !important;
   border-color: transparent !important;
-  text-shadow: 0 0 4px rgba(196, 181, 253, 0.18);
+  text-shadow: 0 0 4px rgba(232, 121, 249, 0.18);
 }
 
 svg[id^=mermaid] .edgeLabel rect {
-  fill: #21152F !important;
+  fill: #D8C9E6 !important;
   fill-opacity: 1 !important;
   stroke: transparent !important;
   rx: 4px;
@@ -2209,9 +2209,9 @@ svg[id^=mermaid] .edgeLabel rect {
 
 svg[id^=mermaid] .edgeLabel text,
 svg[id^=mermaid] .edgeLabel tspan {
-  fill: #C4B5FD !important;
-  color: #C4B5FD !important;
-  text-shadow: 0 0 4px rgba(196, 181, 253, 0.18);
+  fill: #E879F9 !important;
+  color: #E879F9 !important;
+  text-shadow: 0 0 4px rgba(232, 121, 249, 0.18);
 }
 
 svg[id^=mermaid] .node rect,
@@ -2219,7 +2219,7 @@ svg[id^=mermaid] .node circle,
 svg[id^=mermaid] .node ellipse,
 svg[id^=mermaid] .node polygon,
 svg[id^=mermaid] .node path {
-  fill: #2D1C40 !important;
+  fill: #D2C2E2 !important;
   stroke: #8C73A5 !important;
 }
 
@@ -2228,9 +2228,9 @@ svg[id^=mermaid] .nodeLabel p,
 svg[id^=mermaid] .nodeLabel span,
 svg[id^=mermaid] .node text,
 svg[id^=mermaid] .node tspan {
-  color: #D6C8EA !important;
-  fill: #D6C8EA !important;
-  text-shadow: 0 0 4px rgba(12, 9, 17, 0.35);
+  color: #4B3764 !important;
+  fill: #4B3764 !important;
+  text-shadow: none;
 }
 
 svg[id^=mermaid] .edgePath .path,
