@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.33 · Built for Typora
+   Version 2.34 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -465,8 +465,13 @@ html, body {
 #write h4.md-heading::after,
 #write h5.md-heading::after,
 #write h6.md-heading::after {
-  content: none;
-  display: none;
+  content: " ";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 
