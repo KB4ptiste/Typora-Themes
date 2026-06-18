@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.22 · Built for Typora
+   Version 2.23 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2193,10 +2193,10 @@ svg[id^=mermaid] .edgeLabel,
 svg[id^=mermaid] .edgeLabel .label,
 svg[id^=mermaid] .edgeLabel span,
 svg[id^=mermaid] .edgeLabel p {
-  color: #E879F9 !important;
+  color: #C4B5FD !important;
   background-color: transparent !important;
   border-color: transparent !important;
-  text-shadow: 0 0 6px rgba(232, 121, 249, 0.28);
+  text-shadow: 0 0 4px rgba(196, 181, 253, 0.18);
 }
 
 svg[id^=mermaid] .edgeLabel rect {
@@ -2209,9 +2209,39 @@ svg[id^=mermaid] .edgeLabel rect {
 
 svg[id^=mermaid] .edgeLabel text,
 svg[id^=mermaid] .edgeLabel tspan {
-  fill: #E879F9 !important;
-  color: #E879F9 !important;
-  text-shadow: 0 0 6px rgba(232, 121, 249, 0.28);
+  fill: #C4B5FD !important;
+  color: #C4B5FD !important;
+  text-shadow: 0 0 4px rgba(196, 181, 253, 0.18);
+}
+
+svg[id^=mermaid] .node rect,
+svg[id^=mermaid] .node circle,
+svg[id^=mermaid] .node ellipse,
+svg[id^=mermaid] .node polygon,
+svg[id^=mermaid] .node path {
+  fill: #2D1C40 !important;
+  stroke: #8C73A5 !important;
+}
+
+svg[id^=mermaid] .nodeLabel,
+svg[id^=mermaid] .nodeLabel p,
+svg[id^=mermaid] .nodeLabel span,
+svg[id^=mermaid] .node text,
+svg[id^=mermaid] .node tspan {
+  color: #D6C8EA !important;
+  fill: #D6C8EA !important;
+  text-shadow: 0 0 4px rgba(12, 9, 17, 0.35);
+}
+
+svg[id^=mermaid] .edgePath .path,
+svg[id^=mermaid] .flowchart-link {
+  stroke: #7A6D86 !important;
+}
+
+svg[id^=mermaid] marker path,
+svg[id^=mermaid] .arrowheadPath {
+  fill: #7A6D86 !important;
+  stroke: #7A6D86 !important;
 }
 
 #write .md-htmlblock-container,
