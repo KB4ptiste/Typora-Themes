@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 1.9 · Built for Typora
+   Version 2.0 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -347,7 +347,7 @@ html, body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   background-color: var(--surface-readable);
-  background-image: radial-gradient(ellipse at center top, var(--surface-raised) 0%, var(--surface-readable) 58%, var(--surface) 100%);
+  background-image: none;
   background-repeat: no-repeat;
   border: 4px solid var(--border);
   border-radius: 18px;
