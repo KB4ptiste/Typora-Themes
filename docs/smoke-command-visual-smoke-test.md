@@ -273,7 +273,7 @@ Export this document to HTML.
 
 Expected result:
 
-- Dark page background remains.
+- Light page background remains.
 - Document frame survives.
 - Headings, code blocks, alerts, tables, and Mermaid output look intentional.
 - No large white areas appear.
@@ -284,7 +284,7 @@ Export this document to PDF.
 
 Expected result:
 
-- Dark page background remains.
+- Light page background remains.
 - Page margins are tight.
 - Content is not oversized.
 - Code blocks do not break the page layout.
