@@ -238,9 +238,9 @@ This hidden content tests Typora's handling of native HTML elements under the th
 
 ## 14. Footnotes
 
-This sentence includes a footnote reference.[^night-command-footnote]
+This sentence includes a footnote reference.[^smoke-command-footnote]
 
-[^night-command-footnote]: This is the footnote body. It should remain readable and visually connected to the reference.
+[^smoke-command-footnote]: This is the footnote body. It should remain readable and visually connected to the reference.
 
 ## 15. Definition-Style Content
 
