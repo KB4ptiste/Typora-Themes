@@ -1,6 +1,6 @@
 # Typora Themes Project Instructions
 
-Version: 1.0
+Version: 1.1
 
 ## Project Scope
 
@@ -49,6 +49,12 @@ When building a new theme, such as Smoke Command:
 3. When the theme is complete, merge the useful decisions into the single Baptiste Studios brand kit.
 4. Remove or archive the temporary theme-specific brand kit according to the user's instruction.
 5. There should be one long-term brand kit document.
+
+## Smoke Command Commit Scope
+
+Smoke Command color-only CSS/theme changes use the Conventional Commit type `style`.
+
+Use `style` when the change affects colors, visual styling, formatting, or CSS presentation without changing layout structure, behavior, or content.
 
 ## Night Command Rules
 
