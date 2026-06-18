@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.24 · Built for Typora
+   Version 2.25 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2161,7 +2161,7 @@ pre.md-meta-block::after {
 #write .md-fences[lang="mermaid"],
 #write .md-fences[lang="sequence"],
 #write .md-fences[lang="flow"] {
-  background-color: #D8C9E6 !important;
+  background-color: #D2C2E2 !important;
   border-color: #8C73A5 !important;
   border-radius: 12px;
 }
@@ -2196,11 +2196,11 @@ svg[id^=mermaid] .edgeLabel p {
   color: #E879F9 !important;
   background-color: transparent !important;
   border-color: transparent !important;
-  text-shadow: 0 0 4px rgba(232, 121, 249, 0.18);
+  text-shadow: 0 1px 2px rgba(75, 42, 123, 0.18) !important;
 }
 
 svg[id^=mermaid] .edgeLabel rect {
-  fill: #D8C9E6 !important;
+  fill: #D2C2E2 !important;
   fill-opacity: 1 !important;
   stroke: transparent !important;
   rx: 4px;
@@ -2211,7 +2211,7 @@ svg[id^=mermaid] .edgeLabel text,
 svg[id^=mermaid] .edgeLabel tspan {
   fill: #E879F9 !important;
   color: #E879F9 !important;
-  text-shadow: 0 0 4px rgba(232, 121, 249, 0.18);
+  text-shadow: 0 1px 2px rgba(75, 42, 123, 0.18) !important;
 }
 
 svg[id^=mermaid] .node rect,
@@ -2230,7 +2230,13 @@ svg[id^=mermaid] .node text,
 svg[id^=mermaid] .node tspan {
   color: #4B3764 !important;
   fill: #4B3764 !important;
-  text-shadow: none;
+  text-shadow: 0 1px 2px rgba(75, 42, 123, 0.18) !important;
+}
+
+svg[id^=mermaid] .nodeLabel *,
+svg[id^=mermaid] foreignObject,
+svg[id^=mermaid] foreignObject * {
+  text-shadow: 0 1px 2px rgba(75, 42, 123, 0.18) !important;
 }
 
 svg[id^=mermaid] .edgePath .path,
