@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.7 · Built for Typora
+   Version 2.8 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1320,8 +1320,8 @@ body .md-table-resize-popover .md-grid-board a:hover {
 }
 
 .task-list-item input::before {
-  background: #17101F;
-  border-color: #4B3764;
+  background: var(--surface-tint);
+  border-color: var(--border-strong);
 }
 
 .task-list-item input,
