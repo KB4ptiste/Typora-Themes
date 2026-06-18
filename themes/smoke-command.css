@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.12 · Built for Typora
+   Version 2.13 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -517,15 +517,29 @@ html, body {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #17101F;
+  color: var(--text);
+  background-color: #D8C9E6;
+  border-color: var(--border-strong);
 }
 
 #write table th {
-  background-color: #21152F;
+  color: var(--link);
+  background-color: #D2C2E2;
+  border-color: var(--border-strong);
 }
 
 #write table td {
-  background-color: #17101F;
+  color: var(--text);
+  background-color: #D8C9E6;
+  border-color: var(--border);
+}
+
+#write table tbody tr:hover td {
+  background-color: #D2C2E2;
+}
+
+#write table tbody td:hover {
+  background-color: #C8B6DB;
 }
 
 
