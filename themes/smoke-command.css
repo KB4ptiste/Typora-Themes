@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.5 · Built for Typora
+   Version 2.6 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -394,14 +394,14 @@ html, body {
 #write h1 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 900;
-  font-size: 2.625rem;
+  font-size: 2.125rem;
   color: var(--primary);
 }
 
 #write h2 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 800;
-  font-size: 2.125rem;
+  font-size: 1.875rem;
   color: var(--link);
   background-color: var(--surface-readable);
   border: 1px solid rgba(75, 42, 123, 0.18);
@@ -413,7 +413,7 @@ html, body {
 #write h3 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 1.625rem;
   color: var(--link);
 }
 
@@ -427,14 +427,14 @@ html, body {
 #write h5 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   color: var(--link);
 }
 
 #write h6 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--link);
 }
 
