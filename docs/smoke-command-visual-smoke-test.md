@@ -1,11 +1,11 @@
-# Night Command Visual Smoke Test
+# Smoke Command Visual Smoke Test
 
 Version: 1.0
 Date: 2026-06-17
 
 ## Test Instructions
 
-Copy this entire document into Typora, switch to the Night Command theme, and review each section visually.
+Copy this entire document into Typora, switch to the Smoke Command theme, and review each section visually.
 
 Expected result: the document should look deliberate, readable, and internally consistent across editor view, HTML export, and PDF export.
 
@@ -26,7 +26,7 @@ The italic text should be visibly lighter and should not collapse into the backg
 
 ## 2. Headings
 
-# H1 Heading: Night Command Primary Title
+# H1 Heading: Smoke Command Primary Title
 
 The H1 should establish the strongest hierarchy without feeling oversized or disconnected from the rest of the page.
 
@@ -135,7 +135,7 @@ The table should be centered and should not stretch awkwardly across the full pa
 ### JavaScript Code Block
 
 ```javascript
-const themeName = "Night Command";
+const themeName = "Smoke Command";
 const version = "2.49";
 
 function describeTheme(name, version) {
@@ -170,10 +170,10 @@ It should use the same code-block width behavior as other fenced code blocks.
 ### Long-Line Code Block
 
 ```text
-This is a deliberately long line intended to test horizontal overflow, wrapping behavior, code block width, and whether the block stays visually contained inside the Night Command document frame without breaking the layout or forcing the page to feel unstable.
+This is a deliberately long line intended to test horizontal overflow, wrapping behavior, code block width, and whether the block stays visually contained inside the Smoke Command document frame without breaking the layout or forcing the page to feel unstable.
 ```
 
-Code blocks should use Night Command colors, keep the red/yellow/green header dots, and respect the accepted width behavior.
+Code blocks should use Smoke Command colors, keep the red/yellow/green header dots, and respect the accepted width behavior.
 
 ## 9. Math
 
@@ -198,7 +198,7 @@ flowchart TD
   E -- Yes --> F[Export PDF]
   E -- No --> G[Record HTML Issue]
   F --> H{PDF Export Passes?}
-  H -- Yes --> I[Freeze Night Command]
+  H -- Yes --> I[Freeze Smoke Command]
   H -- No --> J[Record PDF Issue]
 ```
 
@@ -212,12 +212,12 @@ The inline table of contents should have tight accepted spacing. In edit mode, l
 
 ## 12. Images
 
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-label="Night Command image rendering test">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-label="Smoke Command image rendering test">
   <rect width="900" height="360" fill="#17101F"/>
   <rect x="28" y="28" width="844" height="304" rx="18" fill="#21152F" stroke="#4B3764" stroke-width="4"/>
   <circle cx="156" cy="180" r="72" fill="#A78BFA" opacity="0.72"/>
   <circle cx="216" cy="180" r="72" fill="#F0A8C6" opacity="0.62"/>
-  <text x="450" y="172" text-anchor="middle" fill="#E7DCF5" font-family="Georgia, serif" font-size="42" font-weight="700">Night Command</text>
+  <text x="450" y="172" text-anchor="middle" fill="#E7DCF5" font-family="Georgia, serif" font-size="42" font-weight="700">Smoke Command</text>
   <text x="450" y="222" text-anchor="middle" fill="#D6C8EA" font-family="Georgia, serif" font-size="24">Local SVG image test</text>
 </svg>
 
@@ -244,7 +244,7 @@ This sentence includes a footnote reference.[^night-command-footnote]
 
 ## 15. Definition-Style Content
 
-**Night Command**
+**Smoke Command**
 : A dark Typora theme built around controlled contrast, editorial typography, and styled technical content.
 
 **Smoke Command**
@@ -259,7 +259,7 @@ Manual checks outside the document body:
 - Sidebar file list text should use the accepted color.
 - File-list separators should remain removed.
 - Outline spacing should be tight but readable.
-- Menus should match the Night Command surface and text treatment.
+- Menus should match the Smoke Command surface and text treatment.
 - Popovers should not show harsh white or gray rows.
 - Scrollbars should look intentional.
 - Preferences should match the theme.
@@ -300,6 +300,6 @@ Use this checklist after testing:
 - [x] HTML export passes
 - [x] PDF export passes
 - [x] Known limitations are acceptable
-- [x] Night Command can freeze at v2.60
+- [x] Smoke Command can freeze at v2.60
 
 <!-- END OF DOCUMENT -->
