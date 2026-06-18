@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.10 · Built for Typora
+   Version 2.11 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1276,7 +1276,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
 
 #write blockquote {
   color: var(--text-prose-alt);
-  background-color: var(--surface-raised);
+  background-color: #D8C9E6;
   border: 1px solid var(--border-strong);
   border-left: 4px solid var(--button);
   border-radius: 14px;
@@ -1289,7 +1289,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
   content: "❝";
   top: 14px;
   left: 14px;
-  color: #F6C2D8;
+  color: var(--button);
   font-family: var(--font-data);
   font-size: 1.75rem;
   font-weight: 700;
@@ -1314,8 +1314,8 @@ body .md-table-resize-popover .md-grid-board a:hover {
 #write blockquote.md-focus::before,
 #write blockquote:focus::before,
 #write blockquote:hover::before {
-  color: var(--button);
-  text-shadow: 0 0 8px rgba(109, 40, 217, 0.25);
+  color: #F6C2D8;
+  text-shadow: 0 0 8px rgba(240, 168, 198, 0.35);
   transform: none;
 }
 
@@ -1993,7 +1993,7 @@ pre.md-meta-block::after {
 
 #write .md-alert {
   color: var(--text);
-  background-color: var(--surface-raised);
+  background-color: #D8C9E6;
   border: 1px solid var(--border-strong);
   border-left-width: 4px;
   border-radius: 14px;
