@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.30 · Built for Typora
+   Version 2.31 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2120,7 +2120,7 @@ pre.md-meta-block::after {
 #write .md-inline-math.md-focus,
 #write .md-inline-math.md-expand {
   color: #4B2A7B !important;
-  background-color: #D8C9E6 !important;
+  background-color: #C8B6DB !important;
   border: 1px solid #7A5F96 !important;
   border-radius: 12px;
 }
@@ -2129,7 +2129,7 @@ pre.md-meta-block::after {
   overflow-x: auto;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.28),
-    0 4px 8px rgba(75, 42, 123, 0.18) !important;
+    0 4px 8px rgba(75, 42, 123, 0.22) !important;
 }
 
 #write .md-math-block.md-focus,
@@ -2153,8 +2153,29 @@ pre.md-meta-block::after {
 #write .md-math-block .cm-s-inner.CodeMirror,
 #write .md-rawblock-on-edit .CodeMirror {
   color: #4B2A7B !important;
-  background-color: #D8C9E6 !important;
+  background-color: #C8B6DB !important;
   font-family: var(--font-data) !important;
+}
+
+#write .md-math-block .md-math-container,
+#write .md-math-block .md-mathblock-panel,
+#write .md-math-block .md-rawblock-container,
+#write .md-math-block .md-rawblock-before,
+#write .md-math-block .md-rawblock-after,
+#write .md-math-block .md-mathblock-input,
+#write .md-math-block .md-mathjax-preview,
+#write .md-math-block .md-mathjax-midline {
+  color: #4B2A7B !important;
+  background-color: #C8B6DB !important;
+  border-color: #7A5F96 !important;
+}
+
+#write .md-math-block .CodeMirror-lines,
+#write .md-math-block .CodeMirror-code,
+#write .md-math-block .CodeMirror-line,
+#write .md-math-block pre.CodeMirror-line {
+  color: #4B2A7B !important;
+  background-color: transparent !important;
 }
 
 #write .md-math-block mjx-container,
@@ -2163,7 +2184,7 @@ pre.md-meta-block::after {
 #write .md-math-block .MathJax_Display,
 #write .md-math-block .md-mathjax-preview {
   color: #4B2A7B !important;
-  background-color: #D8C9E6 !important;
+  background-color: #C8B6DB !important;
 }
 
 #write .md-math-block mjx-container svg,
