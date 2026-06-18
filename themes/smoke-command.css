@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.35 · Built for Typora
+   Version 2.36 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1466,6 +1466,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
 }
 
 #write .md-toc::before {
+  content: "Table of Contents";
   margin-bottom: 0.85rem;
   padding-bottom: 0.55rem;
   font-size: 1.25rem;
