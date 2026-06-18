@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.17 · Built for Typora
+   Version 2.18 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -234,16 +234,16 @@
   --rawblock-edit-panel-bd: rgba(188, 168, 208, 0.80);
 
   /* --- Syntax highlighting --- */
-  --code-keyword:    #5B21B6;
-  --code-variable:   #17111F;
-  --code-function:   #155E75;
-  --code-param:      #115E59;
-  --code-string:     #047857;
-  --code-comment:    #7A6D86;
-  --code-type:       #1D4ED8;
-  --code-property:   #115E59;
-  --code-number:     #9F1239;
-  --code-meta:       #115E59;
+  --code-keyword:    #A78BFA;
+  --code-variable:   #D6C8EA;
+  --code-function:   #67E8F9;
+  --code-param:      #C4B5FD;
+  --code-string:     #86EFAC;
+  --code-comment:    #8C73A5;
+  --code-type:       #93C5FD;
+  --code-property:   #5EEAD4;
+  --code-number:     #F9A8D4;
+  --code-meta:       #FACC15;
   --code-selected-bg: var(--surface-tint);
 
   /* --- Background dot texture --- */
@@ -616,6 +616,12 @@ pre.md-meta-block {
 .cm-s-inner.CodeMirror {
   color: var(--code-variable) !important;
   background-color: #21152F !important;
+}
+
+.md-fences .CodeMirror-code,
+.md-fences pre,
+.md-fences code {
+  color: var(--code-variable) !important;
 }
 
 .md-fences .CodeMirror-gutters {
