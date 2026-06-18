@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.3 · Built for Typora
+   Version 2.4 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -388,19 +388,19 @@ html, body {
    HEADINGS — Wak font + Baptiste Studios cascade
    H1/H2: Wak display (positioning/hover retained from base engine)
    H3/H4: Wak (left-border and dot decorators retained from base engine)
-   H5/H6: Source Serif 4 18pt (smaller, body-adjacent)
+   H5/H6: Wak lower weights (smaller, body-adjacent)
    ================================================ */
 
 #write h1 {
   font-family: "Wak", "Lucy Rose", sans-serif;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 1.8rem;
   color: var(--primary);
 }
 
 #write h2 {
   font-family: "Wak", "Lucy Rose", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.4rem;
   color: var(--link);
   background-color: var(--surface-readable);
@@ -419,23 +419,23 @@ html, body {
 
 #write h4 {
   font-family: "Wak", "Lucy Rose", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.15rem;
-  color: var(--button);
+  color: var(--link);
 }
 
 #write h5 {
-  font-family: "Source Serif 4 18pt", "Source Serif 4", Georgia, serif;
+  font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: var(--link);
 }
 
 #write h6 {
-  font-family: "Source Serif 4 18pt", "Source Serif 4", Georgia, serif;
-  font-weight: 500;
+  font-family: "Wak", "Lucy Rose", sans-serif;
+  font-weight: 400;
   font-size: 1.05rem;
-  color: var(--text-dim);
+  color: var(--link);
 }
 
 /* H1 hover: lifts + expands underline — keep but recolor via --h1-underline-color */
@@ -446,7 +446,19 @@ html, body {
 #write h3:hover,
 #write h3:focus,
 #write h3.md-focus {
-  color: var(--primary) !important;
+  color: var(--text-prose-hover) !important;
+}
+
+#write h4:hover,
+#write h4:focus,
+#write h4.md-focus,
+#write h5:hover,
+#write h5:focus,
+#write h5.md-focus,
+#write h6:hover,
+#write h6:focus,
+#write h6.md-focus {
+  color: var(--text-prose-hover) !important;
 }
 
 #write h3.md-heading::after {
