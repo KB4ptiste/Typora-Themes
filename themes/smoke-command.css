@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.20 · Built for Typora
+   Version 2.21 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2119,21 +2119,21 @@ pre.md-meta-block::after {
 #write .md-math-block,
 #write .md-inline-math.md-focus,
 #write .md-inline-math.md-expand {
-  color: #773CC0;
-  background-color: #D8C9E6;
+  color: #C4B5FD;
+  background-color: #21152F;
   border: 1px solid #8C73A5;
   border-radius: 12px;
 }
 
 #write .md-math-block {
   overflow-x: auto;
-  box-shadow: 0 10px 24px rgba(75, 42, 123, 0.14);
+  box-shadow: 0 10px 24px rgba(75, 42, 123, 0.18);
 }
 
 #write .md-math-block.md-focus,
 #write .md-math-block.md-rawblock-on-edit,
 #write .md-rawblock-on-edit {
-  background-color: #D2C2E2;
+  background-color: #2D1C40;
   border-color: #6D28D9;
   box-shadow: 0 0 14px rgba(109, 40, 217, 0.16);
 }
@@ -2150,8 +2150,8 @@ pre.md-meta-block::after {
 #write .md-math-block .CodeMirror,
 #write .md-math-block .cm-s-inner.CodeMirror,
 #write .md-rawblock-on-edit .CodeMirror {
-  color: #773CC0 !important;
-  background-color: #D8C9E6 !important;
+  color: #C4B5FD !important;
+  background-color: #21152F !important;
   font-family: var(--font-data) !important;
 }
 
