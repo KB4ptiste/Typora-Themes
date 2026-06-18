@@ -1,5 +1,7 @@
 # Typora Themes Project Instructions
 
+Version: 1.0
+
 ## Project Scope
 
 This repository owns Typora theme work, including Night Command and future themes such as Smoke Command.
@@ -50,7 +52,7 @@ When building a new theme, such as Smoke Command:
 
 ## Night Command Rules
 
-Night Command current frozen candidate version: 2.49.
+Night Command current frozen version: 2.60.
 
 Do not edit:
 
