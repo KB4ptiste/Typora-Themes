@@ -1,6 +1,6 @@
 /* ================================================
    Night Command — Baptiste Studios Dark Theme
-   Version 2.49 · Built for Typora
+   Version 2.60 · Built for Typora
    Base: night-command.dark.css (base engine)
    ================================================ */
 
@@ -423,6 +423,48 @@ html, body {
   mask-size: contain;
 }
 
+#write h4.md-heading::after,
+#write h5.md-heading::after,
+#write h6.md-heading::after {
+  content: " ";
+  display: inline-block;
+  margin-left: 0.08em;
+  vertical-align: -0.10em;
+  transform: none;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+#write h4.md-heading::after {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.10em;
+  position: relative;
+  top: -0.22em;
+  -webkit-mask-image: var(--h4-icon-shape);
+  mask-image: var(--h4-icon-shape);
+}
+
+#write h5.md-heading::after {
+  width: 1.05em;
+  height: 1.05em;
+  vertical-align: -0.10em;
+  position: relative;
+  top: -0.24em;
+  -webkit-mask-image: var(--h5-icon-shape);
+  mask-image: var(--h5-icon-shape);
+}
+
+#write h6.md-heading::after {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.24em;
+  -webkit-mask-image: var(--h6-icon-shape);
+  mask-image: var(--h6-icon-shape);
+}
+
 
 /* ================================================
    SECTION SEPARATOR — ✦ U+2726 centered on gradient
@@ -481,6 +523,7 @@ html, body {
 #write table td {
   background-color: #17101F;
 }
+
 
 
 /* ================================================
@@ -844,6 +887,42 @@ body.megamenu-opened *,
 .theme-preview-div,
 .md-table-resize-popover {
   font-family: var(--font-ui) !important;
+}
+
+.ty-preferences,
+.ty-preferences .window-content,
+.ty-preferences .preference-panel,
+.preferences,
+.preference-panel,
+.megamenu-content,
+.megamenu-menu-panel,
+.megamenu-section {
+  font-size: 1rem !important;
+}
+
+#megamenu-menu-header-title,
+.megamenu-menu-header #megamenu-menu-header-title,
+.ty-preferences .window-title,
+.ty-preferences #window-title {
+  font-family: var(--font-display) !important;
+  font-size: 1.7rem !important;
+  line-height: 1.15 !important;
+  color: var(--ui-text-strong) !important;
+}
+
+.ty-preferences label,
+.ty-preferences p,
+.ty-preferences .description,
+.ty-preferences .help-block,
+.ty-preferences input,
+.ty-preferences button,
+.ty-preferences select,
+.ty-preferences textarea,
+.megamenu-menu-panel,
+.megamenu-menu-panel p,
+.megamenu-menu-panel table,
+.megamenu-menu-panel .btn {
+  font-size: 0.98rem !important;
 }
 
 /* Longer UI copy */
@@ -1255,6 +1334,8 @@ body .md-table-resize-popover .md-grid-board a:hover {
 
 #write li.task-list-item > p {
   display: inline;
+  position: relative;
+  top: 0.12em;
 }
 
 .task-list-item input {
@@ -1412,12 +1493,15 @@ body .md-table-resize-popover .md-grid-board a:hover {
   color: #A99ABF;
   border-top: 1px solid #4B3764;
   padding-top: 1rem;
+  font-size: 0.86em;
 }
 
 .footnotes .footnote-line {
   color: #A99ABF;
   font-family: var(--font-body);
   font-optical-sizing: auto;
+  font-size: 0.86em;
+  line-height: 1.45;
 }
 
 .footnotes span.md-def-name,
@@ -1443,6 +1527,14 @@ body .md-table-resize-popover .md-grid-board a:hover {
     0 16px 34px rgba(0, 0, 0, 0.26),
     0 0 16px rgba(167, 139, 250, 0.12);
 }
+
+#write p:has(+ ul) strong:only-child,
+#write p:has(+ ol) strong:only-child {
+  color: #E7DCF5;
+  font-weight: 700;
+}
+
+
 
 #write figcaption {
   color: #A99ABF;
@@ -2047,24 +2139,25 @@ svg[id^=mermaid] .edgeLabel,
 svg[id^=mermaid] .edgeLabel .label,
 svg[id^=mermaid] .edgeLabel span,
 svg[id^=mermaid] .edgeLabel p {
-  color: #FFF4FA !important;
-  background-color: #F0A8C6 !important;
-  border-color: #F6C2D8 !important;
-  text-shadow: 0 1px 2px rgba(16, 11, 21, 0.45);
+  color: #F0A8C6 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  text-shadow: 0 0 6px rgba(240, 168, 198, 0.35);
 }
 
 svg[id^=mermaid] .edgeLabel rect {
-  fill: #F0A8C6 !important;
-  stroke: #F6C2D8 !important;
+  fill: var(--bg-color) !important;
+  fill-opacity: 1 !important;
+  stroke: transparent !important;
   rx: 4px;
   ry: 4px;
 }
 
 svg[id^=mermaid] .edgeLabel text,
 svg[id^=mermaid] .edgeLabel tspan {
-  fill: #FFF4FA !important;
-  color: #FFF4FA !important;
-  text-shadow: 0 1px 2px rgba(16, 11, 21, 0.45);
+  fill: #F0A8C6 !important;
+  color: #F0A8C6 !important;
+  text-shadow: 0 0 6px rgba(240, 168, 198, 0.35);
 }
 
 #write .md-htmlblock-container,
