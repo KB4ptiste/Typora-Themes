@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.43 · Built for Typora
+   Version 2.44 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1744,13 +1744,13 @@ pre.md-meta-block::after {
 .code-tooltip-content,
 .md-rawblock-tooltip,
 .md-toc-tooltip {
-  color: var(--ui-text) !important;
-  background-color: #17101F !important;
-  border: 1px solid #4B3764 !important;
+  color: #4B2A7B !important;
+  background-color: #D8C9E6 !important;
+  border: 1px solid #9F86B8 !important;
   border-radius: 12px !important;
   box-shadow:
-    0 18px 42px rgba(0, 0, 0, 0.34),
-    0 0 18px rgba(167, 139, 250, 0.12) !important;
+    0 18px 42px rgba(75, 42, 123, 0.18),
+    0 0 18px rgba(188, 168, 208, 0.22) !important;
 }
 
 #md-searchpanel,
@@ -1896,10 +1896,10 @@ pre.md-meta-block::after {
 .popover.top > .arrow::after,
 .popover.left > .arrow::after,
 .popover.right > .arrow::after {
-  border-bottom-color: #17101F !important;
-  border-top-color: #17101F !important;
-  border-left-color: #17101F !important;
-  border-right-color: #17101F !important;
+  border-bottom-color: #D8C9E6 !important;
+  border-top-color: #D8C9E6 !important;
+  border-left-color: #D8C9E6 !important;
+  border-right-color: #D8C9E6 !important;
 }
 
 .dropdown-menu li:hover > a,
