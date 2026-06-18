@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 1.0 · Built for Typora
+   Version 1.1 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -153,69 +153,100 @@
   /* --- Layout --- */
   --max-width: 1128px;
 
-  /* --- Base surfaces --- */
-  --bg-color:              #100B15;
+  /* --- Product-level Smoke Command surfaces --- */
+  --bg: #DED2E8;                 /* Smoked Lilac */
+  --surface: #E9E0F1;            /* Rune Mist */
+  --surface-readable: #FFFFFF;   /* White */
+  --surface-raised: #F3EEF8;     /* High Rune */
+  --surface-tint: #D2C2E2;       /* Veil Amethyst */
+  --surface-sunken: #C8B6DB;     /* Inset Lilac */
+  --border-subtle: #CAB8DC;      /* Soft Amethyst */
+  --border: #BCA8D0;             /* Worn Amethyst */
+  --border-strong: #9F86B8;      /* Iron Amethyst */
 
-  /* --- Text --- */
-  --text-color:            #D6C8EA;
-  --text-color-secondary:  #A99ABF;
+  /* --- Product-level Smoke Command text --- */
+  --text: #17111F;               /* Void Ink */
+  --text-muted: #554A60;         /* Grave Plum */
+  --text-dim: #7A6D86;           /* Weathered Plum */
+  --text-inverse: #F5F1FF;       /* Moon Ink */
+
+  /* --- Product-level Smoke Command interaction --- */
+  --primary: #4B2A7B;            /* Fenix Violet */
+  --button: #6D28D9;             /* Command Violet */
+  --button-hover: #5B21B6;       /* Deep Command */
+  --button-text: #FFFFFF;
+  --link: #5B21B6;               /* Deep Command */
+  --link-hover: #4B2A7B;         /* Fenix Violet */
+  --focus: #7C3AED;              /* Arcane Purple */
+  --accent: #92400E;             /* Burnished Ember */
+
+  /* --- Product-level Smoke Command state --- */
+  --state-hover-bg: #D8C9E6;
+  --state-active-bg: #CDB9DF;
+  --state-selected-bg: #D2C2E2;
+  --state-selected-border: #6D28D9;
+
+  /* --- Base engine aliases --- */
+  --bg-color:              var(--bg);
+  --text-color:            var(--text);
+  --text-color-secondary:  var(--text-muted);
 
   /* --- Brand colors → base engine primary/secondary/accent --- */
-  --primary-color:         #A78BFA;  /* Rift Lilac */
-  --secondary-color:       #7C3AED;  /* Arcane Purple */
-  --accent-color:          #F59E0B;  /* Ember Gold */
-  --border-color:          #4B3764;  /* Warden Violet */
+  --primary-color:         var(--link);
+  --secondary-color:       var(--button);
+  --accent-color:          var(--accent);
+  --border-color:          var(--border);
 
   /* --- Glow system --- */
-  --glow-color:            rgba(167, 139, 250, 0.50);
-  --glow-shadow-text:      0 0 8px rgba(167, 139, 250, 0.50);
-  --glow-shadow-box:       0 0 8px rgba(167, 139, 250, 0.50);
-  --hover-background-color: #A78BFA;
+  --glow-color:            rgba(124, 58, 237, 0.28);
+  --glow-shadow-text:      none;
+  --glow-shadow-box:       0 0 0 3px rgba(124, 58, 237, 0.18);
+  --hover-background-color: var(--state-hover-bg);
 
   /* --- Selection --- */
-  --select-text-bg-color:  rgba(124, 58, 237, 0.35);
+  --select-text-bg-color:  rgba(109, 40, 217, 0.20);
 
   /* --- Active file --- */
-  --active-file-bg-color:       rgba(167, 139, 250, 0.12);
-  --active-file-text-color:     #E7DCF5;
-  --active-file-border-color:   #A78BFA;
+  --active-file-bg-color:       var(--state-selected-bg);
+  --active-file-text-color:     var(--text);
+  --active-file-border-color:   var(--state-selected-border);
 
   /* --- H1 underline (expands on hover) --- */
-  --h1-underline-color:    #C4B5FD;  /* Moon Rift */
+  --h1-underline-color:    var(--button);
 
   /* --- H2 glass morphism --- */
-  --h2-bg-image:           radial-gradient(ellipse at center bottom, rgba(196, 181, 253, 0.08), transparent 70%);
-  --h2-bg-image-hover:     radial-gradient(ellipse at center bottom, rgba(196, 181, 253, 0.20), transparent 70%);
-  --h2-border-bottom-hover: rgba(196, 181, 253, 0.35);
+  --h2-bg-image:           radial-gradient(ellipse at center bottom, rgba(210, 194, 226, 0.45), transparent 70%);
+  --h2-bg-image-hover:     radial-gradient(ellipse at center bottom, rgba(109, 40, 217, 0.14), transparent 70%);
+  --h2-border-bottom-hover: rgba(109, 40, 217, 0.32);
 
   /* --- Element color (used by h3–h6 counters, figcaptions) --- */
-  --element-color:          #8B5CF6;  /* Spell Violet */
-  --element-color-soo-shallow: rgba(139, 92, 246, 0.12);
-  --element-color-deep:     #C4B5FD;  /* Moon Rift */
-  --head-title-h2-color:    #C4B5FD;
+  --element-color:          var(--link);
+  --element-color-soo-shallow: rgba(91, 33, 182, 0.12);
+  --element-color-deep:     var(--primary);
+  --head-title-h2-color:    var(--link);
 
   /* --- Code block --- */
-  --code-block-bg:          #0C0911;
-  --glass-border-color:     rgba(167, 139, 250, 0.10);
-  --rawblock-edit-panel-bd: rgba(33, 21, 47, 0.80);
+  --code-block-bg:          var(--surface-sunken);
+  --glass-border-color:     rgba(188, 168, 208, 0.65);
+  --rawblock-edit-panel-bd: rgba(188, 168, 208, 0.80);
 
   /* --- Syntax highlighting --- */
-  --code-keyword:    #C4B5FD;  /* Moon Rift — keywords */
-  --code-variable:   #D6C8EA;  /* Rune Lilac — variables */
-  --code-function:   #67E8F9;  /* Aether Cyan — functions */
-  --code-param:      #5EEAD4;  /* Signal Teal — params */
-  --code-string:     #86EFAC;  /* soft green — strings */
-  --code-comment:    #847490;  /* Ash Plum — comments */
-  --code-type:       #60A5FA;  /* Tactical Blue — types */
-  --code-property:   #5EEAD4;  /* Signal Teal — properties */
-  --code-number:     #FCA5A5;  /* soft red — numbers */
-  --code-meta:       #5EEAD4;  /* Signal Teal — meta */
-  --code-selected-bg: #24143A;
+  --code-keyword:    #5B21B6;
+  --code-variable:   #17111F;
+  --code-function:   #155E75;
+  --code-param:      #115E59;
+  --code-string:     #047857;
+  --code-comment:    #7A6D86;
+  --code-type:       #1D4ED8;
+  --code-property:   #115E59;
+  --code-number:     #9F1239;
+  --code-meta:       #115E59;
+  --code-selected-bg: var(--surface-tint);
 
   /* --- Background dot texture --- */
-  --bg-style:            radial-gradient(#ffffff 1px, transparent 1px);
-  --texture-mask-color:  #4B2A7B;  /* Fenix Violet */
-  --texture-opacity:     0.04;
+  --bg-style:            radial-gradient(#4B2A7B 1px, transparent 1px);
+  --texture-mask-color:  var(--primary);
+  --texture-opacity:     0.025;
 
   /* --- Auto-numbering (disabled) --- */
   --autonum-h1: "";
@@ -232,7 +263,7 @@
   --h6-icon-shape: url("data:image/svg+xml;utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path fill='black' d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 11.429c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 16c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286z'/></svg>");
 
   /* --- Caret --- */
-  --caret-color: #A78BFA;
+  --caret-color: var(--link);
 
   /* --- Monospace (feeds base engine's var(--monospace, monospace) usages) --- */
   --monospace: "MonaspaceXenon", "Lotion", monospace;
@@ -244,36 +275,36 @@
   --font-data: "MonaspaceXenon", "Lotion", monospace;
 
   /* --- Application UI surfaces and states --- */
-  --ui-surface-base: #100B15;
-  --ui-surface-raised: #17101F;
-  --ui-surface-overlay: #1D1427;
-  --ui-surface-hover: #251833;
-  --ui-surface-active: #2D1C40;
-  --ui-surface-pressed: #1A1124;
-  --ui-text-strong: #E7DCF5;
-  --ui-text: #D6C8EA;
-  --ui-text-muted: #A99ABF;
-  --ui-text-disabled: #756A82;
-  --ui-border-subtle: #342442;
-  --ui-border: #4B3764;
-  --ui-border-active: #A78BFA;
-  --ui-focus-outline: #C4B5FD;
-  --ui-accent-soft: #F0A8C6;
-  --ui-glow-hover: 0 0 8px rgba(167, 139, 250, 0.18);
-  --ui-glow-active: 0 0 10px rgba(167, 139, 250, 0.24);
-  --ui-glow-focus: 0 0 0 1px #C4B5FD, 0 0 14px rgba(167, 139, 250, 0.42);
+  --ui-surface-base: var(--bg);
+  --ui-surface-raised: var(--surface);
+  --ui-surface-overlay: var(--surface-raised);
+  --ui-surface-hover: var(--state-hover-bg);
+  --ui-surface-active: var(--state-selected-bg);
+  --ui-surface-pressed: var(--state-active-bg);
+  --ui-text-strong: var(--text);
+  --ui-text: var(--text);
+  --ui-text-muted: var(--text-muted);
+  --ui-text-disabled: var(--text-dim);
+  --ui-border-subtle: var(--border-subtle);
+  --ui-border: var(--border);
+  --ui-border-active: var(--button);
+  --ui-focus-outline: var(--focus);
+  --ui-accent-soft: var(--accent);
+  --ui-glow-hover: 0 0 0 3px rgba(109, 40, 217, 0.12);
+  --ui-glow-active: 0 0 0 3px rgba(109, 40, 217, 0.18);
+  --ui-glow-focus: 0 0 0 1px var(--focus), 0 0 0 4px rgba(124, 58, 237, 0.20);
 
   /* --- Ten-level list progression --- */
-  --bullet-1: #E7DCF5;
-  --bullet-2: #DCCEF0;
-  --bullet-3: #D0BFEA;
-  --bullet-4: #C4B1E3;
-  --bullet-5: #B8A2D8;
-  --bullet-6: #AB93CC;
-  --bullet-7: #9D84BE;
-  --bullet-8: #8F75AF;
-  --bullet-9: #80679F;
-  --bullet-10: #725A8E;
+  --bullet-1: #4B2A7B;
+  --bullet-2: #5B21B6;
+  --bullet-3: #6D28D9;
+  --bullet-4: #554A60;
+  --bullet-5: #7A6D86;
+  --bullet-6: #9F86B8;
+  --bullet-7: #8C73A5;
+  --bullet-8: #755B8F;
+  --bullet-9: #604878;
+  --bullet-10: #4B3764;
   --bullet-size-1: 0.94rem;
   --bullet-size-2: 0.92rem;
   --bullet-size-3: 0.90rem;
@@ -294,6 +325,8 @@
 html, body {
   font-family: var(--font-body);
   font-optical-sizing: auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 
@@ -310,10 +343,10 @@ html, body {
   word-spacing: normal;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  background-color: #15101C;
-  background-image: radial-gradient(ellipse at center top, #1B1425 0%, #15101C 58%, #120D18 100%);
+  background-color: var(--surface-readable);
+  background-image: radial-gradient(ellipse at center top, var(--surface-raised) 0%, var(--surface-readable) 58%, var(--surface) 100%);
   background-repeat: no-repeat;
-  border: 4px solid #4B3764;
+  border: 4px solid var(--border);
   border-radius: 18px;
   overflow: hidden;
   box-shadow: none;
@@ -358,42 +391,42 @@ html, body {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 800;
   font-size: 1.8rem;
-  color: #E7DCF5;
+  color: var(--primary);
 }
 
 #write h2 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
-  color: #C4B5FD;
+  color: var(--link);
 }
 
 #write h3 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
-  color: #A78BFA;
+  color: var(--link);
 }
 
 #write h4 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 600;
   font-size: 1.15rem;
-  color: #8B5CF6;
+  color: var(--button);
 }
 
 #write h5 {
   font-family: "Source Serif 4 18pt", "Source Serif 4", Georgia, serif;
   font-weight: 500;
   font-size: 1.1rem;
-  color: #A99ABF;
+  color: var(--text-muted);
 }
 
 #write h6 {
   font-family: "Source Serif 4 18pt", "Source Serif 4", Georgia, serif;
   font-weight: 500;
   font-size: 1.05rem;
-  color: #847490;
+  color: var(--text-dim);
 }
 
 /* H1 hover: lifts + expands underline — keep but recolor via --h1-underline-color */
@@ -404,7 +437,7 @@ html, body {
 #write h3:hover,
 #write h3:focus,
 #write h3.md-focus {
-  color: #C4B5FD !important;
+  color: var(--primary) !important;
 }
 
 #write h3.md-heading::after {
