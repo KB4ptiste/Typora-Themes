@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.41 · Built for Typora
+   Version 2.42 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -628,6 +628,23 @@ pre.md-meta-block {
 
 #write kbd {
   font-family: "MonaspaceXenon", "Lotion", monospace;
+  color: #4B2A7B;
+  background-color: #D8C9E6;
+  border: 1px solid #9F86B8;
+  border-top-color: #BCA8D0;
+  border-bottom-color: #7A5F96;
+  box-shadow:
+    0 4px 0 #9F86B8,
+    0 6px 10px rgba(75, 42, 123, 0.18);
+}
+
+#write kbd:hover {
+  color: #3A1D5C;
+  background-color: #D2C2E2;
+  border-color: #7A5F96;
+  box-shadow:
+    0 2px 0 #8C73A5,
+    0 4px 8px rgba(75, 42, 123, 0.16);
 }
 
 /* Fenced code — Smoke Command palette */
@@ -1540,14 +1557,14 @@ body .md-table-resize-popover .md-grid-board a:hover {
 }
 
 #write mark {
-  color: #E7DCF5;
-  background-image: linear-gradient(to top, rgba(240, 168, 198, 0.22), transparent 58%);
+  color: #4B2A7B;
+  background-image: linear-gradient(to top, rgba(250, 204, 21, 0.36), rgba(250, 204, 21, 0.16) 58%, transparent 58%);
 }
 
 #write mark:hover {
-  background-image: linear-gradient(to top, rgba(240, 168, 198, 0.34), rgba(167, 139, 250, 0.10));
-  color: #FFFFFF !important;
-  text-shadow: 0 0 8px rgba(240, 168, 198, 0.34);
+  background-image: linear-gradient(to top, rgba(250, 204, 21, 0.52), rgba(232, 121, 249, 0.14));
+  color: #3A1D5C !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.30);
   box-shadow: none;
 }
 
@@ -2352,9 +2369,33 @@ svg[id^=mermaid] .arrowheadPath {
   stroke: #7A5F96 !important;
 }
 
-#write .md-htmlblock-container,
-#write .md-rawblock-container,
-#write .md-rawblock {
+#write details {
+  color: var(--text);
+  background-color: #D8C9E6;
+  border: 1px solid rgba(122, 95, 150, 0.55);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 8px 18px rgba(75, 42, 123, 0.12);
+}
+
+#write details[open] {
+  background-color: #D2C2E2;
+  border-color: #7A5F96;
+}
+
+#write summary {
+  color: var(--link);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#write summary:hover {
+  color: var(--link-hover);
+}
+
+#write .md-htmlblock-container:has(svg),
+#write .md-rawblock-container:has(svg),
+#write .md-rawblock:has(svg) {
   background-color: #D8C9E6;
   border: 2px solid transparent;
   border-radius: 12px;
@@ -2362,16 +2403,16 @@ svg[id^=mermaid] .arrowheadPath {
   box-shadow: 0 8px 18px rgba(75, 42, 123, 0.16);
 }
 
-#write .md-htmlblock-container:hover,
-#write .md-rawblock-container:hover,
-#write .md-rawblock:hover {
+#write .md-htmlblock-container:has(svg):hover,
+#write .md-rawblock-container:has(svg):hover,
+#write .md-rawblock:has(svg):hover {
   background-color: #D2C2E2;
   border-color: transparent;
   box-shadow: 0 10px 22px rgba(75, 42, 123, 0.20);
 }
 
-#write .md-htmlblock-container,
-#write .md-rawblock-container {
+#write .md-htmlblock-container:has(svg),
+#write .md-rawblock-container:has(svg) {
   text-align: center;
 }
 
