@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.18 · Built for Typora
+   Version 2.19 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2119,23 +2119,23 @@ pre.md-meta-block::after {
 #write .md-math-block,
 #write .md-inline-math.md-focus,
 #write .md-inline-math.md-expand {
-  color: #D6C8EA;
-  background-color: #17101F;
-  border: 1px solid #4B3764;
+  color: #4B3764;
+  background-color: #D8C9E6;
+  border: 1px solid #8C73A5;
   border-radius: 12px;
 }
 
 #write .md-math-block {
   overflow-x: auto;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 24px rgba(75, 42, 123, 0.14);
 }
 
 #write .md-math-block.md-focus,
 #write .md-math-block.md-rawblock-on-edit,
 #write .md-rawblock-on-edit {
-  background-color: #1D1427;
-  border-color: #A78BFA;
-  box-shadow: 0 0 14px rgba(167, 139, 250, 0.16);
+  background-color: #D2C2E2;
+  border-color: #6D28D9;
+  box-shadow: 0 0 14px rgba(109, 40, 217, 0.16);
 }
 
 #math-tooltip,
