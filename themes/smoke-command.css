@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.11 · Built for Typora
+   Version 2.12 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1287,7 +1287,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
 
 #write blockquote::before {
   content: "❝";
-  top: 14px;
+  top: 10px;
   left: 14px;
   color: var(--button);
   font-family: var(--font-data);
@@ -1314,8 +1314,8 @@ body .md-table-resize-popover .md-grid-board a:hover {
 #write blockquote.md-focus::before,
 #write blockquote:focus::before,
 #write blockquote:hover::before {
-  color: #F6C2D8;
-  text-shadow: 0 0 8px rgba(240, 168, 198, 0.35);
+  color: #E879F9;
+  text-shadow: 0 0 8px rgba(232, 121, 249, 0.28);
   transform: none;
 }
 
