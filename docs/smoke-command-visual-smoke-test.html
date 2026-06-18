@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smoke Command Visual Smoke Test</title>
+<link rel="stylesheet" href="../themes/smoke-command.css">
+<style>
+  body.typora-export { margin: 0; }
+  body.typora-export #write { min-height: 100vh; }
+  pre.mermaid code { white-space: pre; }
+</style>
+</head>
+<body class="typora-export">
+<div id="write" class="markdown-body">
+<h1>Smoke Command Visual Smoke Test</h1>
+<p>Version: 1.0
+Date: 2026-06-17</p>
+<h2>Test Instructions</h2>
+<p>Copy this entire document into Typora, switch to the Smoke Command theme, and review each section visually.</p>
+<p>Expected result: the document should look deliberate, readable, and internally consistent across editor view, HTML export, and PDF export.</p>
+<p>If something fails, capture:</p>
+<ul>
+<li>Section name</li>
+<li>What looked wrong</li>
+<li>Whether the issue appears in editor view, HTML export, PDF export, or more than one output</li>
+<li>Screenshot if possible</li>
+</ul>
+<h2>1. Document Frame And Body Text</h2>
+<p>This paragraph tests default prose styling. The text should feel comfortable for long reading, with clear contrast against the dark page background. Line spacing should not feel cramped, and the document frame should surround the writing area cleanly.</p>
+<p>This paragraph includes <strong>bold text</strong>, <em>italic text</em>, <em><strong>bold italic text</strong></em>, <del>strikethrough text</del>, <code>inline code</code>, <a href="https://example.com">a normal link</a>, and a bare URL: <a href="https://example.com">https://example.com</a>.</p>
+<p>The italic text should be visibly lighter and should not collapse into the background. Inline code should look technical but not loud.</p>
+<h2>2. Headings</h2>
+<h1>H1 Heading: Smoke Command Primary Title</h1>
+<p>The H1 should establish the strongest hierarchy without feeling oversized or disconnected from the rest of the page.</p>
+<h2>H2 Heading: Section Title</h2>
+<p>The H2 should be clearly subordinate to H1 but still strong.</p>
+<h3>H3 Heading: Three-Dot Indicator Check</h3>
+<p>The H3 should show the accepted three-dot indicator and align cleanly with the heading text.</p>
+<h4>H4 Heading: Smaller Section</h4>
+<p>H4 should remain distinct from body text.</p>
+<h5>H5 Heading: Compact Label</h5>
+<p>H5 should not look broken, weak, or cramped.</p>
+<h6>H6 Heading: Smallest Label</h6>
+<p>H6 should still be legible.</p>
+<h2>3. Horizontal Rule</h2>
+<p>Text before the horizontal rule.</p>
+<hr>
+<p>Text after the horizontal rule. The line, centered diamond, and hover behavior should remain clean. If hover spin is visible, it should not be distracting.</p>
+<h2>4. Lists</h2>
+<h3>Unordered List</h3>
+<ul>
+<li>First-level bullet<ul>
+<li>Second-level bullet<ul>
+<li>Third-level bullet<ul>
+<li>Fourth-level bullet<ul>
+<li>Fifth-level bullet<ul>
+<li>Sixth-level bullet<ul>
+<li>Seventh-level bullet<ul>
+<li>Eighth-level bullet<ul>
+<li>Ninth-level bullet<ul>
+<li>Tenth-level bullet</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The ten-level bullet styling should show a gradual size and color progression without connector lines.</p>
+<h3>Ordered List</h3>
+<ol>
+<li>First ordered item</li>
+<li>Second ordered item<ol>
+<li>Nested ordered item</li>
+<li>Another nested ordered item</li>
+</ol>
+</li>
+<li>Third ordered item</li>
+</ol>
+<p>Ordered lists should not show unwanted connector lines.</p>
+<h3>Task List</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Unchecked task item</li>
+<li><input checked="" disabled="" type="checkbox"> Checked task item</li>
+<li><input disabled="" type="checkbox"> Longer task item with enough text to wrap onto a second line so indentation and alignment can be inspected in Typora.</li>
+</ul>
+<p>Task checkboxes should use the accepted accent color and align with list text.</p>
+<h2>5. Blockquotes</h2>
+<blockquote>
+<p>This is a standard blockquote. It should use the accepted large quote marker and remain readable.</p>
+</blockquote>
+<blockquote>
+<p>This is a longer blockquote with multiple sentences. It tests wrapping, indentation, contrast, and spacing. The quote marker should not collide with the text.</p>
+</blockquote>
+<h2>6. Callouts And Alerts</h2>
+<blockquote>
+<p>[!NOTE]
+This note tests the note alert styling and icon.</p>
+</blockquote>
+<blockquote>
+<p>[!TIP]
+This tip tests the tip alert styling and icon.</p>
+</blockquote>
+<blockquote>
+<p>[!IMPORTANT]
+This important alert tests emphasis, icon placement, and watermark treatment.</p>
+</blockquote>
+<blockquote>
+<p>[!WARNING]
+This warning tests warning color contrast and icon treatment.</p>
+</blockquote>
+<blockquote>
+<p>[!CAUTION]
+This caution alert tests high-severity styling and readability.</p>
+</blockquote>
+<p>Each alert should use the expected emoji icon, including the larger watermark icon if visible.</p>
+<h2>7. Tables</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Expected Appearance</th>
+<th>Manual Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Body text</td>
+<td>Readable and calm</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Links</td>
+<td>Visible without being harsh</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Inline code</td>
+<td>Technical but controlled</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Table</td>
+<td>Centered and aligned</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Borders</td>
+<td>Visible but not heavy</td>
+<td>Pending</td>
+</tr>
+</tbody></table>
+<p>The table should be centered and should not stretch awkwardly across the full page.</p>
+<h2>8. Code Blocks</h2>
+<h3>JavaScript Code Block</h3>
+<pre><code class="language-javascript">const themeName = &quot;Smoke Command&quot;;
+const version = &quot;2.49&quot;;
+
+function describeTheme(name, version) {
+  return `${name} is ready for final visual smoke testing at v${version}.`;
+}
+
+console.log(describeTheme(themeName, version));
+</code></pre>
+<h3>CSS Code Block</h3>
+<pre><code class="language-css">:root {
+  --night-command-surface: #15121d;
+  --night-command-text: #d6c8ea;
+}
+
+#write {
+  max-width: 900px;
+  margin: 0 auto;
+}
+</code></pre>
+<h3>Language-Free Code Block</h3>
+<pre><code>This code block has no language.
+It should display the accepted TEXT label.
+It should use the same code-block width behavior as other fenced code blocks.
+</code></pre>
+<h3>Long-Line Code Block</h3>
+<pre><code class="language-text">This is a deliberately long line intended to test horizontal overflow, wrapping behavior, code block width, and whether the block stays visually contained inside the Smoke Command document frame without breaking the layout or forcing the page to feel unstable.
+</code></pre>
+<p>Code blocks should use Smoke Command colors, keep the red/yellow/green header dots, and respect the accepted width behavior.</p>
+<h2>9. Math</h2>
+<p>Inline math: $E = mc^2$</p>
+<p>Block math:</p>
+<p>$$
+\int_0^1 x^2 dx = \frac{1}{3}
+$$</p>
+<p>Math should remain readable and should not inherit broken colors.</p>
+<h2>10. Mermaid Diagram</h2>
+<pre><code class="language-mermaid">flowchart TD
+  A[Start Visual Test] --&gt; B{Editor View Passes?}
+  B -- Yes --&gt; C[Export HTML]
+  B -- No --&gt; D[Record Editor Issue]
+  C --&gt; E{HTML Export Passes?}
+  E -- Yes --&gt; F[Export PDF]
+  E -- No --&gt; G[Record HTML Issue]
+  F --&gt; H{PDF Export Passes?}
+  H -- Yes --&gt; I[Freeze Smoke Command]
+  H -- No --&gt; J[Record PDF Issue]
+</code></pre>
+<p>Mermaid edge labels should use pink boxes with light text.</p>
+<h2>11. Inline TOC</h2>
+<p>[TOC]</p>
+<p>The inline table of contents should have tight accepted spacing. In edit mode, links may require Ctrl+Click. That is expected Typora behavior.</p>
+<h2>12. Images</h2>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-label="Smoke Command image rendering test">
+  <rect width="900" height="360" fill="#17101F"/>
+  <rect x="28" y="28" width="844" height="304" rx="18" fill="#21152F" stroke="#4B3764" stroke-width="4"/>
+  <circle cx="156" cy="180" r="72" fill="#A78BFA" opacity="0.72"/>
+  <circle cx="216" cy="180" r="72" fill="#F0A8C6" opacity="0.62"/>
+  <text x="450" y="172" text-anchor="middle" fill="#E7DCF5" font-family="Georgia, serif" font-size="42" font-weight="700">Smoke Command</text>
+  <text x="450" y="222" text-anchor="middle" fill="#D6C8EA" font-family="Georgia, serif" font-size="24">Local SVG image test</text>
+</svg>
+
+<p>The image should fit inside the document frame without breaking spacing.</p>
+<h2>13. HTML Elements</h2>
+<p><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></p>
+<p><mark>Highlighted text should remain readable.</mark></p>
+<details>
+<summary>Expandable details test</summary>
+
+<p>This hidden content tests Typora&#39;s handling of native HTML elements under the theme.</p>
+</details>
+
+<h2>14. Footnotes</h2>
+<p>This sentence includes a footnote reference.[^smoke-command-footnote]</p>
+<p>[^smoke-command-footnote]: This is the footnote body. It should remain readable and visually connected to the reference.</p>
+<h2>15. Definition-Style Content</h2>
+<p><strong>Smoke Command</strong>
+: A dark Typora theme built around controlled contrast, editorial typography, and styled technical content.</p>
+<p><strong>Smoke Command</strong>
+: The future light-theme counterpart.</p>
+<p>Definition terms should be bold. Definition lines should be indented.</p>
+<h2>16. Sidebar, Outline, Menus, And Controls</h2>
+<p>Manual checks outside the document body:</p>
+<ul>
+<li>Sidebar file list text should use the accepted color.</li>
+<li>File-list separators should remain removed.</li>
+<li>Outline spacing should be tight but readable.</li>
+<li>Menus should match the Smoke Command surface and text treatment.</li>
+<li>Popovers should not show harsh white or gray rows.</li>
+<li>Scrollbars should look intentional.</li>
+<li>Preferences should match the theme.</li>
+<li>Footer and word-count controls should remain readable.</li>
+</ul>
+<h2>17. Export Checks</h2>
+<h3>HTML Export</h3>
+<p>Export this document to HTML.</p>
+<p>Expected result:</p>
+<ul>
+<li>Light page background remains.</li>
+<li>Document frame survives.</li>
+<li>Headings, code blocks, alerts, tables, and Mermaid output look intentional.</li>
+<li>No large white areas appear.</li>
+</ul>
+<h3>PDF Export</h3>
+<p>Export this document to PDF.</p>
+<p>Expected result:</p>
+<ul>
+<li>Light page background remains.</li>
+<li>Page margins are tight.</li>
+<li>Content is not oversized.</li>
+<li>Code blocks do not break the page layout.</li>
+<li>No reverted scaling behavior appears.</li>
+</ul>
+<h2>18. Final Result</h2>
+<p>Use this checklist after testing:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Editor view passes</li>
+<li><input checked="" disabled="" type="checkbox"> Sidebar and outline pass</li>
+<li><input checked="" disabled="" type="checkbox"> Menus and popovers pass</li>
+<li><input checked="" disabled="" type="checkbox"> HTML export passes</li>
+<li><input checked="" disabled="" type="checkbox"> PDF export passes</li>
+<li><input checked="" disabled="" type="checkbox"> Known limitations are acceptable</li>
+<li><input checked="" disabled="" type="checkbox"> Smoke Command can freeze at v2.60</li>
+</ul>
+
+</div>
+</body>
+</html>
