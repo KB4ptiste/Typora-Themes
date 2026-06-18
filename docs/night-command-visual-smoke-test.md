@@ -294,7 +294,7 @@ Expected result:
 
 Use this checklist after testing:
 
-- [x] Editor view passes
+- [ ] Editor view passes
 - [x] Sidebar and outline pass
 - [x] Menus and popovers pass
 - [x] HTML export passes
