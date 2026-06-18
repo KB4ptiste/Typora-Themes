@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.34 · Built for Typora
+   Version 2.35 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -422,6 +422,9 @@ html, body {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--link);
+  display: block;
+  position: relative;
+  padding-left: 1.25em;
 }
 
 #write h5 {
@@ -429,6 +432,9 @@ html, body {
   font-weight: 500;
   font-size: 1.375rem;
   color: var(--link);
+  display: block;
+  position: relative;
+  padding-left: 1.25em;
 }
 
 #write h6 {
@@ -459,6 +465,35 @@ html, body {
 #write h6:focus,
 #write h6.md-focus {
   color: var(--text-prose-hover) !important;
+}
+
+#write h4:hover,
+#write h4:focus,
+#write h4.md-focus,
+#write h5:hover,
+#write h5:focus,
+#write h5.md-focus {
+  transform: none !important;
+}
+
+#write h4::before,
+#write h5::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-right: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+#write h4:hover::before,
+#write h4:focus::before,
+#write h4.md-focus::before,
+#write h5:hover::before,
+#write h5:focus::before,
+#write h5.md-focus::before {
+  transform: translateY(-50%) scale(1.2);
+  box-shadow: var(--glow-shadow-box);
 }
 
 #write h3.md-heading::after,
