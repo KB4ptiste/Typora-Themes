@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.36 · Built for Typora
+   Version 2.37 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -415,6 +415,8 @@ html, body {
   font-weight: 700;
   font-size: 1.625rem;
   color: var(--link);
+  position: relative;
+  padding-left: 1.45em;
 }
 
 #write h4 {
@@ -424,7 +426,7 @@ html, body {
   color: var(--link);
   display: block;
   position: relative;
-  padding-left: 1.25em;
+  padding-left: 1.45em;
 }
 
 #write h5 {
@@ -434,7 +436,7 @@ html, body {
   color: var(--link);
   display: block;
   position: relative;
-  padding-left: 1.25em;
+  padding-left: 1.45em;
 }
 
 #write h6 {
@@ -442,6 +444,9 @@ html, body {
   font-weight: 500;
   font-size: 1.25rem;
   color: var(--link);
+  display: block;
+  position: relative;
+  padding-left: 1.45em;
 }
 
 /* H1 hover: lifts + expands underline — keep but recolor via --h1-underline-color */
@@ -453,6 +458,7 @@ html, body {
 #write h3:focus,
 #write h3.md-focus {
   color: var(--text-prose-hover) !important;
+  padding-left: 1.45em !important;
 }
 
 #write h4:hover,
@@ -472,12 +478,16 @@ html, body {
 #write h4.md-focus,
 #write h5:hover,
 #write h5:focus,
-#write h5.md-focus {
+#write h5.md-focus,
+#write h6:hover,
+#write h6:focus,
+#write h6.md-focus {
   transform: none !important;
 }
 
 #write h4::before,
-#write h5::before {
+#write h5::before,
+#write h6::before {
   position: absolute;
   left: 0;
   top: 50%;
@@ -494,6 +504,13 @@ html, body {
 #write h5.md-focus::before {
   transform: translateY(-50%) scale(1.2);
   box-shadow: var(--glow-shadow-box);
+}
+
+#write h6:hover::before,
+#write h6:focus::before,
+#write h6.md-focus::before {
+  transform: translateY(-50%) scaleX(1.5);
+  text-shadow: var(--glow-shadow-text);
 }
 
 #write h3.md-heading::after,
