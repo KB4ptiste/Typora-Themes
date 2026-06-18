@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.42 · Built for Typora
+   Version 2.43 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1594,39 +1594,40 @@ body .md-table-resize-popover .md-grid-board a:hover {
 
 #write .footnote-word,
 #write .footnote-item em {
-  color: #A99ABF;
+  color: #773CC0;
   font-family: var(--font-body);
   font-optical-sizing: auto;
 }
 
 #write sup.md-footnote,
 #write .footnote-ref {
-  color: var(--ui-accent-soft);
+  color: #4B2A7B;
   font-family: var(--font-data);
-  background-color: #21152F;
-  border: 1px solid #4B3764;
+  background-color: #D8C9E6;
+  border: 1px solid #9F86B8;
   border-radius: 5px;
   padding: 0 0.32em;
-  text-shadow: 0 0 6px rgba(240, 168, 198, 0.24);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.26);
 }
 
 #write sup.md-footnote:hover,
 #write .footnote-ref:hover {
-  color: #F6C2D8;
-  border-color: var(--ui-accent-soft);
-  box-shadow: 0 0 10px rgba(240, 168, 198, 0.22);
+  color: #3A1D5C;
+  background-color: #D2C2E2;
+  border-color: #7A5F96;
+  box-shadow: 0 0 10px rgba(75, 42, 123, 0.16);
 }
 
 .footnotes {
   margin-top: 3.5rem !important;
-  color: #A99ABF;
-  border-top: 1px solid #4B3764;
+  color: #773CC0;
+  border-top: 1px solid #9F86B8;
   padding-top: 1rem;
   font-size: 0.86em;
 }
 
 .footnotes .footnote-line {
-  color: #A99ABF;
+  color: #773CC0;
   font-family: var(--font-body);
   font-optical-sizing: auto;
   font-size: 0.86em;
@@ -1636,7 +1637,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
 .footnotes span.md-def-name,
 .footnotes span.md-def-name::before,
 .footnotes span.md-def-name::after {
-  color: var(--ui-accent-soft) !important;
+  color: #6D28D9 !important;
   font-family: var(--font-data);
 }
 
