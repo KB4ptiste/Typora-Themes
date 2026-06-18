@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.1 · Built for Typora
+   Version 2.3 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1405,25 +1405,25 @@ body .md-table-resize-popover .md-grid-board a:hover {
 }
 
 #write a {
-  color: var(--link);
-  text-decoration-color: rgba(91, 33, 182, 0.45);
+  color: var(--text-prose-hover);
+  text-decoration-color: rgba(109, 40, 217, 0.45);
   text-shadow: none;
 }
 
 #write a:not(.md-toc-inner):hover,
 #write a:visited:hover {
-  color: var(--text-prose-hover);
-  text-decoration-color: var(--text-prose-hover);
+  color: var(--link-hover);
+  text-decoration-color: var(--link-hover);
   text-shadow: 0 1px 0 rgba(75, 42, 123, 0.16);
 }
 
 #write a:not(.md-toc-inner)::before {
-  background-color: var(--link);
+  background-color: var(--text-prose-hover);
 }
 
 #write a:hover:not(.md-toc-inner)::before,
 #write a:visited:hover:not(.md-toc-inner)::before {
-  background-color: var(--text-prose-hover);
+  background-color: var(--link-hover);
 }
 
 #write a:visited {
