@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.8 · Built for Typora
+   Version 2.9 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1275,14 +1275,14 @@ body .md-table-resize-popover .md-grid-board a:hover {
    ================================================ */
 
 #write blockquote {
-  color: var(--text-color-secondary);
-  background-color: #17101F;
-  border: 1px solid #4B3764;
-  border-left: 4px solid #A78BFA;
+  color: var(--text-prose-alt);
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--button);
   border-radius: 14px;
   box-shadow:
-    inset 0 1px 0 rgba(231, 220, 245, 0.04),
-    0 10px 24px rgba(0, 0, 0, 0.18);
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 10px 24px rgba(75, 42, 123, 0.14);
 }
 
 #write blockquote::before {
@@ -1302,20 +1302,20 @@ body .md-table-resize-popover .md-grid-board a:hover {
 #write blockquote:active,
 #write blockquote:focus,
 #write blockquote:hover {
-  background-color: #1D1427;
-  border-color: #A78BFA;
+  background-color: var(--surface-readable);
+  border-color: var(--button);
   box-shadow:
-    inset 0 1px 0 rgba(231, 220, 245, 0.05),
-    0 12px 28px rgba(0, 0, 0, 0.22),
-    0 0 14px rgba(167, 139, 250, 0.12);
+    inset 0 1px 0 rgba(255, 255, 255, 0.50),
+    0 12px 28px rgba(75, 42, 123, 0.18),
+    0 0 14px rgba(109, 40, 217, 0.14);
   transform: none;
 }
 
 #write blockquote.md-focus::before,
 #write blockquote:focus::before,
 #write blockquote:hover::before {
-  color: #F6C2D8;
-  text-shadow: 0 0 8px rgba(240, 168, 198, 0.35);
+  color: var(--button);
+  text-shadow: 0 0 8px rgba(109, 40, 217, 0.25);
   transform: none;
 }
 
@@ -1992,25 +1992,25 @@ pre.md-meta-block::after {
    ================================================ */
 
 #write .md-alert {
-  color: #D6C8EA;
-  background-color: #17101F;
-  border: 1px solid #4B3764;
+  color: var(--text);
+  background-color: var(--surface-raised);
+  border: 1px solid var(--border-strong);
   border-left-width: 4px;
   border-radius: 14px;
   position: relative;
   box-shadow:
-    inset 0 1px 0 rgba(231, 220, 245, 0.04),
-    0 10px 24px rgba(0, 0, 0, 0.18);
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 10px 24px rgba(75, 42, 123, 0.14);
   transform: none;
 }
 
 #write .md-alert:hover {
-  background-color: #1D1427;
+  background-color: var(--surface-readable);
   transform: none;
   box-shadow:
-    inset 0 1px 0 rgba(231, 220, 245, 0.05),
-    0 12px 28px rgba(0, 0, 0, 0.22),
-    0 0 14px rgba(167, 139, 250, 0.12);
+    inset 0 1px 0 rgba(255, 255, 255, 0.50),
+    0 12px 28px rgba(75, 42, 123, 0.18),
+    0 0 14px rgba(109, 40, 217, 0.14);
 }
 
 #write .md-alert.md-alert-note { border-left-color: #67E8F9; }
@@ -2021,7 +2021,7 @@ pre.md-meta-block::after {
 
 #write .md-alert-text-container,
 #write .md-alert-text-container span {
-  color: #D6C8EA;
+  color: var(--text);
   font-family: var(--font-body);
   font-optical-sizing: auto;
 }
