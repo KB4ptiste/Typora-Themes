@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.6 · Built for Typora
+   Version 2.7 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -471,7 +471,7 @@ html, body {
 
 
 /* ================================================
-   SECTION SEPARATOR — ✦ U+2726 centered on gradient
+   SECTION SEPARATOR — ✦ U+2726 centered on rule
    Overrides base engine's rotated square box; spins on hover
    ================================================ */
 
@@ -486,7 +486,7 @@ html, body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: #15101C;
+  background: var(--surface-readable);
   color: var(--primary-color);
   font-size: 0.85rem;
   padding: 0 0.75rem;
@@ -500,7 +500,7 @@ html, body {
 
 #write hr:hover::after {
   animation: nc-spin 1.8s linear infinite;
-  background: #15101C;
+  background: var(--surface-readable);
   color: var(--primary-color);
   border: none;
   box-shadow: none;
