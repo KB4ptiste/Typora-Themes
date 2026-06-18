@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.28 · Built for Typora
+   Version 2.29 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2153,6 +2153,22 @@ pre.md-meta-block::after {
   color: #4B2A7B !important;
   background-color: #D8C9E6 !important;
   font-family: var(--font-data) !important;
+}
+
+#write .md-math-block mjx-container,
+#write .md-math-block mjx-container[jax],
+#write .md-math-block .MathJax,
+#write .md-math-block .MathJax_Display,
+#write .md-math-block .md-mathjax-preview {
+  color: #4B2A7B !important;
+  background-color: #D8C9E6 !important;
+}
+
+#write .md-math-block mjx-container svg,
+#write .md-math-block mjx-container svg g,
+#write .md-math-block mjx-container svg path {
+  fill: #4B2A7B !important;
+  stroke: #4B2A7B !important;
 }
 
 #write .md-diagram,
