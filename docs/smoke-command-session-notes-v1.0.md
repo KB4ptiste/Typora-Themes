@@ -1,6 +1,6 @@
 # Smoke Command Session Notes v1.0
 
-Version: 1.0
+Version: 1.1
 
 Date: 2026-06-18
 
@@ -13,7 +13,7 @@ Capture the working notes from the Smoke Command color pass and the future revie
 - Smoke Command is being tuned as a light Typora theme while preserving the Night Command layout and section structure.
 - Current active theme wrapper: `themes/smoke-command.css`.
 - Current base import: `themes/smoke-command/smoke-command.light.css`.
-- Current wrapper version at the time of this note: `v2.8`.
+- Current wrapper version at the time of this note: `v2.21`.
 - Color-only Smoke Command CSS/theme changes use Conventional Commit type `style`.
 
 ## Confirmed Visual Decisions
@@ -55,6 +55,10 @@ After Smoke Command is complete, review the Night Command heading system. The Sm
 
 After Smoke Command is complete, review whether to remove the gradient background in Night Command. Smoke Command removed the editor gradient because the center-light effect worked on the dark Night Command screen but did not work well for the lighter Smoke Command theme.
 
+### Math Block Layout Review
+
+After Smoke Command is complete, review math block layout in both Smoke Command and Night Command. The current Smoke Command color direction treats block math as a dark technical panel, similar to code blocks. The open layout question is whether math blocks should remain nearly full-width or use a narrower contained width.
+
 ## Communication Notes
 
 - When the user says "text color," "regular text," or "foreground," interpret that as the visible normal paragraph/sentence text in the editor.
@@ -68,5 +72,6 @@ These are the two notes intended for Codex memory:
 
 1. Review the Night Command heading system after Smoke Command is complete. Smoke Command may prove that heading hierarchy works better when font, weight, and size do more of the work and colors stay more consistent.
 2. Review removing the Night Command gradient background after Smoke Command is complete. Smoke Command removed the editor gradient because the center-light effect worked on the dark Night Command screen but did not work well for the lighter Smoke Command theme.
+3. Review math block layout in both Smoke Command and Night Command after Smoke Command is complete. Current Smoke Command treats block math as a dark technical panel, but the layout may be too wide and should be reviewed for both themes.
 
 <!-- END OF DOCUMENT -->
