@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.21 · Built for Typora
+   Version 2.22 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2161,8 +2161,8 @@ pre.md-meta-block::after {
 #write .md-fences[lang="mermaid"],
 #write .md-fences[lang="sequence"],
 #write .md-fences[lang="flow"] {
-  background-color: #17101F !important;
-  border-color: #4B3764 !important;
+  background-color: #21152F !important;
+  border-color: #8C73A5 !important;
   border-radius: 12px;
 }
 
@@ -2176,8 +2176,8 @@ pre.md-meta-block::after {
 #write .md-fences.md-focus[lang="mermaid"],
 #write .md-fences.md-focus[lang="sequence"],
 #write .md-fences.md-focus[lang="flow"] {
-  border-color: #A78BFA !important;
-  box-shadow: 0 0 14px rgba(167, 139, 250, 0.16);
+  border-color: #6D28D9 !important;
+  box-shadow: 0 0 14px rgba(109, 40, 217, 0.16);
 }
 
 #write .md-diagram-panel-error:not(:empty) {
@@ -2193,14 +2193,14 @@ svg[id^=mermaid] .edgeLabel,
 svg[id^=mermaid] .edgeLabel .label,
 svg[id^=mermaid] .edgeLabel span,
 svg[id^=mermaid] .edgeLabel p {
-  color: #F0A8C6 !important;
+  color: #E879F9 !important;
   background-color: transparent !important;
   border-color: transparent !important;
-  text-shadow: 0 0 6px rgba(240, 168, 198, 0.35);
+  text-shadow: 0 0 6px rgba(232, 121, 249, 0.28);
 }
 
 svg[id^=mermaid] .edgeLabel rect {
-  fill: var(--bg-color) !important;
+  fill: #21152F !important;
   fill-opacity: 1 !important;
   stroke: transparent !important;
   rx: 4px;
@@ -2209,9 +2209,9 @@ svg[id^=mermaid] .edgeLabel rect {
 
 svg[id^=mermaid] .edgeLabel text,
 svg[id^=mermaid] .edgeLabel tspan {
-  fill: #F0A8C6 !important;
-  color: #F0A8C6 !important;
-  text-shadow: 0 0 6px rgba(240, 168, 198, 0.35);
+  fill: #E879F9 !important;
+  color: #E879F9 !important;
+  text-shadow: 0 0 6px rgba(232, 121, 249, 0.28);
 }
 
 #write .md-htmlblock-container,
