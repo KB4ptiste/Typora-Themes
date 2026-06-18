@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.4 · Built for Typora
+   Version 2.5 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -394,14 +394,14 @@ html, body {
 #write h1 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 900;
-  font-size: 1.8rem;
+  font-size: 2.625rem;
   color: var(--primary);
 }
 
 #write h2 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 2.125rem;
   color: var(--link);
   background-color: var(--surface-readable);
   border: 1px solid rgba(75, 42, 123, 0.18);
@@ -413,28 +413,28 @@ html, body {
 #write h3 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   color: var(--link);
 }
 
 #write h4 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   color: var(--link);
 }
 
 #write h5 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--link);
 }
 
 #write h6 {
   font-family: "Wak", "Lucy Rose", sans-serif;
-  font-weight: 400;
-  font-size: 1.05rem;
+  font-weight: 500;
+  font-size: 1.125rem;
   color: var(--link);
 }
 
@@ -461,62 +461,12 @@ html, body {
   color: var(--text-prose-hover) !important;
 }
 
-#write h3.md-heading::after {
-  content: " ";
-  display: inline-block;
-  width: 1.35em;
-  height: 1.35em;
-  margin-left: 0.05em;
-  vertical-align: -0.10em;
-  transform: none;
-  -webkit-mask-image: var(--h3-icon-shape);
-  mask-image: var(--h3-icon-shape);
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
-
+#write h3.md-heading::after,
 #write h4.md-heading::after,
 #write h5.md-heading::after,
 #write h6.md-heading::after {
-  content: " ";
-  display: inline-block;
-  margin-left: 0.08em;
-  vertical-align: -0.10em;
-  transform: none;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
-
-#write h4.md-heading::after {
-  width: 1.2em;
-  height: 1.2em;
-  vertical-align: -0.10em;
-  position: relative;
-  top: -0.22em;
-  -webkit-mask-image: var(--h4-icon-shape);
-  mask-image: var(--h4-icon-shape);
-}
-
-#write h5.md-heading::after {
-  width: 1.05em;
-  height: 1.05em;
-  vertical-align: -0.10em;
-  position: relative;
-  top: -0.24em;
-  -webkit-mask-image: var(--h5-icon-shape);
-  mask-image: var(--h5-icon-shape);
-}
-
-#write h6.md-heading::after {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.24em;
-  -webkit-mask-image: var(--h6-icon-shape);
-  mask-image: var(--h6-icon-shape);
+  content: none;
+  display: none;
 }
 
 
