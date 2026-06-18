@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.9 · Built for Typora
+   Version 2.10 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1289,7 +1289,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
   content: "❝";
   top: 14px;
   left: 14px;
-  color: var(--ui-accent-soft);
+  color: #F6C2D8;
   font-family: var(--font-data);
   font-size: 1.75rem;
   font-weight: 700;
@@ -2014,7 +2014,7 @@ pre.md-meta-block::after {
 }
 
 #write .md-alert.md-alert-note { border-left-color: #67E8F9; }
-#write .md-alert.md-alert-tip { border-left-color: #5EEAD4; }
+#write .md-alert.md-alert-tip { border-left-color: #FACC15; }
 #write .md-alert.md-alert-warning { border-left-color: #F59E0B; }
 #write .md-alert.md-alert-important { border-left-color: #E879F9; }
 #write .md-alert.md-alert-caution { border-left-color: #FB7185; }
@@ -2027,7 +2027,7 @@ pre.md-meta-block::after {
 }
 
 #write .md-alert-text-note { color: #67E8F9 !important; }
-#write .md-alert-text-tip { color: #5EEAD4 !important; }
+#write .md-alert-text-tip { color: #FACC15 !important; }
 #write .md-alert-text-warning { color: #F59E0B !important; }
 #write .md-alert-text-important { color: #E879F9 !important; }
 #write .md-alert-text-caution { color: #FB7185 !important; }
@@ -2067,7 +2067,7 @@ pre.md-meta-block::after {
 #write .md-alert.md-alert-tip::after,
 #write .md-alert.md-alert-tip .md-alert-text-container::before {
   content: "\1F4A1";
-  filter: drop-shadow(0 0 5px rgba(94, 234, 212, 0.24));
+  filter: drop-shadow(0 0 5px rgba(250, 204, 21, 0.28));
 }
 
 #write .md-alert.md-alert-important::after,
