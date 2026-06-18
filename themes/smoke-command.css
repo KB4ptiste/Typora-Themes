@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.38 · Built for Typora
+   Version 2.39 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2367,6 +2367,17 @@ svg[id^=mermaid] .arrowheadPath {
   background-color: #D2C2E2;
   border-color: #7A5F96;
   box-shadow: 0 10px 22px rgba(75, 42, 123, 0.20);
+}
+
+#write .md-htmlblock-container,
+#write .md-rawblock-container {
+  text-align: center;
+}
+
+#write .md-htmlblock-container svg,
+#write .md-rawblock-container svg {
+  display: block;
+  margin: 0 auto;
 }
 
 #write .md-rawblock-input,
