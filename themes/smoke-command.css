@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.13 · Built for Typora
+   Version 2.14 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -573,15 +573,15 @@ pre.md-meta-block {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #0C0911 !important;
-  border-color: var(--ui-border) !important;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+  background-color: #21152F !important;
+  border-color: var(--border-strong) !important;
+  box-shadow: 0 12px 30px rgba(75, 42, 123, 0.18);
 }
 
 .md-fences:not([lang="mermaid"])::before {
-  color: var(--ui-accent-soft) !important;
-  background-color: #21152F !important;
-  border-bottom-color: var(--ui-border) !important;
+  color: #E879F9 !important;
+  background-color: #2D1C40 !important;
+  border-bottom-color: var(--border-strong) !important;
 }
 
 .md-fences:not([lang]),
@@ -600,7 +600,7 @@ pre.md-meta-block {
 }
 
 .md-fences.md-focus:not([lang="mermaid"])::before {
-  color: #F6C2D8 !important;
+  color: #FACC15 !important;
   background-color: #27173A !important;
   border-bottom-color: var(--ui-border-active) !important;
 }
@@ -608,12 +608,12 @@ pre.md-meta-block {
 .md-fences .cm-s-inner.CodeMirror,
 .cm-s-inner.CodeMirror {
   color: var(--code-variable) !important;
-  background-color: #0C0911 !important;
+  background-color: #21152F !important;
 }
 
 .md-fences .CodeMirror-gutters {
   color: var(--code-comment) !important;
-  background-color: #0C0911 !important;
+  background-color: #21152F !important;
   border-right-color: var(--ui-border-subtle) !important;
 }
 
