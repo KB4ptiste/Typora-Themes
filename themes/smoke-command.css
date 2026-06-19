@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.47 · Built for Typora
+   Version 2.48 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1061,8 +1061,17 @@ body.megamenu-opened *,
 #info-panel-tab-outline,
 #info-panel-tab-search {
   color: var(--text-prose-alt) !important;
-  border-color: transparent !important;
+  background-color: var(--surface-readable) !important;
+  border: 1px solid var(--border-strong) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 5px 14px rgba(75, 42, 123, 0.14) !important;
   transition: color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+}
+
+#info-panel-tab-file .info-panel-tab-border,
+#info-panel-tab-outline .info-panel-tab-border,
+#info-panel-tab-search .info-panel-tab-border {
+  display: none !important;
 }
 
 #info-panel-tab-file:hover,
@@ -1070,15 +1079,17 @@ body.megamenu-opened *,
 #info-panel-tab-search:hover {
   color: var(--ui-text-strong) !important;
   background-color: var(--ui-surface-hover) !important;
-  box-shadow: var(--ui-glow-hover);
+  border-color: var(--button) !important;
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.12), var(--ui-glow-hover);
 }
 
 .active-tab-files #info-panel-tab-file,
 .active-tab-outline #info-panel-tab-outline,
 .ty-show-search #info-panel-tab-search {
   color: var(--ui-text-strong) !important;
-  background-color: var(--ui-surface-active) !important;
-  box-shadow: inset 3px 0 0 var(--ui-border-active), var(--ui-glow-active);
+  background-color: var(--surface-sunken) !important;
+  border-color: var(--button) !important;
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.16), var(--ui-glow-active);
 }
 
 /* File tree and outline */
@@ -1727,6 +1738,50 @@ pre.md-meta-block::after {
 
 .typora-sourceview-on .CodeMirror-cursor {
   border-left-color: var(--button) !important;
+}
+
+.typora-sourceview-on .cm-header,
+.typora-sourceview-on .cm-keyword,
+.typora-sourceview-on .cm-tag {
+  color: #5B21B6 !important;
+}
+
+.typora-sourceview-on .cm-def,
+.typora-sourceview-on .cm-variable-2,
+.typora-sourceview-on .cm-variable-3,
+.typora-sourceview-on .cm-builtin {
+  color: #4B2A7B !important;
+}
+
+.typora-sourceview-on .cm-attribute,
+.typora-sourceview-on .cm-property,
+.typora-sourceview-on .cm-qualifier {
+  color: #6D28D9 !important;
+}
+
+.typora-sourceview-on .cm-string,
+.typora-sourceview-on .cm-string-2 {
+  color: #2F7D50 !important;
+}
+
+.typora-sourceview-on .cm-number,
+.typora-sourceview-on .cm-atom {
+  color: #8E477A !important;
+}
+
+.typora-sourceview-on .cm-comment,
+.typora-sourceview-on .cm-quote,
+.typora-sourceview-on .cm-meta {
+  color: #7A5F96 !important;
+}
+
+.typora-sourceview-on .cm-link,
+.typora-sourceview-on .cm-url {
+  color: #4E78A8 !important;
+}
+
+.typora-sourceview-on .cm-hr {
+  color: #8B6508 !important;
 }
 
 
@@ -2699,6 +2754,14 @@ body.typora-export .typora-export-sidebar + #write,
     background-image: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
+  }
+
+  #write .md-alert-text-note {
+    color: #4E78A8 !important;
+  }
+
+  #write .md-alert-text-tip {
+    color: #8B6508 !important;
   }
 
   #write .md-alert,
