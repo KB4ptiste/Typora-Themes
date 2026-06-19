@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.53 · Built for Typora
+   Version 2.55 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1002,7 +1002,7 @@ body.megamenu-opened *,
 .ty-preferences .titlebar-text,
 .ty-preferences #window-title {
   font-family: var(--font-display) !important;
-  font-size: 1.7rem !important;
+  font-size: 1.85rem !important;
   font-weight: 700;
   color: var(--ui-text-strong) !important;
   letter-spacing: 0.025em;
@@ -1868,9 +1868,18 @@ pre.md-meta-block::after {
 .ty-tooltip,
 #ty-tooltip,
 .code-tooltip-content,
-.md-rawblock-tooltip,
 .md-toc-tooltip {
   color: #4B2A7B !important;
+  background-color: #D8C9E6 !important;
+  border: 1px solid #9F86B8 !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 18px 42px rgba(75, 42, 123, 0.18),
+    0 0 18px rgba(188, 168, 208, 0.22) !important;
+}
+
+.md-rawblock-tooltip {
+  color: #A78BFA !important;
   background-color: #D8C9E6 !important;
   border: 1px solid #9F86B8 !important;
   border-radius: 12px !important;
@@ -1912,7 +1921,7 @@ pre.md-meta-block::after {
 .modal-content .btn,
 .popover .btn,
 .md-rawblock-tooltip .md-rawblock-tooltip-btn {
-  color: var(--text-prose-alt) !important;
+  color: #D9C2F5 !important;
   background-color: var(--surface-readable) !important;
   border: 1px solid var(--border-strong) !important;
   border-radius: 6px !important;
