@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.52 · Built for Typora
+   Version 2.53 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -724,11 +724,6 @@ pre.md-meta-block {
   border-bottom-color: var(--ui-border-active) !important;
 }
 
-.md-fences:not([lang="mermaid"]) .md-rawblock-tooltip,
-.md-fences:not([lang="mermaid"]) .code-tooltip-content {
-  color: #A78BFA !important;
-}
-
 .md-fences .cm-s-inner.CodeMirror,
 .cm-s-inner.CodeMirror {
   color: var(--code-variable) !important;
@@ -1001,11 +996,13 @@ body.megamenu-opened *,
 .ty-preferences .title-bar *,
 .ty-preferences > header,
 .ty-preferences > header *,
+.ty-preferences .window-header,
+.ty-preferences .window-header *,
 .ty-preferences .window-title,
 .ty-preferences .titlebar-text,
 .ty-preferences #window-title {
   font-family: var(--font-display) !important;
-  font-size: 1.35rem !important;
+  font-size: 1.7rem !important;
   font-weight: 700;
   color: var(--ui-text-strong) !important;
   letter-spacing: 0.025em;
@@ -2666,7 +2663,7 @@ svg[id^=mermaid] .arrowheadPath {
 #write .md-rawblock-tooltip,
 #write .md-htmlblock .md-rawblock-tooltip,
 #write .md-rawblock .md-rawblock-tooltip {
-  color: var(--text-prose-alt) !important;
+  color: #A78BFA !important;
   background-color: var(--surface-readable) !important;
   border: 1px solid var(--border-strong) !important;
   border-radius: 8px !important;
