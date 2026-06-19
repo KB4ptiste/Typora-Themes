@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.50 · Built for Typora
+   Version 2.51 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -660,7 +660,7 @@ pre.md-meta-block {
 }
 
 .md-fences:not([lang="mermaid"])::before {
-  color: #A78BFA !important;
+  color: var(--code-meta) !important;
   background-color: #2D1C40 !important;
   border-bottom-color: var(--border-strong) !important;
 }
@@ -681,7 +681,7 @@ pre.md-meta-block {
 }
 
 .md-fences.md-focus:not([lang="mermaid"])::before {
-  color: #A78BFA !important;
+  color: var(--code-meta) !important;
   background-color: #27173A !important;
   border-bottom-color: var(--ui-border-active) !important;
 }
@@ -2572,10 +2572,25 @@ svg[id^=mermaid] .arrowheadPath {
 #write .md-fences[lang="mermaid"] .cm-variable-2,
 #write .md-fences[lang="sequence"] .cm-variable-2,
 #write .md-fences[lang="flow"] .cm-variable-2,
+#write .md-fences[lang="mermaid"] .cm-variable-3,
+#write .md-fences[lang="sequence"] .cm-variable-3,
+#write .md-fences[lang="flow"] .cm-variable-3,
 #write .md-fences[lang="mermaid"] .cm-string,
 #write .md-fences[lang="sequence"] .cm-string,
 #write .md-fences[lang="flow"] .cm-string {
-  color: #7A5F96 !important;
+  color: #4B2A7B !important;
+}
+
+#write .md-fences[lang="mermaid"] .cm-def,
+#write .md-fences[lang="sequence"] .cm-def,
+#write .md-fences[lang="flow"] .cm-def,
+#write .md-fences[lang="mermaid"] .cm-atom,
+#write .md-fences[lang="sequence"] .cm-atom,
+#write .md-fences[lang="flow"] .cm-atom,
+#write .md-fences[lang="mermaid"] .cm-number,
+#write .md-fences[lang="sequence"] .cm-number,
+#write .md-fences[lang="flow"] .cm-number {
+  color: #5B21B6 !important;
 }
 
 #write .md-fences[lang="mermaid"] .cm-operator,
