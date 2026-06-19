@@ -310,8 +310,7 @@ html, body {
   word-spacing: normal;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  background-color: #15101C;
-  background-image: radial-gradient(ellipse at center top, #1B1425 0%, #15101C 58%, #120D18 100%);
+  background-color: #211629;
   background-repeat: no-repeat;
   border: 4px solid #543B6D;
   border-radius: 18px;
@@ -482,7 +481,7 @@ html, body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: #15101C;
+  background: #211629;
   color: var(--primary-color);
   font-size: 0.85rem;
   padding: 0 0.75rem;
@@ -496,7 +495,7 @@ html, body {
 
 #write hr:hover::after {
   animation: nc-spin 1.8s linear infinite;
-  background: #15101C;
+  background: #211629;
   color: var(--primary-color);
   border: none;
   box-shadow: none;
@@ -2223,8 +2222,7 @@ svg[id^=mermaid] .edgeLabel tspan {
   margin: 24px auto !important;
   padding: 56px 72px !important;
   color: var(--text-color);
-  background-color: #15101C;
-  background-image: radial-gradient(ellipse at center top, #1B1425 0%, #15101C 58%, #120D18 100%);
+  background-color: #211629;
   border: 4px solid #543B6D !important;
   border-radius: 18px !important;
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
@@ -2317,8 +2315,7 @@ svg[id^=mermaid] .edgeLabel tspan {
     margin: 0 auto !important;
     padding: 3mm !important;
     color: var(--text-color) !important;
-    background-color: #15101C !important;
-    background-image: radial-gradient(ellipse at center top, #1B1425 0%, #15101C 58%, #120D18 100%) !important;
+    background-color: #211629 !important;
     border: 3px solid #543B6D !important;
     border-radius: 14px !important;
     box-shadow: none !important;
