@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.51 · Built for Typora
+   Version 2.52 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -660,9 +660,47 @@ pre.md-meta-block {
 }
 
 .md-fences:not([lang="mermaid"])::before {
-  color: var(--code-meta) !important;
+  color: #E879F9 !important;
   background-color: #2D1C40 !important;
   border-bottom-color: var(--border-strong) !important;
+}
+
+.md-fences[lang="javascript"]::before,
+.md-fences[lang="js"]::before,
+.md-fences[lang="json"]::before {
+  color: #FACC15 !important;
+}
+
+.md-fences[lang="css"]::before,
+.md-fences[lang="scss"]::before,
+.md-fences[lang="less"]::before {
+  color: #67E8F9 !important;
+}
+
+.md-fences[lang="html"]::before,
+.md-fences[lang="xml"]::before,
+.md-fences[lang="svg"]::before {
+  color: #F0A8C6 !important;
+}
+
+.md-fences[lang="bash"]::before,
+.md-fences[lang="sh"]::before,
+.md-fences[lang="shell"]::before,
+.md-fences[lang="powershell"]::before,
+.md-fences[lang="ps1"]::before {
+  color: #86EFAC !important;
+}
+
+.md-fences[lang="python"]::before,
+.md-fences[lang="py"]::before {
+  color: #93C5FD !important;
+}
+
+.md-fences[lang="markdown"]::before,
+.md-fences[lang="md"]::before,
+.md-fences[lang="text"]::before,
+.md-fences[lang="txt"]::before {
+  color: #C4B5FD !important;
 }
 
 .md-fences:not([lang]),
@@ -681,9 +719,14 @@ pre.md-meta-block {
 }
 
 .md-fences.md-focus:not([lang="mermaid"])::before {
-  color: var(--code-meta) !important;
+  color: #FACC15 !important;
   background-color: #27173A !important;
   border-bottom-color: var(--ui-border-active) !important;
+}
+
+.md-fences:not([lang="mermaid"]) .md-rawblock-tooltip,
+.md-fences:not([lang="mermaid"]) .code-tooltip-content {
+  color: #A78BFA !important;
 }
 
 .md-fences .cm-s-inner.CodeMirror,
@@ -1002,7 +1045,7 @@ body.megamenu-opened *,
 .megamenu-content,
 .megamenu-menu-panel,
 .megamenu-section {
-  font-size: 1rem !important;
+  font-size: 1.12rem !important;
 }
 
 #megamenu-menu-header-title,
@@ -1010,7 +1053,7 @@ body.megamenu-opened *,
 .ty-preferences .window-title,
 .ty-preferences #window-title {
   font-family: var(--font-display) !important;
-  font-size: 1.7rem !important;
+  font-size: 1.95rem !important;
   line-height: 1.15 !important;
   color: var(--ui-text-strong) !important;
 }
@@ -1027,7 +1070,7 @@ body.megamenu-opened *,
 .megamenu-menu-panel p,
 .megamenu-menu-panel table,
 .megamenu-menu-panel .btn {
-  font-size: 0.98rem !important;
+  font-size: 1.08rem !important;
 }
 
 /* Longer UI copy */
@@ -1061,35 +1104,53 @@ body.megamenu-opened *,
 #info-panel-tab-outline,
 #info-panel-tab-search {
   color: var(--text-prose-alt) !important;
-  background-color: var(--surface-readable) !important;
-  border: 1px solid var(--border-strong) !important;
-  border-radius: 8px !important;
-  box-shadow: 0 5px 14px rgba(75, 42, 123, 0.14) !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  position: relative;
   transition: color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
 }
 
 #info-panel-tab-file .info-panel-tab-border,
 #info-panel-tab-outline .info-panel-tab-border,
 #info-panel-tab-search .info-panel-tab-border {
-  display: none !important;
+  display: block !important;
+  top: auto !important;
+  bottom: -0.35rem !important;
+  height: 3px !important;
+  background-color: rgba(109, 40, 217, 0.34) !important;
+  box-shadow: 0 4px 12px rgba(109, 40, 217, 0.16) !important;
 }
 
 #info-panel-tab-file:hover,
 #info-panel-tab-outline:hover,
 #info-panel-tab-search:hover {
   color: var(--ui-text-strong) !important;
-  background-color: var(--ui-surface-hover) !important;
-  border-color: var(--button) !important;
-  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.12), var(--ui-glow-hover);
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#info-panel-tab-file:hover .info-panel-tab-border,
+#info-panel-tab-outline:hover .info-panel-tab-border,
+#info-panel-tab-search:hover .info-panel-tab-border {
+  background-color: rgba(109, 40, 217, 0.58) !important;
+  box-shadow: 0 5px 14px rgba(109, 40, 217, 0.22) !important;
 }
 
 .active-tab-files #info-panel-tab-file,
 .active-tab-outline #info-panel-tab-outline,
 .ty-show-search #info-panel-tab-search {
   color: var(--ui-text-strong) !important;
-  background-color: var(--surface-sunken) !important;
-  border-color: var(--button) !important;
-  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.16), var(--ui-glow-active);
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.active-tab-files #info-panel-tab-file .info-panel-tab-border,
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-border,
+.ty-show-search #info-panel-tab-search .info-panel-tab-border {
+  background-color: var(--button) !important;
+  box-shadow: 0 5px 16px rgba(109, 40, 217, 0.36) !important;
 }
 
 /* File tree and outline */
