@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.45 · Built for Typora
+   Version 2.46 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2458,11 +2458,13 @@ svg[id^=mermaid] .arrowheadPath {
    Export and Print
    ================================================ */
 
+body.typora-export,
 .typora-export body {
   color: var(--text-color);
   background-color: var(--bg-color);
 }
 
+body.typora-export #write,
 .typora-export #write {
   width: min(92%, 1100px) !important;
   max-width: 1100px !important;
@@ -2479,6 +2481,100 @@ svg[id^=mermaid] .arrowheadPath {
   box-sizing: border-box;
 }
 
+body.typora-export .typora-export-sidebar,
+.typora-export .typora-export-sidebar {
+  color: #773CC0 !important;
+  background-color: #D2C2E2 !important;
+  border: 2px solid #9F86B8 !important;
+  box-shadow: 0 18px 42px rgba(75, 42, 123, 0.18) !important;
+}
+
+body.typora-export .typora-export-sidebar:hover,
+.typora-export .typora-export-sidebar:hover {
+  border-color: #7A5F96 !important;
+  box-shadow:
+    0 18px 42px rgba(75, 42, 123, 0.20),
+    0 0 18px rgba(159, 134, 184, 0.24) !important;
+}
+
+body.typora-export .typora-export-sidebar::before,
+.typora-export .typora-export-sidebar::before {
+  content: "Table of Contents" !important;
+  color: #5B21B6 !important;
+  text-shadow: 0 3px 10px rgba(75, 42, 123, 0.14) !important;
+}
+
+body.typora-export .typora-export-sidebar .outline-h2,
+body.typora-export .typora-export-sidebar .outline-h3,
+body.typora-export .typora-export-sidebar .outline-h4,
+body.typora-export .typora-export-sidebar .outline-h5,
+body.typora-export .typora-export-sidebar .outline-h6,
+.typora-export .typora-export-sidebar .outline-h2,
+.typora-export .typora-export-sidebar .outline-h3,
+.typora-export .typora-export-sidebar .outline-h4,
+.typora-export .typora-export-sidebar .outline-h5,
+.typora-export .typora-export-sidebar .outline-h6 {
+  border-left-color: rgba(159, 134, 184, 0.42) !important;
+}
+
+body.typora-export .typora-export-sidebar .outline-item,
+.typora-export .typora-export-sidebar .outline-item {
+  color: #773CC0 !important;
+}
+
+body.typora-export .typora-export-sidebar .outline-h1 > .outline-item,
+.typora-export .typora-export-sidebar .outline-h1 > .outline-item {
+  color: #4B2A7B !important;
+}
+
+body.typora-export .typora-export-sidebar .outline-label,
+.typora-export .typora-export-sidebar .outline-label {
+  color: inherit !important;
+}
+
+body.typora-export .typora-export-sidebar .outline-expander,
+.typora-export .typora-export-sidebar .outline-expander {
+  color: #6D28D9 !important;
+}
+
+body.typora-export .outline-expander::before,
+.typora-export .outline-expander::before {
+  color: #6D28D9 !important;
+}
+
+body.typora-export .outline-expander:hover::before,
+body.typora-export .outline-item-open > .outline-item > .outline-expander::before,
+.typora-export .outline-expander:hover::before,
+.typora-export .outline-item-open > .outline-item > .outline-expander::before {
+  color: #4B2A7B !important;
+}
+
+body.typora-export .typora-export-sidebar .outline-item:hover,
+.typora-export .typora-export-sidebar .outline-item:hover {
+  color: #4B2A7B !important;
+  background-color: rgba(200, 182, 219, 0.78) !important;
+}
+
+body.typora-export .typora-export-sidebar .outline-item-wrapper.outline-item-active > .outline-item,
+.typora-export .typora-export-sidebar .outline-item-wrapper.outline-item-active > .outline-item {
+  color: #4B2A7B !important;
+  background-color: #C8B6DB !important;
+  box-shadow: 0 6px 16px rgba(75, 42, 123, 0.16) !important;
+}
+
+body.typora-export .typora-export-sidebar .outline-item-wrapper.outline-item-active > .outline-item .outline-label,
+body.typora-export .typora-export-sidebar .outline-item-wrapper.outline-item-active > .outline-item .outline-expander::before,
+.typora-export .typora-export-sidebar .outline-item-wrapper.outline-item-active > .outline-item .outline-label,
+.typora-export .typora-export-sidebar .outline-item-wrapper.outline-item-active > .outline-item .outline-expander::before {
+  color: #4B2A7B !important;
+}
+
+body.typora-export .typora-export-sidebar .outline-item-wrapper.outline-item-active > .outline-item::after,
+.typora-export .typora-export-sidebar .outline-item-wrapper.outline-item-active > .outline-item::after {
+  color: #6D28D9 !important;
+}
+
+body.typora-export .typora-export-sidebar + #write,
 .typora-export-sidebar + #write {
   width: auto !important;
   max-width: none !important;
@@ -2547,6 +2643,7 @@ svg[id^=mermaid] .arrowheadPath {
 @media print {
   html,
   body,
+  body.typora-export,
   .typora-export body {
     background-color: #BCA8D0 !important;
   }
@@ -2556,7 +2653,9 @@ svg[id^=mermaid] .arrowheadPath {
     display: none !important;
   }
 
+  body.typora-export #write,
   .typora-export #write,
+  body.typora-export .typora-export-sidebar + #write,
   .typora-export-sidebar + #write,
   #write {
     width: 100% !important;
