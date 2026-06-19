@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.49 · Built for Typora
+   Version 2.50 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -660,7 +660,7 @@ pre.md-meta-block {
 }
 
 .md-fences:not([lang="mermaid"])::before {
-  color: #E879F9 !important;
+  color: #A78BFA !important;
   background-color: #2D1C40 !important;
   border-bottom-color: var(--border-strong) !important;
 }
@@ -681,7 +681,7 @@ pre.md-meta-block {
 }
 
 .md-fences.md-focus:not([lang="mermaid"])::before {
-  color: #FACC15 !important;
+  color: #A78BFA !important;
   background-color: #27173A !important;
   border-bottom-color: var(--ui-border-active) !important;
 }
@@ -1241,16 +1241,28 @@ div.outline-item-active .outline-label {
 .ty-preferences input[type="radio"],
 .modal input[type="checkbox"],
 .modal input[type="radio"] {
-  accent-color: var(--ui-accent-soft) !important;
+  accent-color: var(--button) !important;
 }
 
 .ty-preferences input[type="checkbox"]:focus,
 .ty-preferences input[type="radio"]:focus,
 .modal input[type="checkbox"]:focus,
 .modal input[type="radio"]:focus {
-  outline: 1px solid var(--ui-accent-soft) !important;
+  outline: 1px solid var(--button) !important;
   outline-offset: 2px;
-  filter: drop-shadow(0 0 5px rgba(240, 168, 198, 0.45));
+  filter: drop-shadow(0 0 5px rgba(109, 40, 217, 0.36));
+}
+
+#write input[type="checkbox"],
+#write input[type="radio"] {
+  accent-color: var(--button) !important;
+}
+
+#write input[type="checkbox"]:focus,
+#write input[type="radio"]:focus {
+  outline: 1px solid var(--button) !important;
+  outline-offset: 2px;
+  filter: drop-shadow(0 0 5px rgba(109, 40, 217, 0.36));
 }
 
 .ty-preferences select:focus,
@@ -2288,7 +2300,7 @@ pre.md-meta-block::after {
 #write .md-math-block .CodeMirror,
 #write .md-math-block .cm-s-inner.CodeMirror,
 #write .md-rawblock-on-edit .CodeMirror {
-  color: #4B2A7B !important;
+  color: #3A1D5C !important;
   background-color: #C8B6DB !important;
   font-family: var(--font-data) !important;
 }
@@ -2310,8 +2322,25 @@ pre.md-meta-block::after {
 #write .md-math-block .CodeMirror-code,
 #write .md-math-block .CodeMirror-line,
 #write .md-math-block pre.CodeMirror-line {
-  color: #4B2A7B !important;
+  color: #3A1D5C !important;
   background-color: transparent !important;
+}
+
+#write .md-math-block .cm-keyword,
+#write .md-math-block .cm-tag,
+#write .md-math-block .cm-builtin {
+  color: #5B21B6 !important;
+}
+
+#write .md-math-block .cm-variable-2,
+#write .md-math-block .cm-variable-3,
+#write .md-math-block .cm-def {
+  color: #4B2A7B !important;
+}
+
+#write .md-math-block .cm-number,
+#write .md-math-block .cm-atom {
+  color: #6A5F2A !important;
 }
 
 #write .md-math-block mjx-container,
@@ -2336,7 +2365,7 @@ pre.md-meta-block::after {
 #write .md-fences[lang="mermaid"],
 #write .md-fences[lang="sequence"],
 #write .md-fences[lang="flow"] {
-  background-color: #D8C9E6 !important;
+  background-color: #C8B6DB !important;
   border-color: #8C73A5 !important;
   border-radius: 12px;
 }
@@ -2356,8 +2385,8 @@ pre.md-meta-block::after {
 }
 
 #write .md-diagram-panel-error:not(:empty) {
-  color: #FCA5A5;
-  background-color: #35151E;
+  color: #4B2A7B;
+  background-color: #D8C9E6;
   border: 1px solid #FB7185;
   border-radius: 8px;
   padding: 0.75rem 1rem;
@@ -2482,9 +2511,80 @@ svg[id^=mermaid] .arrowheadPath {
 #write .md-rawblock-input,
 #write .md-htmlblock .md-rawblock-input,
 #write .md-rawblock .md-rawblock-input {
-  color: var(--text-prose-alt);
+  color: #3A1D5C;
   background-color: var(--surface-sunken);
   font-family: var(--font-data);
+}
+
+#write .md-rawblock .CodeMirror,
+#write .md-htmlblock .CodeMirror,
+#write .md-rawblock-on-edit .CodeMirror {
+  color: #3A1D5C !important;
+  background-color: var(--surface-sunken) !important;
+}
+
+#write .md-rawblock .cm-tag,
+#write .md-htmlblock .cm-tag,
+#write .md-rawblock-on-edit .cm-tag {
+  color: #5B21B6 !important;
+}
+
+#write .md-rawblock .cm-attribute,
+#write .md-htmlblock .cm-attribute,
+#write .md-rawblock-on-edit .cm-attribute {
+  color: #4B2A7B !important;
+}
+
+#write .md-rawblock .cm-string,
+#write .md-htmlblock .cm-string,
+#write .md-rawblock-on-edit .cm-string,
+#write .md-rawblock .cm-string-2,
+#write .md-htmlblock .cm-string-2,
+#write .md-rawblock-on-edit .cm-string-2 {
+  color: #2F7D50 !important;
+}
+
+#write .md-rawblock .cm-number,
+#write .md-htmlblock .cm-number,
+#write .md-rawblock-on-edit .cm-number,
+#write .md-rawblock .cm-atom,
+#write .md-htmlblock .cm-atom,
+#write .md-rawblock-on-edit .cm-atom {
+  color: #8E477A !important;
+}
+
+#write .md-fences[lang="mermaid"] .cm-s-inner.CodeMirror,
+#write .md-fences[lang="sequence"] .cm-s-inner.CodeMirror,
+#write .md-fences[lang="flow"] .cm-s-inner.CodeMirror,
+#write .md-fences[lang="mermaid"] .CodeMirror,
+#write .md-fences[lang="sequence"] .CodeMirror,
+#write .md-fences[lang="flow"] .CodeMirror {
+  color: #4B2A7B !important;
+  background-color: #C8B6DB !important;
+}
+
+#write .md-fences[lang="mermaid"] .cm-keyword,
+#write .md-fences[lang="sequence"] .cm-keyword,
+#write .md-fences[lang="flow"] .cm-keyword {
+  color: #5B21B6 !important;
+}
+
+#write .md-fences[lang="mermaid"] .cm-variable-2,
+#write .md-fences[lang="sequence"] .cm-variable-2,
+#write .md-fences[lang="flow"] .cm-variable-2,
+#write .md-fences[lang="mermaid"] .cm-string,
+#write .md-fences[lang="sequence"] .cm-string,
+#write .md-fences[lang="flow"] .cm-string {
+  color: #7A5F96 !important;
+}
+
+#write .md-fences[lang="mermaid"] .cm-operator,
+#write .md-fences[lang="sequence"] .cm-operator,
+#write .md-fences[lang="flow"] .cm-operator,
+#write .md-fences[lang="mermaid"] .cm-meta,
+#write .md-fences[lang="sequence"] .cm-meta,
+#write .md-fences[lang="flow"] .cm-meta {
+  color: #6D28D9 !important;
 }
 
 #write .md-rawblock-tooltip,
