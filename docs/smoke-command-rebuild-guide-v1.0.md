@@ -1,6 +1,6 @@
 # Smoke Command Rebuild Guide
 
-Version: 1.0
+Version: 1.1
 
 Date: 2026-06-18
 
@@ -20,9 +20,9 @@ It also captures the fixes and patterns likely worth reviewing in Night Command 
 
 ## Current Version
 
-- Current Smoke Command wrapper version: `2.43`
+- Current Smoke Command wrapper version: `2.55`
 - Current Smoke visual smoke test version: `1.0`
-- Current session notes version: `1.2`
+- Current session notes version: `1.3`
 
 ## Core Architecture
 
@@ -321,7 +321,16 @@ Review these after Smoke Command is complete:
 1. Heading hierarchy: consider letting font, size, and weight carry more of the hierarchy instead of varied colors.
 2. H3-H6 left-indicator alignment: make lower heading text start at the same distance from the left edge.
 3. Gradient background: decide whether the Night Command center-light gradient should remain.
-4. Math layout: decide whether math blocks should stay full-width or use a narrower contained width.
+4. Math layout: review the Smoke Command light contained-panel approach and decide whether Night Command needs similar edit/open state fixes, especially border continuity and the upper-right raw-block handle.
 5. Table hover white-text shadow: consider whether the effect should be reused.
+6. Inline `[TOC]`: decide whether Night Command should use `Table of Contents` as the visible title and confirm nested TOC indentation after heading marker changes.
+7. Source/raw block styling: review raw HTML, raw SVG, source mode, and code-language edit controls. Keep selectors scoped so SVG fixes do not affect native HTML such as `<details>`.
+8. Export output: verify HTML and PDF output for outline/sidebar styling, PDF callout text colors, SVG/image containment, math readability, Mermaid readability, tables, and code blocks.
+9. Sidebar and controls: compare File/Outline active underline placement, inactive-tab dimming, status bar controls, source-code mode controls, and Preferences scaling against the final Smoke Command decisions.
+
+## Version History
+
+- `1.1` - 2026-06-19 - Updated Smoke Command version references and expanded the Night Command follow-up list.
+- `1.0` - 2026-06-18 - Created the Smoke Command rebuild guide.
 
 <!-- END OF DOCUMENT -->

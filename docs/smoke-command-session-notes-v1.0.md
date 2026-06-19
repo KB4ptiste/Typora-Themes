@@ -1,6 +1,6 @@
 # Smoke Command Session Notes v1.0
 
-Version: 1.2
+Version: 1.3
 
 Date: 2026-06-18
 
@@ -13,7 +13,7 @@ Capture the working notes from the Smoke Command color pass and the future revie
 - Smoke Command is being tuned as a light Typora theme while preserving the Night Command layout and section structure.
 - Current active theme wrapper: `themes/smoke-command.css`.
 - Current base import: `themes/smoke-command/smoke-command.light.css`.
-- Current wrapper version at the time of this note: `v2.37`.
+- Current wrapper version at the time of this note: `v2.55`.
 - Color-only Smoke Command CSS/theme changes use Conventional Commit type `style`.
 
 ## Confirmed Visual Decisions
@@ -61,7 +61,23 @@ After Smoke Command is complete, review whether to remove the gradient backgroun
 
 ### Math Block Layout Review
 
-After Smoke Command is complete, review math block layout in both Smoke Command and Night Command. The current Smoke Command color direction treats block math as a dark technical panel, similar to code blocks. The open layout question is whether math blocks should remain nearly full-width or use a narrower contained width.
+After Smoke Command is complete, review math block layout in both Smoke Command and Night Command. Smoke Command moved block math away from the dark code-like panel and toward a light contained panel using the same general design language as Mermaid. Review whether Night Command should keep its current math treatment or adopt the improved layout handling, especially for edit/open state borders and the upper-right raw-block handle.
+
+### Night Command TOC Review
+
+Review Night Command's inline `[TOC]` treatment after Smoke Command is complete. Smoke Command fixed the hierarchy/indent behavior by preserving hidden heading marker structure, and changed the visible title to `Table of Contents`. Confirm whether Night Command should use the same visible title and whether its nested TOC indentation remains correct after any heading changes.
+
+### Night Command Source And Raw Block Review
+
+Review Night Command source-mode, raw HTML, raw SVG, and code-language edit controls after Smoke Command is complete. Smoke Command exposed several Typora-specific raw-block states where broad selectors affected unrelated HTML such as `<details>`. Keep future Night Command fixes tightly scoped to the raw block type being changed.
+
+### Night Command Export Review
+
+Review Night Command HTML and PDF export behavior after Smoke Command is complete. Smoke Command required export-specific attention for outline/sidebar appearance, PDF callout text colors, SVG/image containment, math readability, Mermaid readability, tables, and code blocks.
+
+### Night Command Sidebar And Controls Review
+
+Review Night Command sidebar, File/Outline tabs, status bar controls, and Preferences UI after Smoke Command is complete. Smoke Command moved File/Outline active lines to the bottom and preserved dimmed inactive-tab treatment. Confirm whether Night Command should keep its current behavior or align with the final Smoke Command control patterns.
 
 ## Communication Notes
 
@@ -72,11 +88,20 @@ After Smoke Command is complete, review math block layout in both Smoke Command 
 
 ## Recommended Memory Notes
 
-These are the two notes intended for Codex memory:
+These are the notes intended for Codex memory:
 
 1. Review the Night Command heading system after Smoke Command is complete. Smoke Command may prove that heading hierarchy works better when font, weight, and size do more of the work and colors stay more consistent.
 2. Review removing the Night Command gradient background after Smoke Command is complete. Smoke Command removed the editor gradient because the center-light effect worked on the dark Night Command screen but did not work well for the lighter Smoke Command theme.
 3. Review math block layout in both Smoke Command and Night Command after Smoke Command is complete. Current Smoke Command treats block math as a dark technical panel, but the layout may be too wide and should be reviewed for both themes.
 4. Review H3-H6 left-indicator alignment in Night Command after Smoke Command is complete. Lower heading text should start at the same distance from the left edge even when the heading indicators differ.
+5. Review Night Command inline `[TOC]` behavior after Smoke Command is complete. Confirm whether Night Command should use `Table of Contents` as the visible title and preserve correct nested indentation after heading changes.
+6. Review Night Command source/raw block styling after Smoke Command is complete. Smoke Command showed raw SVG, raw HTML, source mode, and code-language edit controls need tightly scoped selectors to avoid affecting unrelated HTML blocks.
+7. Review Night Command export output after Smoke Command is complete. Check HTML and PDF output for outline/sidebar styling, callout text colors, image/SVG containment, math readability, Mermaid readability, tables, and code blocks.
+8. Review Night Command sidebar and control styling after Smoke Command is complete. Compare File/Outline active underline placement, inactive tab dimming, status bar controls, source-code mode controls, and Preferences scaling.
+
+## Version History
+
+- `1.3` - 2026-06-19 - Added complete Night Command follow-up notes from the Smoke Command tuning pass and updated the recorded wrapper version.
+- `1.2` - 2026-06-18 - Captured heading, gradient, math, and communication notes from the Smoke Command session.
 
 <!-- END OF DOCUMENT -->
