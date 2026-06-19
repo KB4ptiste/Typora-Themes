@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.48 · Built for Typora
+   Version 2.49 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1819,21 +1819,21 @@ pre.md-meta-block::after {
 #typora-quick-open input,
 #typora-quick-open-input input,
 #file-search-container input {
-  color: var(--ui-text-strong) !important;
-  background-color: #100B15 !important;
-  border: 1px solid #4B3764 !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
+  border: 1px solid var(--border-strong) !important;
   border-radius: 6px !important;
-  box-shadow: none !important;
+  box-shadow: 0 2px 8px rgba(75, 42, 123, 0.10) !important;
 }
 
 #md-searchpanel input:focus,
 #typora-quick-open input:focus,
 #typora-quick-open-input input:focus,
 #file-search-container input:focus {
-  border-color: #C4B5FD !important;
-  outline: 1px solid #C4B5FD !important;
+  border-color: var(--button) !important;
+  outline: 1px solid var(--button) !important;
   outline-offset: 1px;
-  box-shadow: 0 0 14px rgba(167, 139, 250, 0.28) !important;
+  box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.16) !important;
 }
 
 #md-searchpanel .btn,
@@ -1842,9 +1842,9 @@ pre.md-meta-block::after {
 .modal-content .btn,
 .popover .btn,
 .md-rawblock-tooltip .md-rawblock-tooltip-btn {
-  color: var(--ui-text) !important;
-  background-color: #21152F !important;
-  border: 1px solid #4B3764 !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
+  border: 1px solid var(--border-strong) !important;
   border-radius: 6px !important;
   font-family: var(--font-ui) !important;
 }
@@ -1855,10 +1855,10 @@ pre.md-meta-block::after {
 .modal-content .btn:hover,
 .popover .btn:hover,
 .md-rawblock-tooltip .md-rawblock-tooltip-btn:hover {
-  color: #E7DCF5 !important;
-  background-color: #2D1C40 !important;
-  border-color: #A78BFA !important;
-  box-shadow: 0 0 10px rgba(167, 139, 250, 0.20) !important;
+  color: var(--primary) !important;
+  background-color: var(--surface-sunken) !important;
+  border-color: var(--button) !important;
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.14), 0 8px 18px rgba(75, 42, 123, 0.16) !important;
 }
 
 #md-searchpanel .btn.active,
@@ -1866,10 +1866,10 @@ pre.md-meta-block::after {
 #searchpanel-regexp-option-btn.active,
 #searchpanel-case-option-btn.active,
 #searchpanel-word-option-btn.active {
-  color: #F6C2D8 !important;
-  background-color: #2D1C40 !important;
-  border-color: var(--ui-accent-soft) !important;
-  box-shadow: 0 0 10px rgba(240, 168, 198, 0.24) !important;
+  color: var(--primary) !important;
+  background-color: var(--surface-sunken) !important;
+  border-color: var(--button) !important;
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.14) !important;
 }
 
 #search-panel-status,
@@ -1896,8 +1896,8 @@ pre.md-meta-block::after {
 #file-search-container .file-list-item:hover,
 #file-search-container .file-list-item.active {
   color: var(--ui-text-strong) !important;
-  background-color: #2D1C40 !important;
-  box-shadow: inset 3px 0 0 #A78BFA, 0 0 10px rgba(167, 139, 250, 0.16) !important;
+  background-color: var(--surface-sunken) !important;
+  box-shadow: inset 3px 0 0 var(--button), 0 8px 18px rgba(75, 42, 123, 0.16) !important;
 }
 
 #write .md-search-hit,
@@ -1933,8 +1933,8 @@ pre.md-meta-block::after {
 .modal-footer,
 .popover-title {
   color: var(--ui-text-strong) !important;
-  background-color: #21152F !important;
-  border-color: #4B3764 !important;
+  background-color: var(--surface-sunken) !important;
+  border-color: var(--border-strong) !important;
 }
 
 .modal-title,
@@ -1985,8 +1985,8 @@ pre.md-meta-block::after {
 #spell-check-panel .dropdown-menu li.active,
 #spell-check-panel-menu li:hover,
 #spell-check-panel-menu li.active {
-  color: #F6C2D8 !important;
-  background-color: #2D1C40 !important;
+  color: var(--primary) !important;
+  background-color: var(--surface-sunken) !important;
 }
 
 .menu-item-container a.menu-style-btn,
@@ -2047,11 +2047,11 @@ pre.md-meta-block::after {
 #ty-spell-check-panel,
 .ty-show-word-count #footer-word-count-info.dropdown-menu,
 .ty-show-spell-check #spell-check-panel {
-  color: #D6C8EA !important;
-  background-color: #1D1427 !important;
-  border: 1px solid #4B3764 !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
+  border: 1px solid var(--border-strong) !important;
   border-radius: 10px !important;
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34), 0 0 18px rgba(167, 139, 250, 0.12) !important;
+  box-shadow: 0 18px 42px rgba(75, 42, 123, 0.18), 0 0 18px rgba(159, 134, 184, 0.18) !important;
 }
 
 #footer-word-count-info li:hover,
@@ -2064,20 +2064,20 @@ pre.md-meta-block::after {
 #footer-word-count-info tr.active td,
 #footer-word-count-info td:hover,
 #footer-word-count-info tbody:hover td {
-  color: #F6C2D8 !important;
-  background-color: #2D1C40 !important;
+  color: var(--primary) !important;
+  background-color: var(--surface-sunken) !important;
 }
 
 #spell-check-panel *,
 #ty-spell-check-panel * {
-  color: #D6C8EA !important;
+  color: var(--text-prose-alt) !important;
 }
 
 #spell-check-panel input,
 #ty-spell-check-panel input {
-  color: #D6C8EA !important;
-  background-color: #100B15 !important;
-  border-color: #342442 !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
+  border-color: var(--border-strong) !important;
 }
 
 #spell-check-panel li,
@@ -2095,25 +2095,25 @@ pre.md-meta-block::after {
 #ty-spell-check-panel li.active,
 #ty-spell-check-panel .menu-item:hover,
 #ty-spell-check-panel .menu-item.active {
-  color: #F6C2D8 !important;
-  background-color: #2D1C40 !important;
+  color: var(--primary) !important;
+  background-color: var(--surface-sunken) !important;
 }
 
 .modal-dialog .modal-content,
 .modal-content,
 .dialog,
 .dialog-content {
-  color: #D6C8EA !important;
-  background-color: #17101F !important;
-  border-color: #4B3764 !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
+  border-color: var(--border-strong) !important;
 }
 
 .modal-dialog .modal-body,
 .modal-body,
 .dialog .modal-body,
 .dialog-content .modal-body {
-  color: #D6C8EA !important;
-  background-color: #100B15 !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
 }
 
 .modal-content label,
@@ -2131,18 +2131,18 @@ pre.md-meta-block::after {
 .modal-content .btn-primary,
 .dialog .btn-default,
 .dialog .btn-primary {
-  color: #D6C8EA !important;
-  background-color: #21152F !important;
-  border-color: #4B3764 !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
+  border-color: var(--border-strong) !important;
 }
 
 .modal-content .btn-default:hover,
 .modal-content .btn-primary:hover,
 .dialog .btn-default:hover,
 .dialog .btn-primary:hover {
-  color: #F6C2D8 !important;
-  background-color: #2D1C40 !important;
-  border-color: var(--ui-accent-soft) !important;
+  color: var(--primary) !important;
+  background-color: var(--surface-sunken) !important;
+  border-color: var(--button) !important;
 }
 
 
@@ -2279,9 +2279,9 @@ pre.md-meta-block::after {
 #math-tooltip,
 #write .md-math-block .code-tooltip,
 #write .md-math-block .md-rawblock-tooltip {
-  color: #D6C8EA !important;
-  background-color: #21152F !important;
-  border: 1px solid #4B3764 !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
+  border: 1px solid var(--border-strong) !important;
   border-radius: 8px !important;
 }
 
@@ -2482,17 +2482,17 @@ svg[id^=mermaid] .arrowheadPath {
 #write .md-rawblock-input,
 #write .md-htmlblock .md-rawblock-input,
 #write .md-rawblock .md-rawblock-input {
-  color: #D6C8EA;
-  background-color: #100B15;
+  color: var(--text-prose-alt);
+  background-color: var(--surface-sunken);
   font-family: var(--font-data);
 }
 
 #write .md-rawblock-tooltip,
 #write .md-htmlblock .md-rawblock-tooltip,
 #write .md-rawblock .md-rawblock-tooltip {
-  color: #D6C8EA !important;
-  background-color: #21152F !important;
-  border: 1px solid #4B3764 !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
+  border: 1px solid var(--border-strong) !important;
   border-radius: 8px !important;
 }
 
