@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.46 · Built for Typora
+   Version 2.47 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -1060,7 +1060,7 @@ body.megamenu-opened *,
 #info-panel-tab-file,
 #info-panel-tab-outline,
 #info-panel-tab-search {
-  color: var(--ui-text-muted) !important;
+  color: var(--text-prose-alt) !important;
   border-color: transparent !important;
   transition: color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
 }
@@ -1118,14 +1118,15 @@ div.outline-item-active .outline-label {
 .file-list-item-file-name,
 .file-list-item-file-name-part,
 .file-list-item-title {
-  color: #D6C8EA !important;
+  color: var(--text-prose-alt) !important;
+  font-weight: 600;
 }
 
 .file-list-item-summary,
 .file-list-item-time,
 .file-list-item-parent-loc,
 .file-list-item-file-ext-part {
-  color: var(--ui-text-muted) !important;
+  color: var(--text-dim) !important;
 }
 
 .file-list-item:hover {
@@ -1299,9 +1300,9 @@ div.outline-item-active .outline-label {
 /* Footer and status controls */
 footer,
 #footer-word-count {
-  color: var(--ui-text-muted) !important;
-  background-color: var(--ui-surface-base) !important;
-  border-color: var(--ui-border-subtle) !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--bg) !important;
+  border-color: var(--border-subtle) !important;
 }
 
 #footer-word-count:hover {
@@ -1704,28 +1705,28 @@ pre.md-meta-block::after {
 .typora-sourceview-on #typora-source,
 .typora-sourceview-on .CodeMirror,
 .typora-sourceview-on .CodeMirror-scroll {
-  color: #D6C8EA;
-  background-color: #100B15 !important;
+  color: var(--text-prose-alt);
+  background-color: var(--surface-readable) !important;
   font-family: var(--font-data) !important;
 }
 
 .typora-sourceview-on .CodeMirror-gutters {
-  color: #847490 !important;
-  background-color: #0C0911 !important;
-  border-right: 1px solid #342442 !important;
+  color: var(--text-dim) !important;
+  background-color: var(--surface-sunken) !important;
+  border-right: 1px solid var(--border-strong) !important;
 }
 
 .typora-sourceview-on .CodeMirror-linenumber {
-  color: #725F82 !important;
+  color: var(--text-dim) !important;
 }
 
 .typora-sourceview-on .CodeMirror-selected,
 .typora-sourceview-on .CodeMirror-selectedtext {
-  background-color: #24143A !important;
+  background-color: var(--surface-raised) !important;
 }
 
 .typora-sourceview-on .CodeMirror-cursor {
-  border-left-color: #A78BFA !important;
+  border-left-color: var(--button) !important;
 }
 
 
@@ -1948,10 +1949,10 @@ pre.md-meta-block::after {
 #toggle-sourceview-btn,
 .footer-item,
 .sidebar-footer-item {
-  color: #D6C8EA !important;
-  background-color: #100B15 !important;
-  border-color: #342442 !important;
-  box-shadow: none !important;
+  color: var(--text-prose-alt) !important;
+  background-color: var(--surface-readable) !important;
+  border-color: var(--border-strong) !important;
+  box-shadow: 0 2px 8px rgba(75, 42, 123, 0.12) !important;
 }
 
 .menu-item-container a.menu-style-btn:hover,
@@ -1980,10 +1981,10 @@ pre.md-meta-block::after {
 .typora-sourceview-on #toggle-sourceview-btn,
 .footer-item:hover,
 .sidebar-footer-item:hover {
-  color: #F6C2D8 !important;
-  background-color: rgba(240, 168, 198, 0.20) !important;
-  border-color: var(--ui-accent-soft) !important;
-  box-shadow: 0 0 10px rgba(240, 168, 198, 0.18) !important;
+  color: var(--primary) !important;
+  background-color: var(--surface-sunken) !important;
+  border-color: var(--button) !important;
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.16), 0 8px 18px rgba(75, 42, 123, 0.18) !important;
 }
 
 #footer-word-count-info,
@@ -2692,6 +2693,12 @@ body.typora-export .typora-export-sidebar + #write,
     break-after: avoid !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
+  }
+
+  #write h2 {
+    background-image: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
   }
 
   #write .md-alert,
