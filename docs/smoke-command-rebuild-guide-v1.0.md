@@ -1,8 +1,8 @@
 # Smoke Command Rebuild Guide
 
-Version: 1.1
+Version: 1.2
 
-Date: 2026-06-18
+Date: 2026-06-19
 
 ## Purpose
 
@@ -16,11 +16,11 @@ It also captures the fixes and patterns likely worth reviewing in Night Command 
 - Base engine: `themes/smoke-command/smoke-command.light.css`
 - Smoke test: `docs/smoke-command-visual-smoke-test.md`
 - Session notes: `docs/smoke-command-session-notes-v1.0.md`
-- Brand kit source: `K:\Dev\baptiste-studios\assets\brand-kit\baptiste_studios_brand_kit_v2.0.md`
+- Brand kit source: `K:\Dev\baptiste-studios\assets\brand-kit\baptiste_studios_brand_kit.md` (v3.1)
 
 ## Current Version
 
-- Current Smoke Command wrapper version: `2.55`
+- Current Smoke Command wrapper version: `2.56`
 - Current Smoke visual smoke test version: `1.0`
 - Current session notes version: `1.3`
 
@@ -53,7 +53,7 @@ Use these current working values:
 | Border strong | `#9F86B8` | Used for table cells and panels |
 | Border darker | `#7A5F96` | Used for Mermaid, math, hover borders |
 | Pink accent | `#E879F9` | Used for Mermaid yes/no and selected accents |
-| Yellow accent | `#FACC15` | Used for tip and mark highlight |
+| Yellow accent | `#FDE047` | Canonical brand yellow — used for tip and mark highlight |
 
 ## Background And Document Frame
 
@@ -166,7 +166,7 @@ Current accepted values:
 - Hover background: nearby darker/light purple tone
 - Blockquote non-hover quote mark: purple
 - Blockquote hover quote mark: pink `#E879F9`
-- Tip callout accent: yellow `#FACC15`, not teal
+- Tip callout accent: yellow `#FDE047` (brand canonical — updated from `#FACC15` in v3.1)
 
 Quote alignment was adjusted so the quote mark sits slightly higher.
 
@@ -185,14 +185,14 @@ Keep the table centered and avoid full-width stretching.
 
 ## Code Blocks
 
-Code blocks intentionally remain dark because they read as technical surfaces.
+Code blocks use `#100B15` (Black Plum) — same as Night Command Umbra. Cross-theme consistency rule supersedes the original intentional-dark decision.
 
 Current accepted values:
 
-- Code body: `#21152F`
-- Code header: `#2D1C40`
+- Code body: `#100B15`
+- Code header: `#261A33`
 - Language label: `#E879F9`
-- Focused language label: `#FACC15`
+- Focused language label: `#FDE047`
 
 Important syntax colors:
 
@@ -205,7 +205,7 @@ Important syntax colors:
 - Type: `#93C5FD`
 - Property: `#5EEAD4`
 - Number: `#F9A8D4`
-- Meta: `#FACC15`
+- Meta: `#FDE047`
 
 These colors were restored because the prior softened code block lost readability.
 
@@ -330,6 +330,7 @@ Review these after Smoke Command is complete:
 
 ## Version History
 
+- `1.2` - 2026-06-19 - Updated to reflect v3.1 brand decisions: fenced code body updated to `#100B15` (Black Plum, cross-theme consistency); code header/focus bg updated to `#261A33`; yellow `#FACC15` → `#FDE047` throughout (Tip, focused lang label, meta syntax); brand kit source reference updated to current filename v3.1.
 - `1.1` - 2026-06-19 - Updated Smoke Command version references and expanded the Night Command follow-up list.
 - `1.0` - 2026-06-18 - Created the Smoke Command rebuild guide.
 
