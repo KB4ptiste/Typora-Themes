@@ -157,8 +157,16 @@
   --bg-color:              #1B1226;
 
   /* --- Text --- */
-  --text-color:            #D9C2F5;
+  --text-color:            #D6C8EA;
   --text-color-secondary:  #A99ABF;
+
+  /* --- Heading color system --- */
+  --heading-color:         #B993EA;  /* H2-H6 rest — less loud than Rift Lilac, less pale than Stellar Mist */
+  --heading-hover:         #D4BDF4;  /* H2-H6 hover/focus — visible lift without going white-lavender */
+  --heading-accent:        #A87EE8;  /* bars, dots, glyphs, active borders — alias of --primary-color */
+
+  /* --- Primary text color system --- */
+  --primary-text:          #B58AF0;  /* text uses of brand color — softer than --primary-color for readability */
 
   /* --- Brand colors → base engine primary/secondary/accent --- */
   --primary-color:         #A87EE8;  /* Rift Lilac */
@@ -181,18 +189,18 @@
   --active-file-border-color:   #A87EE8;
 
   /* --- H1 underline (expands on hover) --- */
-  --h1-underline-color:    #C4B5FD;  /* Moon Rift */
+  --h1-underline-color:    #D9C2F5;  /* Moon Rift */
 
   /* --- H2 glass morphism --- */
-  --h2-bg-image:           radial-gradient(ellipse at center bottom, rgba(196, 181, 253, 0.08), transparent 70%);
-  --h2-bg-image-hover:     radial-gradient(ellipse at center bottom, rgba(196, 181, 253, 0.20), transparent 70%);
-  --h2-border-bottom-hover: rgba(196, 181, 253, 0.35);
+  --h2-bg-image:           radial-gradient(ellipse at center bottom, rgba(217, 194, 245, 0.08), transparent 70%);
+  --h2-bg-image-hover:     radial-gradient(ellipse at center bottom, rgba(217, 194, 245, 0.20), transparent 70%);
+  --h2-border-bottom-hover: rgba(217, 194, 245, 0.35);
 
   /* --- Element color (used by h3–h6 counters, figcaptions) --- */
   --element-color:          #8B5CF6;  /* Spell Violet */
   --element-color-soo-shallow: rgba(139, 92, 246, 0.12);
-  --element-color-deep:     #C4B5FD;  /* Moon Rift */
-  --head-title-h2-color:    #C4B5FD;
+  --element-color-deep:     #D9C2F5;  /* Moon Rift */
+  --head-title-h2-color:    #D9C2F5;
 
   /* --- Code block --- */
   --code-block-bg:          #100B15;
@@ -200,8 +208,9 @@
   --rawblock-edit-panel-bd: rgba(33, 21, 48, 0.80);
 
   /* --- Syntax highlighting --- */
-  --code-keyword:    #C4B5FD;  /* Moon Rift — keywords */
-  --code-variable:   #D9C2F5;  /* Rune Lilac — variables */
+  --code-keyword:    #D9C2F5;  /* Moon Rift — keywords */
+  --code-base-text:  #D9C2F5;  /* Moon Rift — base CodeMirror text (decoupled from variable token) */
+  --code-variable:   #F9A8D4;  /* Blush Pink — variable names */
   --code-function:   #67E8F9;  /* Aether Cyan — functions */
   --code-param:      #5EEAD4;  /* Signal Teal — params */
   --code-string:     #86EFAC;  /* soft green — strings */
@@ -257,11 +266,11 @@
   --ui-border-subtle: #3C2A4C;
   --ui-border: #543B6D;
   --ui-border-active: #A87EE8;
-  --ui-focus-outline: #C4B5FD;
+  --ui-focus-outline: #D9C2F5;
   --ui-accent-soft: #F0A8C6;
   --ui-glow-hover: 0 0 8px rgba(168, 126, 232, 0.18);
   --ui-glow-active: 0 0 10px rgba(168, 126, 232, 0.24);
-  --ui-glow-focus: 0 0 0 1px #C4B5FD, 0 0 14px rgba(168, 126, 232, 0.42);
+  --ui-glow-focus: 0 0 0 1px #D9C2F5, 0 0 14px rgba(168, 126, 232, 0.42);
 
   /* --- Ten-level list progression --- */
   --bullet-1: #E7DCF5;
@@ -350,61 +359,66 @@ html, body {
    HEADINGS — Wak font + Baptiste Studios cascade
    H1/H2: Wak display (positioning/hover retained from base engine)
    H3/H4: Wak (left-border and dot decorators retained from base engine)
-   H5/H6: Source Serif 4 18pt (smaller, body-adjacent)
+   H5/H6: Wak (all levels unified; body-adjacent weights)
    ================================================ */
 
+/* BRAND-KIT-VISUAL-TEST: dark headings adopt light scale; H5/H6 Wak replaces Source Serif 4 18pt; sizes unified across themes */
+/* BRAND-KIT-VISUAL-TEST: !important overrides base engine all-heading color: var(--text-color) rule (L87-95 of base engine) */
 #write h1 {
   font-family: "Wak", "Lucy Rose", sans-serif;
-  font-weight: 800;
-  font-size: 1.8rem;
-  color: #E7DCF5;
+  font-weight: 900;
+  font-size: 2.125rem;
+  color: #E7DCF5 !important;
 }
 
 #write h2 {
   font-family: "Wak", "Lucy Rose", sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: #C4B5FD;
+  font-weight: 800;
+  font-size: 1.875rem;
+  color: var(--heading-color) !important;
 }
 
 #write h3 {
   font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
-  color: #A87EE8;
+  font-size: 1.625rem;
+  color: var(--heading-color) !important;
 }
 
 #write h4 {
   font-family: "Wak", "Lucy Rose", sans-serif;
-  font-weight: 600;
-  font-size: 1.15rem;
-  color: #8B5CF6;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--heading-color) !important;
 }
 
 #write h5 {
-  font-family: "Source Serif 4 18pt", "Source Serif 4", Georgia, serif;
+  font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 500;
-  font-size: 1.1rem;
-  color: #A99ABF;
+  font-size: 1.375rem;
+  color: var(--heading-color) !important;
 }
 
 #write h6 {
-  font-family: "Source Serif 4 18pt", "Source Serif 4", Georgia, serif;
+  font-family: "Wak", "Lucy Rose", sans-serif;
   font-weight: 500;
-  font-size: 1.05rem;
-  color: #8C7A96;
+  font-size: 1.25rem;
+  color: var(--heading-color) !important;
 }
 
 /* H1 hover: lifts + expands underline — keep but recolor via --h1-underline-color */
 /* H2 hover: glass morphism — keep, recolored via --h2-bg-image variables */
-/* H3 hover: shifts padding-left + glow — override color to Moon Rift so change is visible */
-/* H4/H5 hover: dot scale + translateX — keep */
+/* H3–H6 hover: --heading-hover #D4BDF4 explicit override */
 
-#write h3:hover,
-#write h3:focus,
-#write h3.md-focus {
-  color: #C4B5FD !important;
+/* BRAND-KIT-VISUAL-TEST: H2-H6 hover color var(--heading-hover) #D4BDF4 explicit — base engine var(--primary-color) not winning */
+#write h2:hover, #write h2:focus, #write h2.md-focus,
+#write h3:hover, #write h3:focus, #write h3.md-focus,
+#write h4:hover, #write h4:focus, #write h4.md-focus,
+#write h5:hover, #write h5:focus, #write h5.md-focus,
+#write h6:hover, #write h6:focus, #write h6.md-focus {
+  color: var(--heading-hover) !important;
 }
+
 
 #write h3.md-heading::after {
   content: " ";
@@ -436,12 +450,13 @@ html, body {
   mask-size: contain;
 }
 
+/* BRAND-KIT-VISUAL-TEST: dot-grid vertical centering — !important required, base engine vertical-align: top wins via Typora inverted @import cascade */
 #write h4.md-heading::after {
   width: 1.2em;
   height: 1.2em;
-  vertical-align: -0.10em;
+  vertical-align: -0.30em !important;
   position: relative;
-  top: -0.22em;
+  top: -0.12em;
   -webkit-mask-image: var(--h4-icon-shape);
   mask-image: var(--h4-icon-shape);
 }
@@ -449,9 +464,7 @@ html, body {
 #write h5.md-heading::after {
   width: 1.05em;
   height: 1.05em;
-  vertical-align: -0.10em;
-  position: relative;
-  top: -0.24em;
+  vertical-align: -0.28em !important;
   -webkit-mask-image: var(--h5-icon-shape);
   mask-image: var(--h5-icon-shape);
 }
@@ -459,7 +472,7 @@ html, body {
 #write h6.md-heading::after {
   width: 1em;
   height: 1em;
-  vertical-align: -0.24em;
+  vertical-align: -0.50em !important;
   -webkit-mask-image: var(--h6-icon-shape);
   mask-image: var(--h6-icon-shape);
 }
@@ -565,6 +578,45 @@ pre.md-meta-block {
   border-bottom-color: var(--ui-border) !important;
 }
 
+/* BRAND-KIT-VISUAL-TEST: per-language label colors — traditional language colors on dark code block badge */
+.md-fences[lang="javascript"]::before,
+.md-fences[lang="js"]::before,
+.md-fences[lang="json"]::before {
+  color: #FDE047 !important;
+}
+
+.md-fences[lang="css"]::before,
+.md-fences[lang="scss"]::before,
+.md-fences[lang="less"]::before {
+  color: #67E8F9 !important;
+}
+
+.md-fences[lang="html"]::before,
+.md-fences[lang="xml"]::before,
+.md-fences[lang="svg"]::before {
+  color: #F0A8C6 !important;
+}
+
+.md-fences[lang="bash"]::before,
+.md-fences[lang="sh"]::before,
+.md-fences[lang="shell"]::before,
+.md-fences[lang="powershell"]::before,
+.md-fences[lang="ps1"]::before {
+  color: #86EFAC !important;
+}
+
+.md-fences[lang="python"]::before,
+.md-fences[lang="py"]::before {
+  color: #93C5FD !important;
+}
+
+.md-fences[lang="markdown"]::before,
+.md-fences[lang="md"]::before,
+.md-fences[lang="text"]::before,
+.md-fences[lang="txt"]::before {
+  color: #D9C2F5 !important;
+}
+
 .md-fences:not([lang]),
 .md-fences[lang=""] {
   --nc-fence-label: "TEXT";
@@ -586,9 +638,10 @@ pre.md-meta-block {
   border-bottom-color: var(--ui-border-active) !important;
 }
 
+/* BRAND-KIT-VISUAL-TEST: base code text uses --code-base-text (decoupled from --code-variable so variable token can be a distinct color) */
 .md-fences .cm-s-inner.CodeMirror,
 .cm-s-inner.CodeMirror {
-  color: var(--code-variable) !important;
+  color: var(--code-base-text) !important;
   background-color: #100B15 !important;
 }
 
@@ -603,10 +656,22 @@ pre.md-meta-block {
 }
 
 .md-fences .cm-header,
-.md-fences .cm-keyword,
-.md-fences .cm-tag {
+.md-fences .cm-keyword {
   color: var(--code-keyword) !important;
 }
+
+/* BRAND-KIT-VISUAL-TEST: Markdown heading levels in code blocks — per-level colors using established palette; H1 loudest → H5 softest */
+.md-fences .cm-header1 { color: #E879F9 !important; } /* # — fuchsia (alert badge) */
+.md-fences .cm-header2 { color: #A87EE8 !important; } /* ## — Rift Lilac (brand primary) */
+.md-fences .cm-header3 { color: #67E8F9 !important; } /* ### — cyan (functions/CSS badge) */
+.md-fences .cm-header4 { color: #86EFAC !important; } /* #### — green (strings/Bash badge) */
+.md-fences .cm-header5 { color: #FDE047 !important; } /* ##### — amber (JS badge) */
+
+/* BRAND-KIT-VISUAL-TEST: cm-tag → #F0A8C6 (matches HTML badge; distinct from keyword/variable so HTML tag names are clearly visible) */
+.md-fences .cm-tag {
+  color: #F0A8C6 !important;
+}
+
 
 .md-fences .cm-def,
 .md-fences .cm-variable-2,
@@ -754,6 +819,64 @@ pre.md-meta-block {
   border: none !important;
 }
 
+/* ================================================
+   PRIMARY TEXT COLOR OVERRIDES
+   --primary-text: #B58AF0 replaces --primary-color on all text uses.
+   Non-text uses (backgrounds, borders, glows, icon fills) stay on --primary-color: #A87EE8.
+   Link visited intentionally stays on --primary-color (opacity: .9) for visual differentiation.
+   ================================================ */
+
+/* BRAND-KIT-VISUAL-TEST: ordered list markers → --primary-text */
+#write ol > li::marker,
+#write ol ol > li::marker,
+#write ol ol ol > li::marker {
+  color: var(--primary-text) !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: table header text → --primary-text; background tint + border stay on --primary-color */
+#write table th {
+  color: var(--primary-text) !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: link rest → --primary-text; visited stays --primary-color at opacity .9 */
+#write a:not(.md-toc-inner) {
+  color: var(--primary-text) !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: bold text → --primary-text */
+#write strong {
+  color: var(--primary-text) !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: inline code rest → --primary-text */
+#write code:not(.md-fencescode) {
+  color: var(--primary-text) !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: italic hover → --primary-text */
+#write em:hover {
+  color: var(--primary-text) !important;
+  -webkit-text-stroke: 0.5px var(--primary-text) !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: strikethrough hover → --primary-text */
+#write del:hover {
+  color: var(--primary-text) !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: kbd hover text → --primary-text; border-color stays --primary-color */
+#write kbd:hover {
+  color: var(--primary-text) !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: alert-important title color removed — inherits from #write .md-alert-text-important (#E879F9) like other alert types */
+
+/* BRAND-KIT-VISUAL-TEST: TOC title → "Table of Contents"; color → --primary-text; link items → #E7DCF5 */
+.md-toc:before {
+  content: "Table of Contents" !important;
+  color: var(--primary-text) !important;
+}
+
 
 
 /* ================================================
@@ -767,9 +890,10 @@ pre.md-meta-block {
   font-size: 0.85rem !important;
 }
 
+/* BRAND-KIT-VISUAL-TEST: outline H1 text → --primary-text */
 #outline-content .outline-h1 > .outline-item {
   font-size: 0.85rem !important;
-  color: var(--primary-color) !important;
+  color: var(--primary-text) !important;
 }
 
 #outline-content li {
@@ -844,6 +968,7 @@ body.megamenu-opened *,
   letter-spacing: 0.01em;
 }
 
+/* BRAND-KIT-VISUAL-TEST: .window-header selectors added — missing from dark, present in light; title element lives inside .window-header */
 .ty-preferences #top-titlebar,
 .ty-preferences #top-titlebar *,
 .ty-preferences titlebar,
@@ -852,11 +977,14 @@ body.megamenu-opened *,
 .ty-preferences .title-bar *,
 .ty-preferences > header,
 .ty-preferences > header *,
+.ty-preferences .window-header,
+.ty-preferences .window-header *,
 .ty-preferences .window-title,
 .ty-preferences .titlebar-text,
 .ty-preferences #window-title {
   font-family: var(--font-display) !important;
-  font-size: 1.35rem !important;
+  /* BRAND-KIT-VISUAL-TEST: titlebar font-size → 2.2rem (user-tuned from 1.85rem) */
+  font-size: 2.2rem !important;
   font-weight: 700;
   color: var(--ui-text-strong) !important;
   letter-spacing: 0.025em;
@@ -896,7 +1024,14 @@ body.megamenu-opened *,
 .megamenu-content,
 .megamenu-menu-panel,
 .megamenu-section {
-  font-size: 1rem !important;
+  /* BRAND-KIT-VISUAL-TEST: preferences panel base font-size → 1.12rem (matches light theme) */
+  font-size: 1.12rem !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: Preferences left nav items → 1.2rem (explicit, overrides inherited 1.12rem panel base) */
+.ty-preferences .nav-group-item,
+.nav-group-item {
+  font-size: 1.2rem !important;
 }
 
 #megamenu-menu-header-title,
@@ -904,7 +1039,8 @@ body.megamenu-opened *,
 .ty-preferences .window-title,
 .ty-preferences #window-title {
   font-family: var(--font-display) !important;
-  font-size: 1.7rem !important;
+  /* BRAND-KIT-VISUAL-TEST: megamenu/window title font-size → 2.2rem (aligned with titlebar, user-tuned) */
+  font-size: 2.2rem !important;
   line-height: 1.15 !important;
   color: var(--ui-text-strong) !important;
 }
@@ -921,7 +1057,8 @@ body.megamenu-opened *,
 .megamenu-menu-panel p,
 .megamenu-menu-panel table,
 .megamenu-menu-panel .btn {
-  font-size: 0.98rem !important;
+  /* BRAND-KIT-VISUAL-TEST: controls/labels font-size → 1.08rem (matches light theme) */
+  font-size: 1.08rem !important;
 }
 
 /* Longer UI copy */
@@ -1371,8 +1508,9 @@ body .md-table-resize-popover .md-grid-board a:hover {
   text-shadow: 0 0 8px rgba(168, 126, 232, 0.42);
 }
 
+/* BRAND-KIT-VISUAL-TEST: visited link → --text-color-secondary for visible differentiation from rest */
 #write a:visited {
-  color: #B9A3E8;
+  color: var(--text-color-secondary) !important;
   text-shadow: none;
 }
 
@@ -1388,8 +1526,16 @@ body .md-table-resize-popover .md-grid-board a:hover {
 }
 
 #write .md-toc-item {
+  /* BRAND-KIT-VISUAL-TEST: TOC link items → #E7DCF5 */
+  color: #E7DCF5 !important;
   line-height: 1.35;
   padding: 0.22rem 0.7rem;
+}
+
+/* BRAND-KIT-VISUAL-TEST: TOC link anchors → #E7DCF5 direct (inheritance alone unreliable) */
+.md-toc-inner,
+.md-toc-item a {
+  color: #E7DCF5 !important;
 }
 
 #write .md-toc-h1 {
@@ -1417,13 +1563,13 @@ body .md-table-resize-popover .md-grid-board a:hover {
 }
 
 #write strong {
-  color: #C4B5FD;
+  color: #D9C2F5;
   text-shadow: 0 0 4px rgba(168, 126, 232, 0.18);
 }
 
 #write strong:hover {
-  border-bottom-color: #C4B5FD;
-  text-shadow: 0 0 10px rgba(196, 181, 253, 0.42);
+  border-bottom-color: #D9C2F5;
+  text-shadow: 0 0 10px rgba(217, 194, 245, 0.42);
 }
 
 #write mark {
@@ -1449,7 +1595,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
 }
 
 #write code:not(.md-fencescode) {
-  color: #C4B5FD;
+  color: #D9C2F5;
   background-color: #211530;
   border-color: #543B6D;
 }
@@ -1535,15 +1681,17 @@ body .md-table-resize-popover .md-grid-board a:hover {
 
 
 
+/* BRAND-KIT-VISUAL-TEST: dark figcaption rest → #A99ABF (~6.1:1 on #211629); body opacity matches caption intent */
 #write figcaption {
   color: #A99ABF;
   font-family: var(--font-body);
   font-size: 0.9rem;
 }
 
+/* BRAND-KIT-VISUAL-TEST: dark figcaption hover → #D9C2F5 (lifts to near heading-color, ~9.5:1) */
 #write figure:hover > figcaption,
 #write p:hover > img + figcaption {
-  color: #C4B5FD;
+  color: #D9C2F5;
 }
 
 pre.md-meta-block {
@@ -1610,11 +1758,22 @@ pre.md-meta-block::after {
 .popover,
 .ty-tooltip,
 #ty-tooltip,
-.code-tooltip-content,
 .md-rawblock-tooltip,
 .md-toc-tooltip {
   color: var(--ui-text) !important;
   background-color: #211629 !important;
+  border: 1px solid #543B6D !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.34),
+    0 0 18px rgba(168, 126, 232, 0.12) !important;
+}
+
+/* BRAND-KIT-VISUAL-TEST: language selector tooltip standalone — .code-tooltip (container) + .code-tooltip-content (inner); removed from group to eliminate !important conflict; dark-branded palette */
+.code-tooltip,
+.code-tooltip-content {
+  color: var(--primary-text) !important;
+  background-color: #261A33 !important;
   border: 1px solid #543B6D !important;
   border-radius: 12px !important;
   box-shadow:
@@ -1643,8 +1802,8 @@ pre.md-meta-block::after {
 #typora-quick-open input:focus,
 #typora-quick-open-input input:focus,
 #file-search-container input:focus {
-  border-color: #C4B5FD !important;
-  outline: 1px solid #C4B5FD !important;
+  border-color: #D9C2F5 !important;
+  outline: 1px solid #D9C2F5 !important;
   outline-offset: 1px;
   box-shadow: 0 0 14px rgba(168, 126, 232, 0.28) !important;
 }
@@ -1732,8 +1891,8 @@ pre.md-meta-block::after {
 .md-search-select,
 .CodeMirror-focused .cm-search-hit.CodeMirror-selectedtext {
   color: #1B1226 !important;
-  background-color: #C4B5FD !important;
-  box-shadow: 0 0 0 1px #E7DCF5, 0 0 14px rgba(196, 181, 253, 0.42);
+  background-color: #D9C2F5 !important;
+  box-shadow: 0 0 0 1px #E7DCF5, 0 0 14px rgba(217, 194, 245, 0.42);
 }
 
 #md-notification,
@@ -2173,6 +2332,39 @@ svg[id^=mermaid] .edgeLabel tspan {
   background-color: #261A33;
   border-color: #A87EE8;
   box-shadow: 0 0 14px rgba(168, 126, 232, 0.12);
+}
+
+/* BRAND-KIT-VISUAL-TEST: SVG containers → lifted card (#2E1F40 off canvas #211629, padding + shadow) */
+#write .md-htmlblock-container:has(svg),
+#write .md-rawblock-container:has(svg),
+#write .md-rawblock:has(svg) {
+  background-color: #2E1F40;
+  border: 2px solid #543B6D;
+  border-radius: 12px;
+  padding: clamp(1rem, 2vw, 1.75rem);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+/* BRAND-KIT-VISUAL-TEST: SVG container hover → border lifts to --primary-color, shadow deepens */
+#write .md-htmlblock-container:has(svg):hover,
+#write .md-rawblock-container:has(svg):hover,
+#write .md-rawblock:has(svg):hover {
+  background-color: #2E1F40;
+  border-color: #A87EE8;
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.28),
+    0 0 14px rgba(168, 126, 232, 0.10);
+}
+
+/* BRAND-KIT-VISUAL-TEST: SVG in raw/html blocks → centered (matches light theme) */
+#write .md-htmlblock-container:has(svg),
+#write .md-rawblock-container:has(svg) {
+  text-align: center;
+}
+
+#write .md-rawblock-container svg {
+  display: block;
+  margin: 0 auto;
 }
 
 #write .md-rawblock-input,
