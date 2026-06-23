@@ -2334,39 +2334,6 @@ svg[id^=mermaid] .edgeLabel tspan {
   box-shadow: 0 0 14px rgba(168, 126, 232, 0.12);
 }
 
-/* BRAND-KIT-VISUAL-TEST: SVG containers → lifted card (#2E1F40 off canvas #211629, padding + shadow) */
-#write .md-htmlblock-container:has(svg),
-#write .md-rawblock-container:has(svg),
-#write .md-rawblock:has(svg) {
-  background-color: #2E1F40;
-  border: 2px solid #543B6D;
-  border-radius: 12px;
-  padding: clamp(1rem, 2vw, 1.75rem);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
-}
-
-/* BRAND-KIT-VISUAL-TEST: SVG container hover → border lifts to --primary-color, shadow deepens */
-#write .md-htmlblock-container:has(svg):hover,
-#write .md-rawblock-container:has(svg):hover,
-#write .md-rawblock:has(svg):hover {
-  background-color: #2E1F40;
-  border-color: #A87EE8;
-  box-shadow:
-    0 10px 22px rgba(0, 0, 0, 0.28),
-    0 0 14px rgba(168, 126, 232, 0.10);
-}
-
-/* BRAND-KIT-VISUAL-TEST: SVG in raw/html blocks → centered (matches light theme) */
-#write .md-htmlblock-container:has(svg),
-#write .md-rawblock-container:has(svg) {
-  text-align: center;
-}
-
-#write .md-rawblock-container svg {
-  display: block;
-  margin: 0 auto;
-}
-
 #write .md-rawblock-input,
 #write .md-htmlblock .md-rawblock-input,
 #write .md-rawblock .md-rawblock-input {
