@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.5 · Built for Typora
+   Version 3.6 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -382,7 +382,7 @@ html, body {
 
 #write h2::before {
   position: relative;
-  top: 5px;
+  top: 10px;
 }
 
 #write h3 {
