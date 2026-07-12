@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.57 · Built for Typora
+   Version 2.58 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -436,7 +436,7 @@ html, body {
   color: var(--link);
   display: block;
   position: relative;
-  padding-left: 1.45em;
+  padding-left: 18px;
 }
 
 #write h5 {
@@ -446,7 +446,7 @@ html, body {
   color: var(--link);
   display: block;
   position: relative;
-  padding-left: 1.45em;
+  padding-left: 18px;
 }
 
 #write h6 {
@@ -456,7 +456,7 @@ html, body {
   color: var(--link);
   display: block;
   position: relative;
-  padding-left: 1.45em;
+  padding-left: 15px;
 }
 
 /* H1 hover: lifts + expands underline — keep but recolor via --h1-underline-color */
@@ -506,6 +506,11 @@ html, body {
   margin-right: 0;
   transform: translateY(-50%);
   pointer-events: none;
+}
+
+#write h4::before,
+#write h5::before {
+  top: calc(50% + 0.1em);
 }
 
 #write h4:hover::before,
@@ -580,7 +585,7 @@ html, body {
 #write h6.md-heading::after {
   width: 1em;
   height: 1em;
-  vertical-align: -0.50em !important;
+  vertical-align: -0.44em !important;
   -webkit-mask-image: var(--h6-icon-shape);
   mask-image: var(--h6-icon-shape);
 }
