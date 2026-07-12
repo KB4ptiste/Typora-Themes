@@ -2318,12 +2318,41 @@ svg[id^=mermaid] .edgeLabel tspan {
   text-shadow: 0 0 6px rgba(240, 168, 198, 0.35);
 }
 
+svg[id^=mermaid] .node rect,
+svg[id^=mermaid] .node circle,
+svg[id^=mermaid] .node polygon,
+svg[id^=mermaid] .node path {
+  fill: #2D1B45 !important;
+  stroke: #7A5ABA !important;
+  stroke-width: 1.5px !important;
+}
+
+svg[id^=mermaid] .node .label,
+svg[id^=mermaid] .nodeLabel,
+svg[id^=mermaid] .nodeLabel p {
+  color: #D9C2F5 !important;
+  fill: #D9C2F5 !important;
+  text-shadow: none !important;
+}
+
+svg[id^=mermaid] .cluster rect {
+  fill: #1B1226 !important;
+  stroke: #543B6D !important;
+  stroke-width: 1.5px !important;
+}
+
+svg[id^=mermaid] .cluster .label {
+  color: #B993EA !important;
+  fill: #B993EA !important;
+}
+
 #write .md-htmlblock-container,
 #write .md-rawblock-container,
 #write .md-rawblock {
   background-color: #211629;
   border: 1px solid #543B6D;
   border-radius: 12px;
+  padding: 1rem 1.25rem;
 }
 
 #write .md-htmlblock-container:hover,
@@ -2370,16 +2399,18 @@ svg[id^=mermaid] .edgeLabel tspan {
    ================================================ */
 
 .typora-export body {
+  width: 100% !important;
+  max-width: none !important;
   color: var(--text-color);
   background-color: var(--bg-color);
 }
 
 .typora-export #write {
-  width: min(92%, 1100px) !important;
-  max-width: 1100px !important;
+  width: 98% !important;
+  max-width: none !important;
   min-height: auto !important;
   margin: 24px auto !important;
-  padding: 56px 72px !important;
+  padding: 48px 8px !important;
   color: var(--text-color);
   background-color: #211629;
   border: 4px solid #543B6D !important;
@@ -2450,7 +2481,7 @@ svg[id^=mermaid] .edgeLabel tspan {
 }
 
 @page {
-  margin: 1mm;
+  margin: 10mm 3mm;
   background: #1B1226;
 }
 
@@ -2472,7 +2503,7 @@ svg[id^=mermaid] .edgeLabel tspan {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
-    padding: 3mm !important;
+    padding: 3mm 2mm !important;
     color: var(--text-color) !important;
     background-color: #211629 !important;
     border: 3px solid #543B6D !important;
@@ -2535,6 +2566,11 @@ svg[id^=mermaid] .edgeLabel tspan {
   #write canvas {
     max-width: 100% !important;
     height: auto !important;
+  }
+
+  #write .md-fences[lang="mermaid"],
+  #write .md-diagram-panel {
+    zoom: 0.80;
   }
 }
 

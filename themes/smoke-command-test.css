@@ -2625,6 +2625,12 @@ svg[id^=mermaid] .arrowheadPath {
 }
 
 #write .md-htmlblock-container:has(svg),
+#write .md-htmlblock-container,
+#write .md-rawblock-container,
+#write .md-rawblock {
+  padding: 1rem 1.25rem;
+}
+
 #write .md-rawblock-container:has(svg),
 #write .md-rawblock:has(svg) {
   background-color: #D8C9E6;
@@ -2776,17 +2782,19 @@ svg[id^=mermaid] .arrowheadPath {
 
 body.typora-export,
 .typora-export body {
+  width: 100% !important;
+  max-width: none !important;
   color: var(--text-color);
   background-color: var(--bg-color);
 }
 
 body.typora-export #write,
 .typora-export #write {
-  width: min(92%, 1100px) !important;
-  max-width: 1100px !important;
+  width: 98% !important;
+  max-width: none !important;
   min-height: auto !important;
   margin: 24px auto !important;
-  padding: 56px 72px !important;
+  padding: 48px 8px !important;
   color: var(--text-color);
   background-color: #D2C2E2;
   background-image: none;
@@ -2952,7 +2960,7 @@ body.typora-export .typora-export-sidebar + #write,
 }
 
 @page {
-  margin: 1mm;
+  margin: 10mm 3mm;
   background: #BCA8D0;
 }
 
@@ -2977,7 +2985,7 @@ body.typora-export .typora-export-sidebar + #write,
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
-    padding: 3mm !important;
+    padding: 3mm 2mm !important;
     color: var(--text-color) !important;
     background-color: #D2C2E2 !important;
     background-image: none !important;
@@ -3036,7 +3044,7 @@ body.typora-export .typora-export-sidebar + #write,
   }
 
   #write .md-fences {
-    width    width: 100% !important;
+    width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
     white-space: pre-wrap;
@@ -3055,6 +3063,11 @@ body.typora-export .typora-export-sidebar + #write,
   #write canvas {
     max-width: 100% !important;
     height: auto !important;
+  }
+
+  #write .md-fences[lang="mermaid"],
+  #write .md-diagram-panel {
+    zoom: 0.80;
   }
 }
 
