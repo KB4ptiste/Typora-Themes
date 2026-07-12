@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.56 · Built for Typora
+   Version 2.57 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -420,7 +420,13 @@ html, body {
   font-size: 1.625rem;
   color: var(--link);
   position: relative;
-  padding-left: 1.45em;
+  padding-left: 15px;
+}
+
+#write h3 > span.md-plain,
+#write h3.md-heading::after {
+  position: relative;
+  top: -4px;
 }
 
 #write h4 {
@@ -458,12 +464,12 @@ html, body {
 /* H3 hover: shifts padding-left + glow — override color to Moon Rift so change is visible */
 /* H4/H5 hover: dot scale + translateX — keep */
 
-/* BRAND-KIT-VISUAL-TEST: light H3 hover rightward shift (rest 1.45em -> hover 1.65em; base engine sets 20px which reverses direction) */
+/* BRAND-KIT-VISUAL-TEST: light H3 matches dark spacing and keeps the 5px hover shift (rest 15px -> hover 20px) */
 #write h3:hover,
 #write h3:focus,
 #write h3.md-focus {
   color: var(--text-prose-hover) !important;
-  padding-left: 1.65em !important;
+  padding-left: 20px !important;
 }
 
 #write h4:hover,
