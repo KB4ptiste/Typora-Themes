@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.58 · Built for Typora
+   Version 2.64 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -423,10 +423,14 @@ html, body {
   padding-left: 15px;
 }
 
-#write h3 > span.md-plain,
+#write h3 > span.md-plain {
+  position: relative;
+  top: -2px;
+}
+
 #write h3.md-heading::after {
   position: relative;
-  top: -4px;
+  top: -3px;
 }
 
 #write h4 {
