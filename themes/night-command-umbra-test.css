@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.8 · Built for Typora
+   Version 3.9 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -412,6 +412,21 @@ html, body {
   color: var(--heading-color) !important;
 }
 
+#write h4::before,
+#write h5::before {
+  position: relative;
+  top: 0.2em;
+}
+
+#write h4:hover::before,
+#write h4:focus::before,
+#write h4.md-focus::before,
+#write h5:hover::before,
+#write h5:focus::before,
+#write h5.md-focus::before {
+  box-shadow: 0 0 0 3px rgba(168, 126, 232, 0.20), var(--glow-shadow-box);
+}
+
 /* H1 hover: lifts + expands underline — keep but recolor via --h1-underline-color */
 /* H2 hover: glass morphism — keep, recolored via --h2-bg-image variables */
 /* H3–H6 hover: --heading-hover #D4BDF4 explicit override */
@@ -478,7 +493,7 @@ html, body {
 #write h6.md-heading::after {
   width: 1em;
   height: 1em;
-  vertical-align: -0.50em !important;
+  vertical-align: -0.25em !important;
   -webkit-mask-image: var(--h6-icon-shape);
   mask-image: var(--h6-icon-shape);
 }
