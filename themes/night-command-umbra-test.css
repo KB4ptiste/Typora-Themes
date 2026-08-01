@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.18 · Built for Typora
+   Version 3.19 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -2558,16 +2558,16 @@ svg[id^=mermaid] .cluster .label {
 }
 
 @page {
-  margin: 1mm;
-  padding: 0;
-  background: #FFFFFF;
+  margin: 1mm !important;
+  padding: 0 !important;
+  background: #FFFFFF !important;
 }
 
 @media print {
   @page {
-    margin: 1mm;
-    padding: 0;
-    background: #FFFFFF;
+    margin: 1mm !important;
+    padding: 0 !important;
+    background: #FFFFFF !important;
   }
 
   :root {
@@ -2586,6 +2586,21 @@ svg[id^=mermaid] .cluster .label {
     color-scheme: light !important;
   }
 
+  body.typora-export {
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .typora-export-content {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .typora-export-sidebar,
   .typora-export-sidebar * {
     display: none !important;
@@ -2596,7 +2611,7 @@ svg[id^=mermaid] .cluster .label {
   #write {
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
     padding: 3mm !important;
     color: #211629 !important;
     background-color: #FFFFFF !important;
