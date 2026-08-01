@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.64 · Built for Typora
+   Version 2.66 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2976,7 +2976,7 @@ body.typora-export .typora-export-sidebar + #write,
 
 @page {
   margin: 10mm 3mm;
-  background: #BCA8D0;
+  background: #FFFFFF;
 }
 
 @media print {
@@ -2984,7 +2984,8 @@ body.typora-export .typora-export-sidebar + #write,
   body,
   body.typora-export,
   .typora-export body {
-    background-color: #BCA8D0 !important;
+    background-color: #FFFFFF !important;
+    color-scheme: light !important;
   }
 
   .typora-export-sidebar,
@@ -3001,15 +3002,15 @@ body.typora-export .typora-export-sidebar + #write,
     max-width: 100% !important;
     margin: 0 auto !important;
     padding: 3mm 2mm !important;
-    color: var(--text-color) !important;
-    background-color: #D2C2E2 !important;
+    color: #211629 !important;
+    background-color: #FFFFFF !important;
     background-image: none !important;
-    border: 3px solid #9F86B8 !important;
-    border-radius: 14px !important;
+    border: none !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
     overflow: visible !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: economy !important;
+    print-color-adjust: economy !important;
   }
 
   .typora-export #write {
@@ -3017,8 +3018,8 @@ body.typora-export .typora-export-sidebar + #write,
   }
 
   #write::before {
-    display: block !important;
-    opacity: 0.04 !important;
+    display: none !important;
+    opacity: 0 !important;
   }
 
   #write h1,
@@ -3037,14 +3038,6 @@ body.typora-export .typora-export-sidebar + #write,
     background-image: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
-  }
-
-  #write .md-alert-text-note {
-    color: #4E78A8 !important;
-  }
-
-  #write .md-alert-text-tip {
-    color: #8B6508 !important;
   }
 
   #write .md-alert,
@@ -3083,6 +3076,200 @@ body.typora-export .typora-export-sidebar + #write,
   #write .md-fences[lang="mermaid"],
   #write .md-diagram-panel {
     zoom: 0.80;
+  }
+
+  /* Print-only toner-saving palette: preserve accent text and line work, remove large fills. */
+  #write {
+    --print-background: #FFFFFF;
+    --print-text: #211629;
+    --print-text-secondary: #4B3764;
+    --print-text-dim: #5B6470;
+    --print-heading: #7E22CE;
+    --print-heading-marker: #7E22CE;
+    --print-link: #5B21B6;
+    --print-strong: #4B2A7B;
+    --print-emphasis: #5B3F72;
+    --print-border: #8C73A5;
+    --print-highlight: #FFF3A3;
+    --print-note: #1D4ED8;
+    --print-tip: #047857;
+    --print-warning: #B45309;
+    --print-important: #7E22CE;
+    --print-caution: #BE123C;
+    --print-code-background: #FFFFFF;
+    --print-code-text: #211629;
+    --print-code-keyword: #5B21B6;
+    --print-code-variable: #9D174D;
+    --print-code-function: #0369A1;
+    --print-code-parameter: #0F766E;
+    --print-code-string: #047857;
+    --print-code-comment: #5B6470;
+    --print-code-type: #1D4ED8;
+    --print-code-property: #0F766E;
+    --print-code-number: #B45309;
+    --print-code-meta: #92400E;
+    --print-diagram-background: #FFFFFF;
+    --print-diagram-text: #211629;
+    --print-diagram-node-border: #6D28D9;
+    --print-diagram-line: #4B2A7B;
+    --bg: var(--print-background);
+    --surface: var(--print-background);
+    --surface-readable: var(--print-background);
+    --surface-raised: var(--print-background);
+    --surface-tint: var(--print-background);
+    --surface-sunken: var(--print-background);
+    --text-prose: var(--print-text);
+    --text-prose-hover: var(--print-link);
+    --text-prose-alt: var(--print-text-secondary);
+    --text: var(--print-text);
+    --text-muted: var(--print-text-secondary);
+    --text-dim: var(--print-text-dim);
+    --primary: var(--print-strong);
+    --button: #6D28D9;
+    --button-hover: var(--print-link);
+    --link: var(--print-link);
+    --link-hover: var(--print-strong);
+    --focus: #6D28D9;
+    --state-hover-bg: transparent;
+    --state-active-bg: transparent;
+    --state-selected-bg: transparent;
+    --text-color: var(--print-text);
+    --text-color-secondary: var(--print-text-secondary);
+    --primary-color: var(--print-link);
+    --secondary-color: #6D28D9;
+    --border-color: var(--print-border);
+    --glow-shadow-text: none;
+    --glow-shadow-box: none;
+    --h1-underline-color: var(--print-heading-marker);
+    --primary-text: var(--print-heading);
+    --element-color: var(--print-heading-marker);
+    --element-color-deep: var(--print-strong);
+    --head-title-h2-color: var(--print-heading);
+    --code-block-bg: var(--print-code-background);
+    --code-keyword: var(--print-code-keyword);
+    --code-base-text: var(--print-code-text);
+    --code-variable: var(--print-code-variable);
+    --code-function: var(--print-code-function);
+    --code-param: var(--print-code-parameter);
+    --code-string: var(--print-code-string);
+    --code-comment: var(--print-code-comment);
+    --code-type: var(--print-code-type);
+    --code-property: var(--print-code-property);
+    --code-number: var(--print-code-number);
+    --code-meta: var(--print-code-meta);
+  }
+
+  #write * {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #write p,
+  #write li,
+  #write dd,
+  #write td,
+  #write blockquote,
+  #write figcaption,
+  #write .footnotes,
+  #write .md-alert,
+  #write .md-toc-content,
+  #write .md-toc-item {
+    color: var(--print-text) !important;
+  }
+
+  #write h1,
+  #write h2,
+  #write h3,
+  #write h4,
+  #write h5,
+  #write h6,
+  #write th,
+  #write .md-toc::before {
+    color: var(--print-heading) !important;
+  }
+
+  #write a {
+    color: var(--print-link) !important;
+  }
+
+  #write h1::before,
+  #write h1::after,
+  #write h2::before,
+  #write h2::after,
+  #write h3::before,
+  #write h3::after,
+  #write h4::before,
+  #write h4::after,
+  #write h5::before,
+  #write h5::after,
+  #write h6::before,
+  #write h6::after {
+    color: var(--print-heading-marker) !important;
+    background-color: var(--print-heading-marker) !important;
+  }
+
+  #write strong {
+    color: var(--print-strong) !important;
+  }
+
+  #write em,
+  #write del {
+    color: var(--print-emphasis) !important;
+  }
+
+  #write code,
+  #write pre,
+  #write .CodeMirror,
+  #write .CodeMirror-code,
+  #write .CodeMirror-line {
+    color: var(--print-code-text) !important;
+  }
+
+  #write mark {
+    color: var(--print-text) !important;
+    background-color: var(--print-highlight) !important;
+  }
+
+  #write .md-alert-text-note { color: var(--print-note) !important; }
+  #write .md-alert-text-tip { color: var(--print-tip) !important; }
+  #write .md-alert-text-warning { color: var(--print-warning) !important; }
+  #write .md-alert-text-important { color: var(--print-important) !important; }
+  #write .md-alert-text-caution { color: var(--print-caution) !important; }
+
+  #write .md-fences .cm-header1 { color: #9D174D !important; }
+  #write .md-fences .cm-header2 { color: #6D28D9 !important; }
+  #write .md-fences .cm-header3 { color: #0369A1 !important; }
+  #write .md-fences .cm-header4 { color: #047857 !important; }
+  #write .md-fences .cm-header5 { color: #B45309 !important; }
+  #write .md-fences .cm-tag { color: #9D174D !important; }
+
+  #write svg[id^="mermaid"] .node rect,
+  #write svg[id^="mermaid"] .node circle,
+  #write svg[id^="mermaid"] .node ellipse,
+  #write svg[id^="mermaid"] .node polygon,
+  #write svg[id^="mermaid"] .edgeLabel rect {
+    fill: var(--print-diagram-background) !important;
+    stroke: var(--print-diagram-node-border) !important;
+  }
+
+  #write svg[id^="mermaid"] text,
+  #write svg[id^="mermaid"] tspan,
+  #write svg[id^="mermaid"] .label,
+  #write svg[id^="mermaid"] .edgeLabel {
+    color: var(--print-diagram-text) !important;
+    fill: var(--print-diagram-text) !important;
+  }
+
+  #write svg[id^="mermaid"] .edgePath path,
+  #write svg[id^="mermaid"] path.flowchart-link {
+    stroke: var(--print-diagram-line) !important;
+  }
+
+  #write svg[id^="mermaid"] marker path {
+    fill: var(--print-diagram-line) !important;
+    stroke: var(--print-diagram-line) !important;
   }
 }
 
