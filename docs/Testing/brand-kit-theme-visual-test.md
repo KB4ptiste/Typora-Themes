@@ -1,6 +1,6 @@
 # Baptiste Studios Brand Kit Theme Visual Test
 
-Version: 1.5
+Version: 1.6
 Date: 2026-08-01
 
 ## Test Instructions
@@ -232,7 +232,7 @@ Each alert should use the expected emoji icon, including the larger watermark ic
 | Links | Visible without being harsh | Pass |
 | Inline code | Technical but controlled | Pass |
 | Table | Centered and aligned | Pass |
-| Borders | Visible but not heavy | Fail |
+| Borders | Visible but not heavy | Pass |
 
 The table should be centered and should not stretch awkwardly across the full page.
 
@@ -247,7 +247,7 @@ The table should be centered and should not stretch awkwardly across the full pa
 | Line color | Pass |       |
 | Table width | Pass |       |
 | Table alignment | Pass |       |
-| Table line border | Fail | Outer corners are disconnected because the cells are not clipped to the rounded table boundary. |
+| Table line border | Pass | The v3.18 corner-cell rounding and wrapper clipping produce connected rounded boundaries. |
 
 ---
 
@@ -410,7 +410,7 @@ Mermaid edge labels should use the accepted theme treatment and remain readable.
 | Border color | Pass |       |
 | Yes/No label color | Pass |       |
 | Edge label readability | Pass |       |
-| Export behavior | Fail | The latest PDF leaves page 12 blank and fragments the diagram across pages 13 and 14. HTML export remains readable. |
+| Export behavior | Pass | The complete Mermaid diagram fits on page 12 without a blank page or diagram fragmentation. The result table continues normally on page 13, and HTML export remains readable. |
 
 ---
 
@@ -743,7 +743,7 @@ Export this complete document to HTML and PDF after editor validation passes.
 | PDF background | Page, document, and CSS-controlled component backgrounds print as `#FFFFFF` or transparent over white, with no colored page bars | Fail |  | The latest audited PDF still draws explicit `#1B1226` rectangles approximately 15–16 mm high at the top and bottom of every page. |
 | PDF margins | Accepted `@page` margin of `1mm`, page padding of `0`, and printed `#write` padding of `3mm` remain tight | Fail |  | The base theme's nested print-page padding remains effective in Typora export; the previous standalone override did not remove the bands. |
 | PDF scale | Text and components are not oversized or compressed | Pass |  |  |
-| PDF page breaks | Blocks do not split in visibly broken positions | Fail |  | Page 12 is blank and the Mermaid diagram is fragmented across pages 13 and 14. |
+| PDF page breaks | Blocks do not split in visibly broken positions | Pass |  | The complete Mermaid diagram fits on page 12; the following result table continues normally on page 13. |
 | PDF H2 panel | H2 surface exports without duplicate boxes or artifacts | Pass |  |  |
 
 ### Build 8: General Document Elements
@@ -762,7 +762,7 @@ Review Sections 1 and 3 through 15 in editor view and on hover where applicable.
 | Task lists | Checked, unchecked, hover, and wrapped tasks align correctly | Pass |  |  |
 | Blockquotes | Marker, border, background, hover, and wrapped text remain readable | Pass |  |  |
 | Alerts | Note, Tip, Important, Warning, and Caution remain distinct and readable | Pass |  |  |
-| Tables | Header, cells, borders, hover, width, and alignment are correct | Fail |  | All table outer corners are disconnected. |
+| Tables | Header, cells, borders, hover, width, and alignment are correct | Pass |  | The v3.18 table correction produces connected rounded outer corners. |
 | Images | Images remain centered, contained, and correctly bordered | Pass |  | Raw SVG image and figure canvases are centered in the latest Dark export. |
 | Footnotes | Reference, hover, divider, and footnote body remain connected | Pass |  |  |
 | Definition content | Terms, definitions, indentation, colors, and hover are correct | Pass |  |  |
@@ -798,7 +798,7 @@ Perform these checks outside the document body.
 | 5 | Raw HTML and SVG | Pass |  |  |  |
 | 6 | Code blocks | Pass |  |  |  |
 | 7 | HTML and PDF export | Fail |  |  |  |
-| 8 | General document elements | Fail |  |  | Table boundary rendering requires correction. |
+| 8 | General document elements | Pass |  |  | Table boundary rendering passed in the latest Dark editor and export review. |
 | 9 | Typora interface sweep | Pass |  |  |  |
 
 ---
@@ -831,6 +831,7 @@ Use this checklist after testing:
 | 1.3 | 2026-07-31 | Recorded the Dark audit results for tables, raw SVG alignment, Mermaid export, and PDF layout. |
 | 1.4 | 2026-08-01 | Corrected the Dark export diagnosis and updated SVG, table-boundary, page-padding, and Mermaid validation records. |
 | 1.5 | 2026-08-01 | Replaced the disproven PDF-padding diagnosis with measured page-band evidence and updated the latest Mermaid pagination failure. |
+| 1.6 | 2026-08-01 | Recorded passing Dark table boundaries and Mermaid pagination while retaining the PDF background and margin failures. |
 
 ---
 
