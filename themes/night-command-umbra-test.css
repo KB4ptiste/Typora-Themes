@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.19 · Built for Typora
+   Version 3.20 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -2557,6 +2557,14 @@ svg[id^=mermaid] .cluster .label {
   break-inside: avoid;
 }
 
+/* Typora samples this computed PDF-export background when generating its
+   otherwise-empty header and footer surfaces. Keep the rule outside
+   @media print so those surfaces remain white. */
+body.typora-export.typora-print {
+  background-color: #FFFFFF !important;
+  color-scheme: light !important;
+}
+
 @page {
   margin: 1mm !important;
   padding: 0 !important;
@@ -2643,6 +2651,12 @@ svg[id^=mermaid] .cluster .label {
     break-after: avoid !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
+  }
+
+  /* Clear Typora's fixed PDF header surface without increasing every page's
+     print margin. The document title is the first direct child of #write. */
+  #write > h1:first-child {
+    margin-top: 10mm !important;
   }
 
   #write .md-alert,
