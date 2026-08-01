@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.66 · Built for Typora
+   Version 2.67 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2972,6 +2972,14 @@ body.typora-export .typora-export-sidebar + #write,
 .typora-export #write .md-diagram-panel {
   page-break-inside: avoid;
   break-inside: avoid;
+}
+
+/* Typora samples this computed PDF-export background when generating its
+   otherwise-empty header and footer surfaces. Keep the rule outside
+   @media print so those surfaces remain white. */
+body.typora-export.typora-print {
+  background-color: #FFFFFF !important;
+  color-scheme: light !important;
 }
 
 @page {
