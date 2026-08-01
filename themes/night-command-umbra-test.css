@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.17 · Built for Typora
+   Version 3.18 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -2421,6 +2421,8 @@ svg[id^=mermaid] .cluster .label {
   background-color: #211629;
   border: 1px solid var(--border-color);
   border-radius: 8px;
+  clip-path: inset(0 round 8px);
+  isolation: isolate;
 }
 
 #write .md-table-fig > table,
@@ -2428,6 +2430,26 @@ svg[id^=mermaid] .cluster .label {
   margin: 0;
   border: 0;
   border-radius: 0;
+}
+
+#write .md-table-fig > table > thead > tr:first-child > th:first-child,
+#write figure.table-figure > table > thead > tr:first-child > th:first-child {
+  border-top-left-radius: 7px;
+}
+
+#write .md-table-fig > table > thead > tr:first-child > th:last-child,
+#write figure.table-figure > table > thead > tr:first-child > th:last-child {
+  border-top-right-radius: 7px;
+}
+
+#write .md-table-fig > table > tbody > tr:last-child > td:first-child,
+#write figure.table-figure > table > tbody > tr:last-child > td:first-child {
+  border-bottom-left-radius: 7px;
+}
+
+#write .md-table-fig > table > tbody > tr:last-child > td:last-child,
+#write figure.table-figure > table > tbody > tr:last-child > td:last-child {
+  border-bottom-right-radius: 7px;
 }
 
 #write img,
@@ -2542,9 +2564,22 @@ svg[id^=mermaid] .cluster .label {
 }
 
 @media print {
+  @page {
+    margin: 1mm;
+    padding: 0;
+    background: #FFFFFF;
+  }
+
+  :root {
+    --bg-color: #FFFFFF !important;
+    --ui-surface-base: #FFFFFF !important;
+  }
+
   html,
   body,
-  .typora-export body {
+  body.typora-export,
+  .typora-export body,
+  .typora-export-content {
     margin: 0 !important;
     padding: 0 !important;
     background-color: #FFFFFF !important;
@@ -2614,6 +2649,7 @@ svg[id^=mermaid] .cluster .label {
   #write .md-table-fig,
   #write figure.table-figure {
     overflow: visible !important;
+    clip-path: none;
     -webkit-box-decoration-break: slice;
     box-decoration-break: slice;
   }
@@ -2647,10 +2683,22 @@ svg[id^=mermaid] .cluster .label {
 
   #write .md-fences[lang="mermaid"],
   #write .md-diagram-panel {
-    zoom: 0.70;
+    zoom: 1;
     overflow: visible !important;
     background-color: #FFFFFF !important;
     background-image: none !important;
+  }
+
+  #write .md-fences[lang="mermaid"] svg[id^="mermaid"],
+  #write .md-diagram-panel[lang="mermaid"] svg[id^="mermaid"],
+  #write .md-diagram-panel svg[id^="mermaid"] {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 180mm !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   /* Print-only toner-saving palette: preserve accent text and line work, remove large fills. */
