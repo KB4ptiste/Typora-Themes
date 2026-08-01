@@ -3,3 +3,8 @@ themes/_gsdata_/
 
 # Local symlink to Baptiste Studios brand kit
 brand-kit
+
+# Typora built-in GitHub theme synchronized locally
+themes/Readme.md
+themes/github.css
+themes/github/
