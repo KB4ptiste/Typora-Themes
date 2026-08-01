@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.13 · Built for Typora
+   Version 3.15 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -2512,14 +2512,15 @@ svg[id^=mermaid] .cluster .label {
 
 @page {
   margin: 10mm 3mm;
-  background: #1B1226;
+  background: #FFFFFF;
 }
 
 @media print {
   html,
   body,
   .typora-export body {
-    background-color: #1B1226 !important;
+    background-color: #FFFFFF !important;
+    color-scheme: light !important;
   }
 
   .typora-export-sidebar,
@@ -2534,14 +2535,15 @@ svg[id^=mermaid] .cluster .label {
     max-width: 100% !important;
     margin: 0 auto !important;
     padding: 3mm 2mm !important;
-    color: var(--text-color) !important;
-    background-color: #211629 !important;
-    border: 3px solid #543B6D !important;
-    border-radius: 14px !important;
+    color: #211629 !important;
+    background-color: #FFFFFF !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
     overflow: visible !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: economy !important;
+    print-color-adjust: economy !important;
   }
 
   .typora-export #write {
@@ -2549,8 +2551,8 @@ svg[id^=mermaid] .cluster .label {
   }
 
   #write::before {
-    display: block !important;
-    opacity: 0.04 !important;
+    display: none !important;
+    opacity: 0 !important;
   }
 
   #write h1,
@@ -2601,6 +2603,150 @@ svg[id^=mermaid] .cluster .label {
   #write .md-fences[lang="mermaid"],
   #write .md-diagram-panel {
     zoom: 0.80;
+  }
+
+  /* Print-only toner-saving palette: preserve accent text and line work, remove large fills. */
+  #write {
+    --text-color: #211629;
+    --text-color-secondary: #4B3764;
+    --heading-color: #7E22CE;
+    --heading-hover: #7E22CE;
+    --heading-accent: #7E22CE;
+    --primary-text: #7E22CE;
+    --primary-color: #6D28D9;
+    --secondary-color: #5B21B6;
+    --border-color: #8C73A5;
+    --glow-shadow-text: none;
+    --glow-shadow-box: none;
+    --h1-underline-color: #7E22CE;
+    --element-color: #7E22CE;
+    --element-color-deep: #4B2A7B;
+    --head-title-h2-color: #7E22CE;
+    --code-block-bg: #FFFFFF;
+    --code-keyword: #5B21B6;
+    --code-base-text: #211629;
+    --code-variable: #9D174D;
+    --code-function: #0369A1;
+    --code-param: #0F766E;
+    --code-string: #047857;
+    --code-comment: #5B6470;
+    --code-type: #1D4ED8;
+    --code-property: #0F766E;
+    --code-number: #B45309;
+    --code-meta: #92400E;
+  }
+
+  #write * {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #write p,
+  #write li,
+  #write dd,
+  #write td,
+  #write blockquote,
+  #write figcaption,
+  #write .footnotes,
+  #write .md-alert,
+  #write .md-toc-content,
+  #write .md-toc-item {
+    color: #211629 !important;
+  }
+
+  #write h1,
+  #write h2,
+  #write h3,
+  #write h4,
+  #write h5,
+  #write h6,
+  #write th,
+  #write .md-toc::before {
+    color: #7E22CE !important;
+  }
+
+  #write a {
+    color: #5B21B6 !important;
+  }
+
+  #write h1::before,
+  #write h1::after,
+  #write h2::before,
+  #write h2::after,
+  #write h3::before,
+  #write h3::after,
+  #write h4::before,
+  #write h4::after,
+  #write h5::before,
+  #write h5::after,
+  #write h6::before,
+  #write h6::after {
+    color: #7E22CE !important;
+    background-color: #7E22CE !important;
+  }
+
+  #write strong {
+    color: #4B2A7B !important;
+  }
+
+  #write em,
+  #write del {
+    color: #5B3F72 !important;
+  }
+
+  #write code,
+  #write pre,
+  #write .CodeMirror,
+  #write .CodeMirror-code,
+  #write .CodeMirror-line {
+    color: #211629 !important;
+  }
+
+  #write mark {
+    color: #211629 !important;
+    background-color: #FFF3A3 !important;
+  }
+
+  #write .md-alert-text-note { color: #1D4ED8 !important; }
+  #write .md-alert-text-tip { color: #047857 !important; }
+  #write .md-alert-text-warning { color: #B45309 !important; }
+  #write .md-alert-text-important { color: #7E22CE !important; }
+  #write .md-alert-text-caution { color: #BE123C !important; }
+
+  #write .md-fences .cm-header1 { color: #9D174D !important; }
+  #write .md-fences .cm-header2 { color: #6D28D9 !important; }
+  #write .md-fences .cm-header3 { color: #0369A1 !important; }
+  #write .md-fences .cm-header4 { color: #047857 !important; }
+  #write .md-fences .cm-header5 { color: #B45309 !important; }
+  #write .md-fences .cm-tag { color: #9D174D !important; }
+
+  #write svg[id^="mermaid"] .node rect,
+  #write svg[id^="mermaid"] .node circle,
+  #write svg[id^="mermaid"] .node ellipse,
+  #write svg[id^="mermaid"] .node polygon,
+  #write svg[id^="mermaid"] .edgeLabel rect {
+    fill: #FFFFFF !important;
+    stroke: #6D28D9 !important;
+  }
+
+  #write svg[id^="mermaid"] text,
+  #write svg[id^="mermaid"] tspan,
+  #write svg[id^="mermaid"] .label,
+  #write svg[id^="mermaid"] .edgeLabel {
+    color: #211629 !important;
+    fill: #211629 !important;
+  }
+
+  #write svg[id^="mermaid"] .edgePath path,
+  #write svg[id^="mermaid"] path.flowchart-link {
+    stroke: #4B2A7B !important;
+  }
+
+  #write svg[id^="mermaid"] marker path {
+    fill: #4B2A7B !important;
+    stroke: #4B2A7B !important;
   }
 }
 
