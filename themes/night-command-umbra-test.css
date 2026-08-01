@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.16 · Built for Typora
+   Version 3.17 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -2410,16 +2410,24 @@ svg[id^=mermaid] .cluster .label {
   border-radius: 8px !important;
 }
 
-#write table {
-  overflow: hidden;
-}
-
-#write .md-table,
 #write .md-table-fig,
 #write figure.table-figure {
+  width: fit-content;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #211629;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
+}
+
+#write .md-table-fig > table,
+#write figure.table-figure > table {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
 }
 
 #write img,
@@ -2529,6 +2537,7 @@ svg[id^=mermaid] .cluster .label {
 
 @page {
   margin: 1mm;
+  padding: 0;
   background: #FFFFFF;
 }
 
@@ -2596,9 +2605,17 @@ svg[id^=mermaid] .cluster .label {
 
   #write table,
   #write .md-table,
-  #write .md-table-fig {
+  #write .md-table-fig,
+  #write figure.table-figure {
     page-break-inside: auto;
     break-inside: auto;
+  }
+
+  #write .md-table-fig,
+  #write figure.table-figure {
+    overflow: visible !important;
+    -webkit-box-decoration-break: slice;
+    box-decoration-break: slice;
   }
 
   #write tr {
@@ -2630,7 +2647,7 @@ svg[id^=mermaid] .cluster .label {
 
   #write .md-fences[lang="mermaid"],
   #write .md-diagram-panel {
-    zoom: 0.80;
+    zoom: 0.70;
     overflow: visible !important;
     background-color: #FFFFFF !important;
     background-image: none !important;

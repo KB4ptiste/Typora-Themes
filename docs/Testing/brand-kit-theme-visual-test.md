@@ -1,7 +1,7 @@
 # Baptiste Studios Brand Kit Theme Visual Test
 
-Version: 1.3
-Date: 2026-07-31
+Version: 1.4
+Date: 2026-08-01
 
 ## Test Instructions
 
@@ -410,7 +410,7 @@ Mermaid edge labels should use the accepted theme treatment and remain readable.
 | Border color | Pass |       |
 | Yes/No label color | Pass |       |
 | Edge label readability | Pass |       |
-| Export behavior | Fail | PDF export uses a dark diagram canvas and clips the final nodes. HTML export remains readable. |
+| Export behavior | Fail | The PDF canvas is white, but the diagram is fragmented across multiple pages. HTML export remains readable. |
 
 ---
 
@@ -457,12 +457,12 @@ The image should fit inside the document frame without breaking spacing.
 | Output | Pass / Fail | Notes |
 | ------ | ----------- | ----- |
 | Image background color | Pass |       |
-| Image centered | Fail | The raw SVG canvas is not centered inside its editor container. |
+| Image centered | Pass | The raw SVG canvas is centered in the latest Dark editor and PDF export. |
 | Image border color | Pass |       |
 | Figure caption color | Pass |       |
 | Figure caption spacing | Pass |       |
 | Figure caption hover | Pass |       |
-| Figure centered | Fail | The figure SVG canvas is not centered inside its editor container. |
+| Figure centered | Pass | The figure SVG canvas is centered in the latest Dark editor and PDF export. |
 
 ---
 
@@ -703,7 +703,7 @@ Use Sections 12 and 13. Enter raw-source editing mode where Typora permits it.
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| SVG sizing | SVG remains centered and contained within the writing frame | Fail |  | Raw SVG and figure canvases are not centered. |
+| SVG sizing | SVG remains centered and contained within the writing frame | Pass |  | Raw SVG and figure canvases are centered and contained. |
 | SVG border | Only the intended border is visible; no duplicate editor border appears | Pass |  |  |
 | Figure caption | Caption alignment, spacing, contrast, and hover state are correct | Pass |  |  |
 | Raw HTML rendered | Rendered block uses theme surfaces and readable text | Pass |  |  |
@@ -740,10 +740,10 @@ Export this complete document to HTML and PDF after editor validation passes.
 | HTML document frame | Writing surface, width, and borders remain intentional | Pass |  |  |
 | HTML components | Headings, alerts, tables, code, math, Mermaid, HTML, and SVG survive | Pass |  |  |
 | HTML navigation | Inline TOC links navigate to the correct headings | Pass |  |  |
-| PDF background | Page, document, and CSS-controlled component backgrounds print as `#FFFFFF` or transparent over white, with no colored page bars | Fail |  | Purple bars remain at the top and bottom, and dark component backgrounds leak into print. |
-| PDF margins | Accepted `@page` margin of `1mm` and printed `#write` padding of `3mm` remain tight | Fail |  | The audited export was generated with a `10mm` top and bottom page margin. |
+| PDF background | Page, document, and CSS-controlled component backgrounds print as `#FFFFFF` or transparent over white, with no colored page bars | Fail |  | The latest audited PDF retains dark bars from the base theme's inherited `15mm` page padding. |
+| PDF margins | Accepted `@page` margin of `1mm`, page padding of `0`, and printed `#write` padding of `3mm` remain tight | Fail |  | The latest audited PDF uses the accepted margin but retains inherited `15mm` page padding. |
 | PDF scale | Text and components are not oversized or compressed | Pass |  |  |
-| PDF page breaks | Blocks do not split in visibly broken positions | Fail |  | Excessive blank space remains and the Mermaid diagram is clipped. |
+| PDF page breaks | Blocks do not split in visibly broken positions | Fail |  | The Mermaid diagram is fragmented across pages 14 through 16. |
 | PDF H2 panel | H2 surface exports without duplicate boxes or artifacts | Pass |  |  |
 
 ### Build 8: General Document Elements
@@ -763,7 +763,7 @@ Review Sections 1 and 3 through 15 in editor view and on hover where applicable.
 | Blockquotes | Marker, border, background, hover, and wrapped text remain readable | Pass |  |  |
 | Alerts | Note, Tip, Important, Warning, and Caution remain distinct and readable | Pass |  |  |
 | Tables | Header, cells, borders, hover, width, and alignment are correct | Fail |  | All table outer corners are disconnected. |
-| Images | Images remain centered, contained, and correctly bordered | Fail |  | Raw SVG image and figure canvases are not centered in editor view. |
+| Images | Images remain centered, contained, and correctly bordered | Pass |  | Raw SVG image and figure canvases are centered in the latest Dark export. |
 | Footnotes | Reference, hover, divider, and footnote body remain connected | Pass |  |  |
 | Definition content | Terms, definitions, indentation, colors, and hover are correct | Pass |  |  |
 | Focus mode | Focused content is readable and dimmed content remains identifiable | Pass |  |  |
@@ -795,10 +795,10 @@ Perform these checks outside the document body.
 | 2 | Inline TOC | Pass |  |  |  |
 | 3 | Files, Outline, and Search tabs | Pass |  |  |  |
 | 4 | Math and Mermaid | Pass |  |  |  |
-| 5 | Raw HTML and SVG | Fail |  |  |  |
+| 5 | Raw HTML and SVG | Pass |  |  |  |
 | 6 | Code blocks | Pass |  |  |  |
 | 7 | HTML and PDF export | Fail |  |  |  |
-| 8 | General document elements | Fail |  |  | Table corners and raw SVG alignment require correction. |
+| 8 | General document elements | Fail |  |  | Table boundary rendering requires correction. |
 | 9 | Typora interface sweep | Pass |  |  |  |
 
 ---
@@ -829,6 +829,7 @@ Use this checklist after testing:
 | --- | --- | --- |
 | 1.2 | 2026-07-12 | Added the complete theme validation protocol and build acceptance dashboard. |
 | 1.3 | 2026-07-31 | Recorded the Dark audit results for tables, raw SVG alignment, Mermaid export, and PDF layout. |
+| 1.4 | 2026-08-01 | Corrected the Dark export diagnosis and updated SVG, table-boundary, page-padding, and Mermaid validation records. |
 
 ---
 
