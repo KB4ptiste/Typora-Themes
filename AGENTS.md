@@ -1,6 +1,6 @@
 # Typora Themes Project Instructions
 
-Version: 1.2
+Version: 1.3
 
 ## Project Scope
 
@@ -24,15 +24,15 @@ Edit in one place per session and wait for GoodSync to finish. Perform Git opera
 
 The Baptiste Studios brand kit belongs to the baptiste-studios Git repository, not this Typora-Themes repository.
 
-Current brand kit source of truth:
+Current brand kit source of truth (Version 5.18):
 
-K:\Dev\baptiste-studios\assets\brand-kit\baptiste_studios_brand_kit_v2.0.md
+K:\Dev\baptiste-studios\baptiste_studios_brand_kit_v5.md
 
-This repository may expose that folder through a symbolic link:
+This repository may expose supporting brand-kit assets through a symbolic link:
 
 K:\Dev\Typora-Themes\brand-kit
 
-The symlink is a pointer to the real brand-kit folder. Editing a file through the symlink edits the real file in the baptiste-studios repository.
+The symlink does not contain the canonical brand-kit document. Do not treat files under the symlink as the brand-kit source of truth.
 
 Commit brand kit changes from:
 
@@ -44,7 +44,7 @@ Do not commit brand kit documents into Typora-Themes unless explicitly requested
 
 When building a new theme, such as Smoke Command:
 
-1. Read the current Baptiste Studios brand kit through the symlink.
+1. Read the canonical Baptiste Studios brand kit at `K:\Dev\baptiste-studios\baptiste_studios_brand_kit_v5.md`.
 2. Create a temporary theme-specific brand kit markdown only if needed for active theme development.
 3. When the theme is complete, merge the useful decisions into the single Baptiste Studios brand kit.
 4. Remove or archive the temporary theme-specific brand kit according to the user's instruction.
