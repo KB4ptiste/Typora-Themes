@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.20 · Built for Typora
+   Version 3.21 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -2657,6 +2657,38 @@ body.typora-export.typora-print {
      print margin. The document title is the first direct child of #write. */
   #write > h1:first-child {
     margin-top: 10mm !important;
+  }
+
+  /* Typora moves collected footnotes into a generated data-breakpage block
+     and forces it onto a new page. Let it follow the document naturally and
+     neutralize the full-size decorative separator inside that compact area. */
+  #write .footnotes-area[data-breakpage] {
+    page-break-before: auto !important;
+    break-before: auto !important;
+    /* Pull the generated block above Chromium's final-page clipping boundary.
+       The preceding document separator already supplies visible spacing. */
+    margin-top: 0 !important;
+    padding: 0 !important;
+    color: #211629 !important;
+    transform: translateY(-10mm);
+  }
+
+  #write .footnotes-area > hr {
+    height: 1px !important;
+    margin: 0 0 2mm !important;
+    background: #8C73A5 !important;
+    opacity: 1 !important;
+  }
+
+  #write .footnotes-area > hr::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  #write .footnotes-area .footnote-line,
+  #write .footnotes-area .footnote-line span,
+  #write .footnotes-area .reversefootnote {
+    color: #211629 !important;
   }
 
   #write .md-alert,
