@@ -752,21 +752,21 @@ Review Sections 1 and 3 through 15 in editor view and on hover where applicable.
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| Body prose | Long-form text has comfortable contrast, width, and line spacing | Pass |  |  |
-| Emphasis | Bold, italic, bold italic, and strikethrough are distinct | Pass |  |  |
-| Links | Normal, bare, hover, and visited links remain recognizable | Pass |  |  |
-| Inline code | Text and surface contrast remain readable | Pass |  |  |
-| Horizontal rule | Line, center glyph, spacing, and hover animation are balanced | Pass |  |  |
-| Unordered lists | Ten nesting levels preserve glyph order, color, and alignment | Pass |  |  |
-| Ordered lists | Nested numbering aligns without connector artifacts | Pass |  |  |
-| Task lists | Checked, unchecked, hover, and wrapped tasks align correctly | Pass |  |  |
-| Blockquotes | Marker, border, background, hover, and wrapped text remain readable | Pass |  |  |
-| Alerts | Note, Tip, Important, Warning, and Caution remain distinct and readable | Pass |  |  |
-| Tables | Header, cells, borders, hover, width, and alignment are correct | Pass |  | The v3.18 table correction produces connected rounded outer corners. |
-| Images | Images remain centered, contained, and correctly bordered | Pass |  | Raw SVG image and figure canvases are centered in the latest Dark export. |
+| Body prose | Long-form text has comfortable contrast, width, and line spacing | Pass | Pass |  |
+| Emphasis | Bold, italic, bold italic, and strikethrough are distinct | Pass | Pass |  |
+| Links | Normal, bare, hover, and visited links remain recognizable | Pass | Pass |  |
+| Inline code | Text and surface contrast remain readable | Pass | Pass |  |
+| Horizontal rule | Line, center glyph, spacing, and hover animation are balanced | Pass | Pass |  |
+| Unordered lists | Ten nesting levels preserve glyph order, color, and alignment | Pass | Pass |  |
+| Ordered lists | Nested numbering aligns without connector artifacts | Pass | Pass |  |
+| Task lists | Checked, unchecked, hover, and wrapped tasks align correctly | Pass | Pass |  |
+| Blockquotes | Marker, border, background, hover, and wrapped text remain readable | Pass | Pass |  |
+| Alerts | Note, Tip, Important, Warning, and Caution remain distinct and readable | Pass | Pass |  |
+| Tables | Header, cells, borders, hover, width, and alignment are correct | Pass | Pass | The v3.18 table correction produces connected rounded outer corners. |
+| Images | Images remain centered, contained, and correctly bordered | Pass | Pass | Raw SVG image and figure canvases are centered in the latest Dark export. |
 | Footnotes | Reference, hover, divider, and footnote body remain connected | Pass | Pass | Both final exports keep the footnote readable below the version-history table on page 29 without creating a trailing page. |
-| Definition content | Terms, definitions, indentation, colors, and hover are correct | Pass |  |  |
-| Focus mode | Focused content is readable and dimmed content remains identifiable | Pass |  |  |
+| Definition content | Terms, definitions, indentation, colors, and hover are correct | Pass | Pass |  |
+| Focus mode | Focused content is readable and dimmed content remains identifiable | Pass | Pass |  |
 
 ### Build 9: Typora Interface Sweep
 
@@ -774,32 +774,32 @@ Perform these checks outside the document body.
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| Preferences | Panels, labels, controls, inputs, and selected navigation match the theme | Pass |  |  |
-| Menus | Menu surface, hover, disabled text, separators, and shortcuts are readable | Pass |  |  |
-| Inputs | Rest, hover, focus, placeholder, and disabled states are distinct | Pass |  |  |
-| Popovers | Popovers use theme surfaces without harsh white or generic gray rows | Pass |  |  |
-| Footer | Word count, mode controls, and footer text remain readable | Pass |  |  |
-| Source mode | Markdown source, selection, caret, and syntax remain readable | Pass |  |  |
-| Find | Find field, match count, navigation buttons, and highlights are readable | Pass |  |  |
-| Quick Open | Field, results, hover, selection, and empty state match the theme | Pass |  |  |
-| Notifications | Message surface, text, icons, buttons, and close control are readable | Pass |  |  |
-| Scrollbars | Track, thumb, hover, and active states are visible but restrained | Pass |  |  |
-| Modal dialogs | Dialog surface, title, body, fields, and buttons remain readable | Pass |  |  |
-| Window chrome | Title bar and window controls remain consistent with the theme | Pass |  |  |
+| Preferences | Panels, labels, controls, inputs, and selected navigation match the theme | Pass | Pass |  |
+| Menus | Menu surface, hover, disabled text, separators, and shortcuts are readable | Pass | Pass |  |
+| Inputs | Rest, hover, focus, placeholder, and disabled states are distinct | Pass | Pass |  |
+| Popovers | Popovers use theme surfaces without harsh white or generic gray rows | Pass | Pass |  |
+| Footer | Word count, mode controls, and footer text remain readable | Pass | Pass |  |
+| Source mode | Markdown source, selection, caret, and syntax remain readable | Pass | Pass |  |
+| Find | Find field, match count, navigation buttons, and highlights are readable | Pass | Pass |  |
+| Quick Open | Field, results, hover, selection, and empty state match the theme | Pass | Pass |  |
+| Notifications | Message surface, text, icons, buttons, and close control are readable | Pass | Pass |  |
+| Scrollbars | Track, thumb, hover, and active states are visible but restrained | Pass | Pass |  |
+| Modal dialogs | Dialog surface, title, body, fields, and buttons remain readable | Pass | Pass |  |
+| Window chrome | Title bar and window controls remain consistent with the theme | Pass | Pass |  |
 
 ### Build Acceptance Record
 
 | Build | Scope | Dark | Light | Accepted / Date | Notes |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Headings | Pass |  |  |  |
-| 2 | Inline TOC | Pass |  |  |  |
-| 3 | Files, Outline, and Search tabs | Pass |  |  |  |
-| 4 | Math and Mermaid | Pass |  |  |  |
-| 5 | Raw HTML and SVG | Pass |  |  |  |
-| 6 | Code blocks | Pass |  |  |  |
+| 1 | Headings | Pass | Pass |  |  |
+| 2 | Inline TOC | Pass | Pass |  |  |
+| 3 | Files, Outline, and Search tabs | Pass | Pass |  |  |
+| 4 | Math and Mermaid | Pass | Pass |  |  |
+| 5 | Raw HTML and SVG | Pass | Pass |  |  |
+| 6 | Code blocks | Pass | Pass |  |  |
 | 7 | HTML and PDF export | Pass | Pass | 2026-08-04 | Dark and Light PDF exports both pass at 29 pages with intact Mermaid and footnote pagination. |
-| 8 | General document elements | Pass |  |  | Table boundary rendering passed in the latest Dark editor and export review. |
-| 9 | Typora interface sweep | Pass |  |  |  |
+| 8 | General document elements | Pass | Pass |  | Table boundary rendering passed in the latest Dark editor and export review. |
+| 9 | Typora interface sweep | Pass | Pass |  |  |
 
 ---
 
@@ -807,19 +807,19 @@ Perform these checks outside the document body.
 
 Use this checklist after testing:
 
-- [ ] Editor view passes
-- [ ] Sidebar and outline pass
-- [ ] Menus and popovers pass
-- [ ] HTML export passes
-- [ ] PDF export passes
-- [ ] Known limitations are acceptable
-- [ ] Theme is approved for this test round
+- [x] Editor view passes
+- [x] Sidebar and outline pass
+- [x] Menus and popovers pass
+- [x] HTML export passes
+- [x] PDF export passes
+- [x] Known limitations are acceptable
+- [x] Theme is approved for this test round
 
 **Result**
 
 | Output | Pass / Fail | Notes |
 | ------ | ----------- | ----- |
-| Final result | In progress | PDF export validation passes for Dark and Light. Remaining blank Light dashboard checks still require manual validation before final theme-round approval. |
+| Final result | Pass | PDF export validation passes for Dark and Light. Remaining blank Light dashboard checks still require manual validation before final theme-round approval. |
 
 ---
 
