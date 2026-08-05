@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.24 · Built for Typora
+   Version 3.25 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -13,133 +13,133 @@
 
 @font-face {
   font-family: "Wak";
-  src: url("./night-command/Wak-Black.ttf") format("truetype");
+  src: url("./night-command-umbra/Wak-Black.ttf") format("truetype");
   font-weight: 900; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Wak";
-  src: url("./night-command/Wak-ExtraBold.ttf") format("truetype");
+  src: url("./night-command-umbra/Wak-ExtraBold.ttf") format("truetype");
   font-weight: 800; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Wak";
-  src: url("./night-command/Wak-Bold.ttf") format("truetype");
+  src: url("./night-command-umbra/Wak-Bold.ttf") format("truetype");
   font-weight: 700; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Wak";
-  src: url("./night-command/Wak-Medium.ttf") format("truetype");
+  src: url("./night-command-umbra/Wak-Medium.ttf") format("truetype");
   font-weight: 500; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Wak";
-  src: url("./night-command/Wak-Book.ttf") format("truetype");
+  src: url("./night-command-umbra/Wak-Book.ttf") format("truetype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Wak";
-  src: url("./night-command/Wak-Light.ttf") format("truetype");
+  src: url("./night-command-umbra/Wak-Light.ttf") format("truetype");
   font-weight: 300; font-style: normal; font-display: swap;
 }
 
 @font-face {
   font-family: "Source Serif 4";
-  src: url("./night-command/SourceSerif4-Regular.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4-Regular.ttf") format("truetype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Source Serif 4";
-  src: url("./night-command/SourceSerif4-Italic.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4-Italic.ttf") format("truetype");
   font-weight: 400; font-style: italic; font-display: swap;
 }
 @font-face {
   font-family: "Source Serif 4";
-  src: url("./night-command/SourceSerif4-Medium.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4-Medium.ttf") format("truetype");
   font-weight: 500; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Source Serif 4";
-  src: url("./night-command/SourceSerif4-MediumItalic.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4-MediumItalic.ttf") format("truetype");
   font-weight: 500; font-style: italic; font-display: swap;
 }
 @font-face {
   font-family: "Source Serif 4";
-  src: url("./night-command/SourceSerif4-SemiBold.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4-SemiBold.ttf") format("truetype");
   font-weight: 600; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Source Serif 4";
-  src: url("./night-command/SourceSerif4-Bold.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4-Bold.ttf") format("truetype");
   font-weight: 700; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Source Serif 4";
-  src: url("./night-command/SourceSerif4-BoldItalic.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4-BoldItalic.ttf") format("truetype");
   font-weight: 700; font-style: italic; font-display: swap;
 }
 
 @font-face {
   font-family: "Source Serif 4 Variable";
-  src: url("./night-command/SourceSerif4-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: 200 900; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Source Serif 4 Variable";
-  src: url("./night-command/SourceSerif4-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4-Italic-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: 200 900; font-style: italic; font-display: swap;
 }
 
 @font-face {
   font-family: "Source Serif 4 18pt";
-  src: url("./night-command/SourceSerif4_18pt-Regular.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4_18pt-Regular.ttf") format("truetype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Source Serif 4 18pt";
-  src: url("./night-command/SourceSerif4_18pt-Medium.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4_18pt-Medium.ttf") format("truetype");
   font-weight: 500; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Source Serif 4 18pt";
-  src: url("./night-command/SourceSerif4_18pt-SemiBold.ttf") format("truetype");
+  src: url("./night-command-umbra/SourceSerif4_18pt-SemiBold.ttf") format("truetype");
   font-weight: 600; font-style: normal; font-display: swap;
 }
 
 @font-face {
   font-family: "MonaspaceXenon";
-  src: url("./night-command/MonaspaceXenon-Regular.otf") format("opentype");
+  src: url("./night-command-umbra/MonaspaceXenon-Regular.otf") format("opentype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "MonaspaceXenon";
-  src: url("./night-command/MonaspaceXenon-Bold.otf") format("opentype");
+  src: url("./night-command-umbra/MonaspaceXenon-Bold.otf") format("opentype");
   font-weight: 700; font-style: normal; font-display: swap;
 }
 
 @font-face {
   font-family: "MonaspaceArgon";
-  src: url("./night-command/MonaspaceArgon-Regular.otf") format("opentype");
+  src: url("./night-command-umbra/MonaspaceArgon-Regular.otf") format("opentype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "MonaspaceArgon";
-  src: url("./night-command/MonaspaceArgon-Medium.otf") format("opentype");
+  src: url("./night-command-umbra/MonaspaceArgon-Medium.otf") format("opentype");
   font-weight: 500; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "MonaspaceArgon";
-  src: url("./night-command/MonaspaceArgon-Bold.otf") format("opentype");
+  src: url("./night-command-umbra/MonaspaceArgon-Bold.otf") format("opentype");
   font-weight: 700; font-style: normal; font-display: swap;
 }
 
 @font-face {
   font-family: "Lotion";
-  src: url("./night-command/Lotion-Regular.ttf") format("truetype");
+  src: url("./night-command-umbra/Lotion-Regular.ttf") format("truetype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Lotion";
-  src: url("./night-command/Lotion-Bold.ttf") format("truetype");
+  src: url("./night-command-umbra/Lotion-Bold.ttf") format("truetype");
   font-weight: 700; font-style: normal; font-display: swap;
 }
 
