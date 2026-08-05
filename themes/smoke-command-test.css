@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.67 · Built for Typora
+   Version 2.68 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -2983,17 +2983,42 @@ body.typora-export.typora-print {
 }
 
 @page {
-  margin: 10mm 3mm;
-  background: #FFFFFF;
+  margin: 1mm !important;
+  padding: 0 !important;
+  background: #FFFFFF !important;
 }
 
 @media print {
+  @page {
+    margin: 1mm !important;
+    padding: 0 !important;
+    background: #FFFFFF !important;
+  }
+
   html,
   body,
   body.typora-export,
-  .typora-export body {
+  .typora-export body,
+  .typora-export-content {
+    margin: 0 !important;
+    padding: 0 !important;
     background-color: #FFFFFF !important;
     color-scheme: light !important;
+  }
+
+  body.typora-export {
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .typora-export-content {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .typora-export-sidebar,
@@ -3008,8 +3033,8 @@ body.typora-export.typora-print {
   #write {
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
-    padding: 3mm 2mm !important;
+    margin: 0 !important;
+    padding: 3mm !important;
     color: #211629 !important;
     background-color: #FFFFFF !important;
     background-image: none !important;
@@ -3048,13 +3073,67 @@ body.typora-export.typora-print {
     backdrop-filter: none !important;
   }
 
+  /* Clear Typora's fixed PDF header surface without increasing every page's
+     print margin. The document title is the first direct child of #write. */
+  #write > h1:first-child {
+    margin-top: 10mm !important;
+  }
+
+  /* Typora collects footnotes in a generated data-breakpage block. Keep the
+     compact block with the final content instead of forcing a footnote-only
+     page, then lift it above Chromium's final-page clipping boundary. */
+  #write .footnotes-area[data-breakpage] {
+    page-break-before: auto !important;
+    break-before: auto !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    color: #211629 !important;
+    transform: translateY(-10mm);
+  }
+
+  #write .footnotes-area > hr {
+    height: 1px !important;
+    margin: 0 0 2mm !important;
+    background: #8C73A5 !important;
+    opacity: 1 !important;
+  }
+
+  #write .footnotes-area > hr::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  #write .footnotes-area .footnote-line,
+  #write .footnotes-area .footnote-line span,
+  #write .footnotes-area .reversefootnote {
+    color: #211629 !important;
+  }
+
   #write .md-alert,
   #write figure,
   #write .md-diagram-panel,
-  #write .md-fences[lang="mermaid"],
+  #write .md-fences[lang="mermaid"] {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
   #write table,
   #write .md-table,
-  #write .md-table-fig {
+  #write .md-table-fig,
+  #write figure.table-figure {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+
+  #write .md-table-fig,
+  #write figure.table-figure {
+    overflow: visible !important;
+    clip-path: none;
+    -webkit-box-decoration-break: slice;
+    box-decoration-break: slice;
+  }
+
+  #write tr {
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -3083,7 +3162,22 @@ body.typora-export.typora-print {
 
   #write .md-fences[lang="mermaid"],
   #write .md-diagram-panel {
-    zoom: 0.80;
+    zoom: 1;
+    overflow: visible !important;
+    background-color: #FFFFFF !important;
+    background-image: none !important;
+  }
+
+  #write .md-fences[lang="mermaid"] svg[id^="mermaid"],
+  #write .md-diagram-panel[lang="mermaid"] svg[id^="mermaid"],
+  #write .md-diagram-panel svg[id^="mermaid"] {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 180mm !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   /* Print-only toner-saving palette: preserve accent text and line work, remove large fills. */
