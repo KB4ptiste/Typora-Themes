@@ -11,3 +11,7 @@ themes/github/
 
 # Local PDF inspection renders
 tmp/pdfs/
+
+# Temporary Typora visual-test exports
+docs/Testing/*.pdf
+docs/Testing/*.html
