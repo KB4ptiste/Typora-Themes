@@ -1,7 +1,7 @@
 # Baptiste Studios Brand Kit Theme Visual Test
 
-Version: 1.6
-Date: 2026-08-01
+Version: 1.7
+Date: 2026-08-04
 
 ## Test Instructions
 
@@ -631,7 +631,7 @@ Expected result:
 | ------ | ----------- | ----- |
 | Editor | Pass |       |
 | HTML export | Pass |       |
-| PDF export | Fail |       |
+| PDF export | Pass | Dark and Light exports both complete in 29 pages with white print surfaces, intact Mermaid pagination, and the final footnote integrated on page 29. |
 
 ---
 
@@ -740,11 +740,11 @@ Export this complete document to HTML and PDF after editor validation passes.
 | HTML document frame | Writing surface, width, and borders remain intentional | Pass |  |  |
 | HTML components | Headings, alerts, tables, code, math, Mermaid, HTML, and SVG survive | Pass |  |  |
 | HTML navigation | Inline TOC links navigate to the correct headings | Pass |  |  |
-| PDF background | Page, document, and CSS-controlled component backgrounds print as `#FFFFFF` or transparent over white, with no colored page bars | Fail |  | The latest audited PDF still draws explicit `#1B1226` rectangles approximately 15–16 mm high at the top and bottom of every page. |
-| PDF margins | Accepted `@page` margin of `1mm`, page padding of `0`, and printed `#write` padding of `3mm` remain tight | Fail |  | The base theme's nested print-page padding remains effective in Typora export; the previous standalone override did not remove the bands. |
-| PDF scale | Text and components are not oversized or compressed | Pass |  |  |
-| PDF page breaks | Blocks do not split in visibly broken positions | Pass |  | The complete Mermaid diagram fits on page 12; the following result table continues normally on page 13. |
-| PDF H2 panel | H2 surface exports without duplicate boxes or artifacts | Pass |  |  |
+| PDF background | Page, document, and CSS-controlled component backgrounds print as `#FFFFFF` or transparent over white, with no colored page bars | Pass | Pass | Both verified exports use white page surfaces without colored top or bottom bands. |
+| PDF margins | Accepted `@page` margin of `1mm`, page padding of `0`, and printed `#write` padding of `3mm` remain tight | Pass | Pass | Dark v3.21 and Light v2.68 use the shared accepted print geometry. |
+| PDF scale | Text and components are not oversized or compressed | Pass | Pass | Both verified exports complete in 29 pages without rejected scaling overrides. |
+| PDF page breaks | Blocks do not split in visibly broken positions | Pass | Pass | The complete Mermaid diagram fits on page 12, its result table continues on page 13, and the final footnote remains on page 29. |
+| PDF H2 panel | H2 surface exports without duplicate boxes or artifacts | Pass | Pass | Verified in both final PDF exports. |
 
 ### Build 8: General Document Elements
 
@@ -764,7 +764,7 @@ Review Sections 1 and 3 through 15 in editor view and on hover where applicable.
 | Alerts | Note, Tip, Important, Warning, and Caution remain distinct and readable | Pass |  |  |
 | Tables | Header, cells, borders, hover, width, and alignment are correct | Pass |  | The v3.18 table correction produces connected rounded outer corners. |
 | Images | Images remain centered, contained, and correctly bordered | Pass |  | Raw SVG image and figure canvases are centered in the latest Dark export. |
-| Footnotes | Reference, hover, divider, and footnote body remain connected | Pass |  |  |
+| Footnotes | Reference, hover, divider, and footnote body remain connected | Pass | Pass | Both final exports keep the footnote readable below the version-history table on page 29 without creating a trailing page. |
 | Definition content | Terms, definitions, indentation, colors, and hover are correct | Pass |  |  |
 | Focus mode | Focused content is readable and dimmed content remains identifiable | Pass |  |  |
 
@@ -797,7 +797,7 @@ Perform these checks outside the document body.
 | 4 | Math and Mermaid | Pass |  |  |  |
 | 5 | Raw HTML and SVG | Pass |  |  |  |
 | 6 | Code blocks | Pass |  |  |  |
-| 7 | HTML and PDF export | Fail |  |  |  |
+| 7 | HTML and PDF export | Pass | Pass | 2026-08-04 | Dark and Light PDF exports both pass at 29 pages with intact Mermaid and footnote pagination. |
 | 8 | General document elements | Pass |  |  | Table boundary rendering passed in the latest Dark editor and export review. |
 | 9 | Typora interface sweep | Pass |  |  |  |
 
@@ -819,7 +819,7 @@ Use this checklist after testing:
 
 | Output | Pass / Fail | Notes |
 | ------ | ----------- | ----- |
-| Final result |             |       |
+| Final result | In progress | PDF export validation passes for Dark and Light. Remaining blank Light dashboard checks still require manual validation before final theme-round approval. |
 
 ---
 
@@ -832,6 +832,7 @@ Use this checklist after testing:
 | 1.4 | 2026-08-01 | Corrected the Dark export diagnosis and updated SVG, table-boundary, page-padding, and Mermaid validation records. |
 | 1.5 | 2026-08-01 | Replaced the disproven PDF-padding diagnosis with measured page-band evidence and updated the latest Mermaid pagination failure. |
 | 1.6 | 2026-08-01 | Recorded passing Dark table boundaries and Mermaid pagination while retaining the PDF background and margin failures. |
+| 1.7 | 2026-08-04 | Recorded passing Dark and Light PDF backgrounds, margins, scale, Mermaid pagination, and final-footnote pagination; retained unfinished Light manual checks as pending. |
 
 ---
 
