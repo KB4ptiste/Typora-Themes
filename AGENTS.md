@@ -1,10 +1,10 @@
 # Typora Themes Project Instructions
 
-Version: 1.3
+Version: 1.4
 
 ## Project Scope
 
-This repository owns Typora theme work, including Night Command and future themes such as Smoke Command.
+This repository owns Typora theme work, including Night Command Umbra and Smoke Command.
 
 ## Source Of Truth
 
@@ -119,25 +119,33 @@ For numbered or multi-part work:
 - When the user clearly accepts the final part or declares the multi-part task complete, automatically publish all remaining accepted changes.
 - Never publish unrelated changes or unfinished later parts.
 
-## Night Command Rules
+## Night Command Umbra Rules
 
-Night Command current frozen version: 2.60.
+Night Command Umbra current production and test version: 3.25.
 
-Do not edit:
+Do not edit the base engine:
 
-themes/night-command/night-command.dark.css
+themes/night-command-umbra/night-command-umbra.dark.css
 
-Apply Night Command overrides only in:
+Apply Night Command Umbra overrides only in:
 
-themes/night-command.css
+- themes/night-command-umbra.css
+- themes/night-command-umbra-test.css
 
-Every edit to night-command.css requires:
+Keep the production and test wrappers byte-for-byte identical. Every edit to either wrapper requires:
 
-1. Version bump.
-2. CSS brace balance check.
-3. Tail check confirming the file ends with:
+1. Matching version bumps.
+2. CSS brace balance checks.
+3. Production/test hash comparison.
+4. Tail checks confirming both files end with:
 
 /* <!-- END OF DOCUMENT --> */
+
+Night Command Umbra font assets belong in:
+
+themes/night-command-umbra/
+
+Do not reference the retired `themes/night-command/` path.
 
 Do not reintroduce the reverted PDF scaling experiment:
 
@@ -162,5 +170,10 @@ themes/_gsdata_/
 When a Typora UI area is difficult to style or selector behavior is unclear, inspect other installed Typora themes for working selector patterns before guessing.
 
 Use this only for guidance. Do not copy large theme sections or adopt unrelated styling.
+
+## Version History
+
+- 1.3 — 2026-08-04 — Added the automatic multi-part Git checkpoint workflow and recorded the then-current theme and print constraints.
+- 1.4 — 2026-08-04 — Retired the legacy Night Command file rules, established Night Command Umbra v3.25 production/test parity and asset ownership, and preserved the accepted print constraints.
 
 <!-- END OF DOCUMENT -->

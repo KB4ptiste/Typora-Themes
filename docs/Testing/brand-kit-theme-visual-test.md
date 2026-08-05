@@ -1,6 +1,6 @@
 # Baptiste Studios Brand Kit Theme Visual Test
 
-Version: 1.9
+Version: 1.10
 Date: 2026-08-04
 
 ## Test Instructions
@@ -247,7 +247,7 @@ The table should be centered and should not stretch awkwardly across the full pa
 | Line color | Pass |       |
 | Table width | Pass |       |
 | Table alignment | Pass |       |
-| Table line border | Pass | Night Command Umbra v3.24 and Smoke Command v2.70 produce connected rounded boundaries with consistent 2px outer frames. |
+| Table line border | Pass | Night Command Umbra v3.25 and Smoke Command v2.70 produce connected rounded boundaries with consistent 2px outer frames. |
 
 ---
 
@@ -760,9 +760,9 @@ Review Sections 1 and 3 through 15 in editor view and on hover where applicable.
 | Unordered lists | Ten nesting levels preserve glyph order, color, and alignment | Pass | Pass |  |
 | Ordered lists | Nested numbering aligns without connector artifacts | Pass | Pass |  |
 | Task lists | Checked, unchecked, hover, and wrapped tasks align correctly | Pass | Pass |  |
-| Blockquotes | Marker, border, background, hover, and wrapped text remain readable | Pass | Pass | Night Command Umbra v3.24 uses a purple quote marker at rest and a pink marker on hover; the exported HTML behavior was confirmed on 2026-08-04. |
+| Blockquotes | Marker, border, background, hover, and wrapped text remain readable | Pass | Pass | Night Command Umbra v3.25 preserves the accepted purple quote marker at rest and pink marker on hover after the font-asset relocation. |
 | Alerts | Note, Tip, Important, Warning, and Caution remain distinct and readable | Pass | Pass |  |
-| Tables | Header, cells, borders, hover, width, and alignment are correct | Pass | Pass | Night Command Umbra v3.24 and Smoke Command v2.70 produce connected rounded outer corners with consistent frame weight. |
+| Tables | Header, cells, borders, hover, width, and alignment are correct | Pass | Pass | Night Command Umbra v3.25 and Smoke Command v2.70 produce connected rounded outer corners with consistent frame weight. |
 | Images | Images remain centered, contained, and correctly bordered | Pass | Pass | Raw SVG image and figure canvases are centered in both final theme exports. |
 | Footnotes | Reference, hover, divider, and footnote body remain connected | Pass | Pass | Both final exports keep the footnote readable below the version-history table on page 30 without creating an isolated trailing page. |
 | Definition content | Terms, definitions, indentation, colors, and hover are correct | Pass | Pass |  |
@@ -797,7 +797,7 @@ Perform these checks outside the document body.
 | 4 | Math and Mermaid | Pass | Pass | 2026-08-04 |  |
 | 5 | Raw HTML and SVG | Pass | Pass | 2026-08-04 |  |
 | 6 | Code blocks | Pass | Pass | 2026-08-04 |  |
-| 7 | HTML and PDF export | Pass | Pass | 2026-08-04 | Night Command Umbra v3.24 and Smoke Command v2.70 both pass; the accepted PDFs complete in 30 pages with intact Mermaid and footnote pagination, and the Night v3.24 HTML export confirms the corrected blockquote marker states. |
+| 7 | HTML and PDF export | Pass | Pass | 2026-08-04 | Night Command Umbra v3.24 and Smoke Command v2.70 remain the accepted export baselines. Night v3.25 changes only the location of byte-identical font assets and preserves the accepted editor rendering. |
 | 8 | General document elements | Pass | Pass | 2026-08-04 | Rounded table boundaries and consistent frame weight pass in both final theme reviews. |
 | 9 | Typora interface sweep | Pass | Pass | 2026-08-04 |  |
 
@@ -819,7 +819,7 @@ Use this checklist after testing:
 
 | Output | Pass / Fail | Notes |
 | ------ | ----------- | ----- |
-| Final result | Pass | Night Command Umbra v3.24 and Smoke Command v2.70 pass all editor, interface, HTML, and PDF checks for this test round. Both accepted PDFs complete in 30 pages, with the version history and connected footnote together on page 30; the Night v3.24 HTML export confirms a purple blockquote marker at rest and pink on hover. |
+| Final result | Pass | Night Command Umbra v3.25 and Smoke Command v2.70 are the final passing theme versions. Night v3.25 relocates byte-identical font assets into the Umbra directory and preserves the accepted editor rendering; the accepted Night v3.24 and Smoke v2.70 export baselines remain unchanged. |
 
 ---
 
@@ -835,6 +835,7 @@ Use this checklist after testing:
 | 1.7 | 2026-08-04 | Recorded passing Dark and Light PDF backgrounds, margins, scale, Mermaid pagination, and final-footnote pagination. |
 | 1.8 | 2026-08-04 | Completed all Dark and Light dashboard checks; recorded Night Command Umbra v3.23 and Smoke Command v2.70 as the final passing versions; and accepted the complete 30-page PDF exports. |
 | 1.9 | 2026-08-04 | Recorded Night Command Umbra v3.24 as the final passing Dark version after confirming its exported HTML blockquote marker is purple at rest and pink on hover; retained Smoke Command v2.70 as the final passing Light version. |
+| 1.10 | 2026-08-04 | Recorded Night Command Umbra v3.25 after relocating byte-identical font assets into the Umbra directory, confirming unchanged production and test rendering, and retiring the legacy Night Command theme. |
 
 ---
 
