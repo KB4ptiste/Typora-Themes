@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.56 · Built for Typora
+   Version 2.70 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -165,6 +165,7 @@
   --border-strong: #9F86B8;      /* Iron Amethyst */
 
   /* --- Product-level Smoke Command text --- */
+  /* BRAND-KIT-VISUAL-TEST: primary prose AA on writing surface #D2C2E2 (#773CC0=3.93:1 -> #5B21B6=5.37:1) */
   --text-prose: #5B21B6;
   --text-prose-hover: #6D28D9;
   --text-prose-alt: #4B3764;     /* Warden Violet */
@@ -236,6 +237,7 @@
 
   /* --- Syntax highlighting --- */
   --code-keyword:    #A78BFA;
+  /* BRAND-KIT-VISUAL-TEST: decouple base text from variable color, match dark Change 2.18/2.19 */
   --code-base-text:  #D6C8EA;
   --code-variable:   #F9A8D4;
   --code-function:   #67E8F9;
@@ -418,7 +420,17 @@ html, body {
   font-size: 1.625rem;
   color: var(--link);
   position: relative;
-  padding-left: 1.45em;
+  padding-left: 15px;
+}
+
+#write h3 > span.md-plain {
+  position: relative;
+  top: -2px;
+}
+
+#write h3.md-heading::after {
+  position: relative;
+  top: -3px;
 }
 
 #write h4 {
@@ -428,7 +440,7 @@ html, body {
   color: var(--link);
   display: block;
   position: relative;
-  padding-left: 1.45em;
+  padding-left: 18px;
 }
 
 #write h5 {
@@ -438,7 +450,7 @@ html, body {
   color: var(--link);
   display: block;
   position: relative;
-  padding-left: 1.45em;
+  padding-left: 18px;
 }
 
 #write h6 {
@@ -448,7 +460,7 @@ html, body {
   color: var(--link);
   display: block;
   position: relative;
-  padding-left: 1.45em;
+  padding-left: 15px;
 }
 
 /* H1 hover: lifts + expands underline — keep but recolor via --h1-underline-color */
@@ -456,11 +468,12 @@ html, body {
 /* H3 hover: shifts padding-left + glow — override color to Moon Rift so change is visible */
 /* H4/H5 hover: dot scale + translateX — keep */
 
+/* BRAND-KIT-VISUAL-TEST: light H3 matches dark spacing and keeps the 5px hover shift (rest 15px -> hover 20px) */
 #write h3:hover,
 #write h3:focus,
 #write h3.md-focus {
   color: var(--text-prose-hover) !important;
-  padding-left: 1.65em !important;
+  padding-left: 20px !important;
 }
 
 #write h4:hover,
@@ -475,6 +488,7 @@ html, body {
   color: var(--text-prose-hover) !important;
 }
 
+/* BRAND-KIT-VISUAL-TEST: light H4/H5/H6 hover restore translateX(5px) — was none !important, killing base engine slide animation */
 #write h4:hover,
 #write h4:focus,
 #write h4.md-focus,
@@ -498,6 +512,11 @@ html, body {
   pointer-events: none;
 }
 
+#write h4::before,
+#write h5::before {
+  top: calc(50% + 0.1em);
+}
+
 #write h4:hover::before,
 #write h4:focus::before,
 #write h4.md-focus::before,
@@ -515,6 +534,7 @@ html, body {
   text-shadow: var(--glow-shadow-text);
 }
 
+/* BRAND-KIT-VISUAL-TEST: restore ::after dot-grid icons in light — match dark; base engine sets background-color via --primary-color */
 #write h3.md-heading::after {
   content: " ";
   display: inline-block;
@@ -545,6 +565,7 @@ html, body {
   mask-size: contain;
 }
 
+/* BRAND-KIT-VISUAL-TEST: light H4/H5/H6 dot-grid vertical alignment — first attempt, dark values as baseline */
 #write h4.md-heading::after {
   width: 1.2em;
   height: 1.2em;
@@ -568,7 +589,7 @@ html, body {
 #write h6.md-heading::after {
   width: 1em;
   height: 1em;
-  vertical-align: -0.50em !important;
+  vertical-align: -0.44em !important;
   -webkit-mask-image: var(--h6-icon-shape);
   mask-image: var(--h6-icon-shape);
 }
@@ -623,26 +644,38 @@ html, body {
   margin-right: auto;
   color: var(--text);
   background-color: #D8C9E6;
-  border-collapse: collapse;
-  border: 2px solid #8C73A5;
-  border-color: #8C73A5;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 0;
+  border-radius: 0;
 }
 
 #write table th,
 #write table td {
-  border: 1px solid var(--border-strong);
+  border: 0;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 #write table th {
   color: var(--link);
   background-color: #D2C2E2;
-  border-color: var(--border-strong);
+  border-right-color: var(--border-strong);
+  border-bottom-color: var(--border-strong);
 }
 
 #write table td {
   color: var(--text);
   background-color: #D8C9E6;
-  border-color: var(--border);
+}
+
+#write table th:last-child,
+#write table td:last-child {
+  border-right: 0;
+}
+
+#write table tbody tr:last-child td {
+  border-bottom: 0;
 }
 
 #write table tbody tr:hover td {
@@ -798,12 +831,14 @@ pre.md-meta-block {
   color: var(--code-keyword) !important;
 }
 
+/* BRAND-KIT-VISUAL-TEST: Markdown heading level colors in code blocks, match dark Change 2.17 — cm-header1 (no hyphen) confirmed via DevTools */
 .md-fences .cm-header1 { color: #E879F9 !important; }
 .md-fences .cm-header2 { color: #A87EE8 !important; }
 .md-fences .cm-header3 { color: #67E8F9 !important; }
 .md-fences .cm-header4 { color: #86EFAC !important; }
 .md-fences .cm-header5 { color: #FDE047 !important; }
 
+/* BRAND-KIT-VISUAL-TEST: cm-tag split from keyword group, match dark Change 2.16 — HTML tag names distinct from keywords */
 .md-fences .cm-tag {
   color: #F0A8C6 !important;
 }
@@ -1058,6 +1093,7 @@ body.megamenu-opened *,
 .ty-preferences .titlebar-text,
 .ty-preferences #window-title {
   font-family: var(--font-display) !important;
+  /* BRAND-KIT-VISUAL-TEST: preferences title 1.85rem → 2.2rem, match dark Change 2.14 */
   font-size: 2.2rem !important;
   font-weight: 700;
   color: var(--ui-text-strong) !important;
@@ -1090,6 +1126,7 @@ body.megamenu-opened *,
   font-family: var(--font-ui) !important;
 }
 
+/* BRAND-KIT-VISUAL-TEST: nav items explicit 1.2rem, match dark Change 2.14 */
 .ty-preferences .nav-group-item {
   font-size: 1.2rem !important;
 }
@@ -1110,6 +1147,7 @@ body.megamenu-opened *,
 .ty-preferences .window-title,
 .ty-preferences #window-title {
   font-family: var(--font-display) !important;
+  /* BRAND-KIT-VISUAL-TEST: megamenu header title 1.95rem → 2.2rem, match dark Change 2.14 */
   font-size: 2.2rem !important;
   line-height: 1.15 !important;
   color: var(--ui-text-strong) !important;
@@ -1595,6 +1633,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
   content: "";
 }
 
+/* BRAND-KIT-VISUAL-TEST: checked task circle purple not red (base engine rgba(255,85,85) wins without !important; --ui-accent-soft=#92400E not brand-appropriate here) */
 .task-list-item input:checked::before {
   background: rgba(109, 40, 217, 0.15) !important;
   border-color: var(--button) !important;
@@ -1721,6 +1760,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
   text-decoration-color: var(--ui-accent-soft);
 }
 
+/* BRAND-KIT-VISUAL-TEST: light inline code text legible on light bg (#D9C2F5=1.18:1 -> #4B2A7B=7.00:1) */
 #write code:not(.md-fencescode) {
   color: #4B2A7B;
   background-color: #D8C9E6;
@@ -1809,12 +1849,14 @@ body .md-table-resize-popover .md-grid-board a:hover {
 
 
 
+/* BRAND-KIT-VISUAL-TEST: light figcaption legible (#A99ABF=1.56:1 stray dark value -> #554A60=4.95:1) */
 #write figcaption {
   color: #554A60;
   font-family: var(--font-body);
   font-size: 0.9rem;
 }
 
+/* BRAND-KIT-VISUAL-TEST: light figcaption hover more noticeable (rest #554A60 -> hover #2D1C40; 1.88:1 distinct, 9.29:1 legible) */
 #write figure:hover > figcaption,
 #write p:hover > img + figcaption {
   color: #2D1C40;
@@ -1928,6 +1970,7 @@ pre.md-meta-block::after {
 .popover,
 .ty-tooltip,
 #ty-tooltip,
+/* BRAND-KIT-VISUAL-TEST: .code-tooltip outer wrapper unstyled — add to match dark Change 2.15 equivalent */
 .code-tooltip,
 .code-tooltip-content,
 .md-toc-tooltip {
@@ -2609,6 +2652,12 @@ svg[id^=mermaid] .arrowheadPath {
 }
 
 #write .md-htmlblock-container:has(svg),
+#write .md-htmlblock-container,
+#write .md-rawblock-container,
+#write .md-rawblock {
+  padding: 1rem 1.25rem;
+}
+
 #write .md-rawblock-container:has(svg),
 #write .md-rawblock:has(svg) {
   background-color: #D8C9E6;
@@ -2740,10 +2789,44 @@ svg[id^=mermaid] .arrowheadPath {
   border-radius: 8px !important;
 }
 
-#write table,
-#write .md-table,
-#write .md-table-fig {
+#write .md-table-fig,
+#write figure.table-figure {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #D8C9E6;
+  border: 2px solid #8C73A5;
+  border-radius: 8px;
+  clip-path: inset(0 round 8px);
+  isolation: isolate;
+}
+
+#write .md-table-fig > table,
+#write figure.table-figure > table {
+  margin: 0;
+}
+
+#write .md-table-fig > table > thead > tr:first-child > th:first-child,
+#write figure.table-figure > table > thead > tr:first-child > th:first-child {
+  border-top-left-radius: 6px;
+}
+
+#write .md-table-fig > table > thead > tr:first-child > th:last-child,
+#write figure.table-figure > table > thead > tr:first-child > th:last-child {
+  border-top-right-radius: 6px;
+}
+
+#write .md-table-fig > table > tbody > tr:last-child > td:first-child,
+#write figure.table-figure > table > tbody > tr:last-child > td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+#write .md-table-fig > table > tbody > tr:last-child > td:last-child,
+#write figure.table-figure > table > tbody > tr:last-child > td:last-child {
+  border-bottom-right-radius: 6px;
 }
 
 #write img,
@@ -2760,17 +2843,19 @@ svg[id^=mermaid] .arrowheadPath {
 
 body.typora-export,
 .typora-export body {
+  width: 100% !important;
+  max-width: none !important;
   color: var(--text-color);
   background-color: var(--bg-color);
 }
 
 body.typora-export #write,
 .typora-export #write {
-  width: min(92%, 1100px) !important;
-  max-width: 1100px !important;
+  width: 98% !important;
+  max-width: none !important;
   min-height: auto !important;
   margin: 24px auto !important;
-  padding: 56px 72px !important;
+  padding: 48px 8px !important;
   color: var(--text-color);
   background-color: #D2C2E2;
   background-image: none;
@@ -2935,17 +3020,51 @@ body.typora-export .typora-export-sidebar + #write,
   break-inside: avoid;
 }
 
+/* Typora samples this computed PDF-export background when generating its
+   otherwise-empty header and footer surfaces. Keep the rule outside
+   @media print so those surfaces remain white. */
+body.typora-export.typora-print {
+  background-color: #FFFFFF !important;
+  color-scheme: light !important;
+}
+
 @page {
-  margin: 1mm;
-  background: #BCA8D0;
+  margin: 1mm !important;
+  padding: 0 !important;
+  background: #FFFFFF !important;
 }
 
 @media print {
+  @page {
+    margin: 1mm !important;
+    padding: 0 !important;
+    background: #FFFFFF !important;
+  }
+
   html,
   body,
   body.typora-export,
-  .typora-export body {
-    background-color: #BCA8D0 !important;
+  .typora-export body,
+  .typora-export-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #FFFFFF !important;
+    color-scheme: light !important;
+  }
+
+  body.typora-export {
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .typora-export-content {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .typora-export-sidebar,
@@ -2960,17 +3079,17 @@ body.typora-export .typora-export-sidebar + #write,
   #write {
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
     padding: 3mm !important;
-    color: var(--text-color) !important;
-    background-color: #D2C2E2 !important;
+    color: #211629 !important;
+    background-color: #FFFFFF !important;
     background-image: none !important;
-    border: 3px solid #9F86B8 !important;
-    border-radius: 14px !important;
+    border: none !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
     overflow: visible !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: economy !important;
+    print-color-adjust: economy !important;
   }
 
   .typora-export #write {
@@ -2978,8 +3097,8 @@ body.typora-export .typora-export-sidebar + #write,
   }
 
   #write::before {
-    display: block !important;
-    opacity: 0.04 !important;
+    display: none !important;
+    opacity: 0 !important;
   }
 
   #write h1,
@@ -3000,27 +3119,75 @@ body.typora-export .typora-export-sidebar + #write,
     backdrop-filter: none !important;
   }
 
-  #write .md-alert-text-note {
-    color: #4E78A8 !important;
+  /* Clear Typora's fixed PDF header surface without increasing every page's
+     print margin. The document title is the first direct child of #write. */
+  #write > h1:first-child {
+    margin-top: 10mm !important;
   }
 
-  #write .md-alert-text-tip {
-    color: #8B6508 !important;
+  /* Typora collects footnotes in a generated data-breakpage block. Keep the
+     compact block with the final content instead of forcing a footnote-only
+     page, then lift it above Chromium's final-page clipping boundary. */
+  #write .footnotes-area[data-breakpage] {
+    page-break-before: auto !important;
+    break-before: auto !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    color: #211629 !important;
+    transform: translateY(-10mm);
+  }
+
+  #write .footnotes-area > hr {
+    height: 1px !important;
+    margin: 0 0 2mm !important;
+    background: #8C73A5 !important;
+    opacity: 1 !important;
+  }
+
+  #write .footnotes-area > hr::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  #write .footnotes-area .footnote-line,
+  #write .footnotes-area .footnote-line span,
+  #write .footnotes-area .reversefootnote {
+    color: #211629 !important;
   }
 
   #write .md-alert,
   #write figure,
   #write .md-diagram-panel,
-  #write .md-fences[lang="mermaid"],
+  #write .md-fences[lang="mermaid"] {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
   #write table,
   #write .md-table,
-  #write .md-table-fig {
+  #write .md-table-fig,
+  #write figure.table-figure {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+
+  #write .md-table-fig,
+  #write figure.table-figure {
+    overflow: visible !important;
+    clip-path: none;
+    border: 0 !important;
+    box-shadow: inset 0 0 0 2px #8C73A5 !important;
+    -webkit-box-decoration-break: slice;
+    box-decoration-break: slice;
+  }
+
+  #write tr {
     page-break-inside: avoid;
     break-inside: avoid;
   }
 
   #write .md-fences {
-    width    width: 100% !important;
+    width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
     white-space: pre-wrap;
@@ -3039,6 +3206,220 @@ body.typora-export .typora-export-sidebar + #write,
   #write canvas {
     max-width: 100% !important;
     height: auto !important;
+  }
+
+  #write .md-fences[lang="mermaid"],
+  #write .md-diagram-panel {
+    zoom: 1;
+    overflow: visible !important;
+    background-color: #FFFFFF !important;
+    background-image: none !important;
+  }
+
+  #write .md-fences[lang="mermaid"] svg[id^="mermaid"],
+  #write .md-diagram-panel[lang="mermaid"] svg[id^="mermaid"],
+  #write .md-diagram-panel svg[id^="mermaid"] {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 180mm !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Print-only toner-saving palette: preserve accent text and line work, remove large fills. */
+  #write {
+    --print-background: #FFFFFF;
+    --print-text: #211629;
+    --print-text-secondary: #4B3764;
+    --print-text-dim: #5B6470;
+    --print-heading: #7E22CE;
+    --print-heading-marker: #7E22CE;
+    --print-link: #5B21B6;
+    --print-strong: #4B2A7B;
+    --print-emphasis: #5B3F72;
+    --print-border: #8C73A5;
+    --print-highlight: #FFF3A3;
+    --print-note: #1D4ED8;
+    --print-tip: #047857;
+    --print-warning: #B45309;
+    --print-important: #7E22CE;
+    --print-caution: #BE123C;
+    --print-code-background: #FFFFFF;
+    --print-code-text: #211629;
+    --print-code-keyword: #5B21B6;
+    --print-code-variable: #9D174D;
+    --print-code-function: #0369A1;
+    --print-code-parameter: #0F766E;
+    --print-code-string: #047857;
+    --print-code-comment: #5B6470;
+    --print-code-type: #1D4ED8;
+    --print-code-property: #0F766E;
+    --print-code-number: #B45309;
+    --print-code-meta: #92400E;
+    --print-diagram-background: #FFFFFF;
+    --print-diagram-text: #211629;
+    --print-diagram-node-border: #6D28D9;
+    --print-diagram-line: #4B2A7B;
+    --bg: var(--print-background);
+    --surface: var(--print-background);
+    --surface-readable: var(--print-background);
+    --surface-raised: var(--print-background);
+    --surface-tint: var(--print-background);
+    --surface-sunken: var(--print-background);
+    --text-prose: var(--print-text);
+    --text-prose-hover: var(--print-link);
+    --text-prose-alt: var(--print-text-secondary);
+    --text: var(--print-text);
+    --text-muted: var(--print-text-secondary);
+    --text-dim: var(--print-text-dim);
+    --primary: var(--print-strong);
+    --button: #6D28D9;
+    --button-hover: var(--print-link);
+    --link: var(--print-link);
+    --link-hover: var(--print-strong);
+    --focus: #6D28D9;
+    --state-hover-bg: transparent;
+    --state-active-bg: transparent;
+    --state-selected-bg: transparent;
+    --text-color: var(--print-text);
+    --text-color-secondary: var(--print-text-secondary);
+    --primary-color: var(--print-link);
+    --secondary-color: #6D28D9;
+    --border-color: var(--print-border);
+    --glow-shadow-text: none;
+    --glow-shadow-box: none;
+    --h1-underline-color: var(--print-heading-marker);
+    --primary-text: var(--print-heading);
+    --element-color: var(--print-heading-marker);
+    --element-color-deep: var(--print-strong);
+    --head-title-h2-color: var(--print-heading);
+    --code-block-bg: var(--print-code-background);
+    --code-keyword: var(--print-code-keyword);
+    --code-base-text: var(--print-code-text);
+    --code-variable: var(--print-code-variable);
+    --code-function: var(--print-code-function);
+    --code-param: var(--print-code-parameter);
+    --code-string: var(--print-code-string);
+    --code-comment: var(--print-code-comment);
+    --code-type: var(--print-code-type);
+    --code-property: var(--print-code-property);
+    --code-number: var(--print-code-number);
+    --code-meta: var(--print-code-meta);
+  }
+
+  #write * {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #write p,
+  #write li,
+  #write dd,
+  #write td,
+  #write blockquote,
+  #write figcaption,
+  #write .footnotes,
+  #write .md-alert,
+  #write .md-toc-content,
+  #write .md-toc-item {
+    color: var(--print-text) !important;
+  }
+
+  #write h1,
+  #write h2,
+  #write h3,
+  #write h4,
+  #write h5,
+  #write h6,
+  #write th,
+  #write .md-toc::before {
+    color: var(--print-heading) !important;
+  }
+
+  #write a {
+    color: var(--print-link) !important;
+  }
+
+  #write h1::before,
+  #write h1::after,
+  #write h2::before,
+  #write h2::after,
+  #write h3::before,
+  #write h3::after,
+  #write h4::before,
+  #write h4::after,
+  #write h5::before,
+  #write h5::after,
+  #write h6::before,
+  #write h6::after {
+    color: var(--print-heading-marker) !important;
+    background-color: var(--print-heading-marker) !important;
+  }
+
+  #write strong {
+    color: var(--print-strong) !important;
+  }
+
+  #write em,
+  #write del {
+    color: var(--print-emphasis) !important;
+  }
+
+  #write code,
+  #write pre,
+  #write .CodeMirror,
+  #write .CodeMirror-code,
+  #write .CodeMirror-line {
+    color: var(--print-code-text) !important;
+  }
+
+  #write mark {
+    color: var(--print-text) !important;
+    background-color: var(--print-highlight) !important;
+  }
+
+  #write .md-alert-text-note { color: var(--print-note) !important; }
+  #write .md-alert-text-tip { color: var(--print-tip) !important; }
+  #write .md-alert-text-warning { color: var(--print-warning) !important; }
+  #write .md-alert-text-important { color: var(--print-important) !important; }
+  #write .md-alert-text-caution { color: var(--print-caution) !important; }
+
+  #write .md-fences .cm-header1 { color: #9D174D !important; }
+  #write .md-fences .cm-header2 { color: #6D28D9 !important; }
+  #write .md-fences .cm-header3 { color: #0369A1 !important; }
+  #write .md-fences .cm-header4 { color: #047857 !important; }
+  #write .md-fences .cm-header5 { color: #B45309 !important; }
+  #write .md-fences .cm-tag { color: #9D174D !important; }
+
+  #write svg[id^="mermaid"] .node rect,
+  #write svg[id^="mermaid"] .node circle,
+  #write svg[id^="mermaid"] .node ellipse,
+  #write svg[id^="mermaid"] .node polygon,
+  #write svg[id^="mermaid"] .edgeLabel rect {
+    fill: var(--print-diagram-background) !important;
+    stroke: var(--print-diagram-node-border) !important;
+  }
+
+  #write svg[id^="mermaid"] text,
+  #write svg[id^="mermaid"] tspan,
+  #write svg[id^="mermaid"] .label,
+  #write svg[id^="mermaid"] .edgeLabel {
+    color: var(--print-diagram-text) !important;
+    fill: var(--print-diagram-text) !important;
+  }
+
+  #write svg[id^="mermaid"] .edgePath path,
+  #write svg[id^="mermaid"] path.flowchart-link {
+    stroke: var(--print-diagram-line) !important;
+  }
+
+  #write svg[id^="mermaid"] marker path {
+    fill: var(--print-diagram-line) !important;
+    stroke: var(--print-diagram-line) !important;
   }
 }
 

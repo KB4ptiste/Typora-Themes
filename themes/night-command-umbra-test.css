@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.23 · Built for Typora
+   Version 3.24 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -1451,7 +1451,7 @@ body .md-table-resize-popover .md-grid-board a:hover {
   content: "❝";
   top: 14px;
   left: 14px;
-  color: var(--ui-accent-soft);
+  color: var(--primary-color);
   font-family: var(--font-data);
   font-size: 1.75rem;
   font-weight: 700;
