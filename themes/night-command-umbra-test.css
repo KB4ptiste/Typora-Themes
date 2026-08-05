@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.21 · Built for Typora
+   Version 3.22 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -2419,7 +2419,7 @@ svg[id^=mermaid] .cluster .label {
   overflow-x: auto;
   overflow-y: hidden;
   background-color: #211629;
-  border: 1px solid var(--border-color);
+  border: 2px solid #8C73A5;
   border-radius: 8px;
   clip-path: inset(0 round 8px);
   isolation: isolate;

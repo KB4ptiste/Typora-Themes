@@ -1,6 +1,6 @@
 /* ================================================
    Smoke Command — Baptiste Studios Light Theme
-   Version 2.68 · Built for Typora
+   Version 2.69 · Built for Typora
    Base: smoke-command.light.css (base engine)
    ================================================ */
 
@@ -644,26 +644,38 @@ html, body {
   margin-right: auto;
   color: var(--text);
   background-color: #D8C9E6;
-  border-collapse: collapse;
-  border: 2px solid #8C73A5;
-  border-color: #8C73A5;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 0;
+  border-radius: 0;
 }
 
 #write table th,
 #write table td {
-  border: 1px solid var(--border-strong);
+  border: 0;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 #write table th {
   color: var(--link);
   background-color: #D2C2E2;
-  border-color: var(--border-strong);
+  border-right-color: var(--border-strong);
+  border-bottom-color: var(--border-strong);
 }
 
 #write table td {
   color: var(--text);
   background-color: #D8C9E6;
-  border-color: var(--border);
+}
+
+#write table th:last-child,
+#write table td:last-child {
+  border-right: 0;
+}
+
+#write table tbody tr:last-child td {
+  border-bottom: 0;
 }
 
 #write table tbody tr:hover td {
@@ -2777,10 +2789,44 @@ svg[id^=mermaid] .arrowheadPath {
   border-radius: 8px !important;
 }
 
-#write table,
-#write .md-table,
-#write .md-table-fig {
+#write .md-table-fig,
+#write figure.table-figure {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #D8C9E6;
+  border: 2px solid #8C73A5;
+  border-radius: 8px;
+  clip-path: inset(0 round 8px);
+  isolation: isolate;
+}
+
+#write .md-table-fig > table,
+#write figure.table-figure > table {
+  margin: 0;
+}
+
+#write .md-table-fig > table > thead > tr:first-child > th:first-child,
+#write figure.table-figure > table > thead > tr:first-child > th:first-child {
+  border-top-left-radius: 6px;
+}
+
+#write .md-table-fig > table > thead > tr:first-child > th:last-child,
+#write figure.table-figure > table > thead > tr:first-child > th:last-child {
+  border-top-right-radius: 6px;
+}
+
+#write .md-table-fig > table > tbody > tr:last-child > td:first-child,
+#write figure.table-figure > table > tbody > tr:last-child > td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+#write .md-table-fig > table > tbody > tr:last-child > td:last-child,
+#write figure.table-figure > table > tbody > tr:last-child > td:last-child {
+  border-bottom-right-radius: 6px;
 }
 
 #write img,
