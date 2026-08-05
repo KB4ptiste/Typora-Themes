@@ -1,6 +1,6 @@
 /* ================================================
    Night Command Umbra — Baptiste Studios Dark Theme
-   Version 3.22 · Built for Typora
+   Version 3.23 · Built for Typora
    Base: night-command-umbra.dark.css (base engine)
    ================================================ */
 
@@ -2711,6 +2711,8 @@ body.typora-export.typora-print {
   #write figure.table-figure {
     overflow: visible !important;
     clip-path: none;
+    border: 0 !important;
+    box-shadow: inset 0 0 0 2px #8C73A5 !important;
     -webkit-box-decoration-break: slice;
     box-decoration-break: slice;
   }

@@ -1,6 +1,6 @@
 # Baptiste Studios Brand Kit Theme Visual Test
 
-Version: 1.7
+Version: 1.8
 Date: 2026-08-04
 
 ## Test Instructions
@@ -247,7 +247,7 @@ The table should be centered and should not stretch awkwardly across the full pa
 | Line color | Pass |       |
 | Table width | Pass |       |
 | Table alignment | Pass |       |
-| Table line border | Pass | The v3.18 corner-cell rounding and wrapper clipping produce connected rounded boundaries. |
+| Table line border | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 produce connected rounded boundaries with consistent 2px outer frames. |
 
 ---
 
@@ -631,7 +631,7 @@ Expected result:
 | ------ | ----------- | ----- |
 | Editor | Pass |       |
 | HTML export | Pass |       |
-| PDF export | Pass | Dark and Light exports both complete in 29 pages with white print surfaces, intact Mermaid pagination, and the final footnote integrated on page 29. |
+| PDF export | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 both complete in 30 pages with white print surfaces, intact Mermaid pagination, and the final footnote integrated beneath the version history on page 30. |
 
 ---
 
@@ -643,26 +643,26 @@ Use the visual fixtures above together with the manual checks below. Enter Pass 
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| H1 hierarchy | Strongest heading; centered title and underline remain balanced | Pass |  |  |
-| H2 panel | Text is vertically centered inside the raised panel | Pass |  |  |
-| H3 marker | Left marker and heading text share the same visual center | Pass |  |  |
-| H3 trailing dots | Dots align with the accepted dark-theme relationship | Pass |  |  |
-| H4 marker | Filled circular marker is centered with the text | Pass |  |  |
-| H5 marker | Ring marker is centered with the text | Pass |  |  |
-| H6 marker | Dash marker and trailing dots remain balanced | Pass |  |  |
-| Heading hover | Glow and halo appear without shifting text or markers | Pass |  |  |
+| H1 hierarchy | Strongest heading; centered title and underline remain balanced | Pass | Pass |  |
+| H2 panel | Text is vertically centered inside the raised panel | Pass | Pass |  |
+| H3 marker | Left marker and heading text share the same visual center | Pass | Pass |  |
+| H3 trailing dots | Dots align with the accepted dark-theme relationship | Pass | Pass |  |
+| H4 marker | Filled circular marker is centered with the text | Pass | Pass |  |
+| H5 marker | Ring marker is centered with the text | Pass | Pass |  |
+| H6 marker | Dash marker and trailing dots remain balanced | Pass | Pass |  |
+| Heading hover | Glow and halo appear without shifting text or markers | Pass | Pass |  |
 
 ### Build 2: Inline TOC
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| Title | Table of Contents title is centered and readable | Pass |  |  |
-| H1-H6 indentation | Each heading level advances consistently | Pass |  |  |
-| Long-entry wrapping | Narrow the window; wrapped entries remain inside the TOC | Pass |  |  |
-| Hover row | Hover surface spans the available row without moving the text | Pass |  |  |
-| Single-click navigation | One click navigates to the selected section | Pass |  |  |
-| Container growth | The TOC contains the complete generated list without internal clipping | Pass |  |  |
-| Theme parity | Dark and Light preserve the same hierarchy and spacing | Pass |  |  |
+| Title | Table of Contents title is centered and readable | Pass | Pass |  |
+| H1-H6 indentation | Each heading level advances consistently | Pass | Pass |  |
+| Long-entry wrapping | Narrow the window; wrapped entries remain inside the TOC | Pass | Pass |  |
+| Hover row | Hover surface spans the available row without moving the text | Pass | Pass |  |
+| Single-click navigation | One click navigates to the selected section | Pass | Pass |  |
+| Container growth | The TOC contains the complete generated list without internal clipping | Pass | Pass |  |
+| Theme parity | Dark and Light preserve the same hierarchy and spacing | Pass | Pass |  |
 
 ### Build 3: Files, Outline, And Search Tabs
 
@@ -670,16 +670,16 @@ Open the sidebar and test Files, Outline, and Search at rest, on hover, and whil
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| Active tab underline | Selected tab has a visible, centered accent underline | Pass |  |  |
-| Inactive tab | Inactive tabs are dimmer but remain readable | Pass |  |  |
-| Tab hover | Hover is visible without resembling the selected state | Pass |  |  |
-| File selection | Selected file row is distinct and text remains readable | Pass |  |  |
-| File hover | Hover surface does not introduce unwanted separators | Pass |  |  |
-| Outline hierarchy | Heading levels are indented consistently and remain compact | Pass |  |  |
-| Outline selection | Active outline entry is distinct without clipping | Pass |  |  |
-| Search field | Input, placeholder, border, and focus state match the theme | Pass |  |  |
-| Search results | Match highlighting, selected result, and surrounding text are readable | Pass |  |  |
-| Empty state | Empty or no-results message remains readable | Pass |  |  |
+| Active tab underline | Selected tab has a visible, centered accent underline | Pass | Pass |  |
+| Inactive tab | Inactive tabs are dimmer but remain readable | Pass | Pass |  |
+| Tab hover | Hover is visible without resembling the selected state | Pass | Pass |  |
+| File selection | Selected file row is distinct and text remains readable | Pass | Pass |  |
+| File hover | Hover surface does not introduce unwanted separators | Pass | Pass |  |
+| Outline hierarchy | Heading levels are indented consistently and remain compact | Pass | Pass |  |
+| Outline selection | Active outline entry is distinct without clipping | Pass | Pass |  |
+| Search field | Input, placeholder, border, and focus state match the theme | Pass | Pass |  |
+| Search results | Match highlighting, selected result, and surrounding text are readable | Pass | Pass |  |
+| Empty state | Empty or no-results message remains readable | Pass | Pass |  |
 
 ### Build 4: Math And Mermaid
 
@@ -687,15 +687,15 @@ Use Sections 9 and 10. Enter and leave edit mode for each fixture.
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| Inline math | Formula aligns with surrounding prose and remains readable | Pass |  |  |
-| Block math rendered | Rendered formula is centered and contained | Pass |  |  |
-| Block math editing | Source, border, background, and focus state are readable | Pass |  |  |
-| Math overflow | A wide formula scrolls or contains itself without breaking the frame | Pass |  |  |
-| Mermaid rendered | Nodes, arrows, text, and background remain readable | Pass |  |  |
-| Mermaid edge labels | Yes/No labels have sufficient contrast | Pass |  |  |
-| Mermaid source | Source editor and syntax colors remain readable | Pass |  |  |
-| Mermaid focus | Editing border and handles are visible without duplicate outlines | Pass |  |  |
-| Mermaid overflow | Diagram stays inside the document frame | Pass |  |  |
+| Inline math | Formula aligns with surrounding prose and remains readable | Pass | Pass |  |
+| Block math rendered | Rendered formula is centered and contained | Pass | Pass |  |
+| Block math editing | Source, border, background, and focus state are readable | Pass | Pass |  |
+| Math overflow | A wide formula scrolls or contains itself without breaking the frame | Pass | Pass |  |
+| Mermaid rendered | Nodes, arrows, text, and background remain readable | Pass | Pass |  |
+| Mermaid edge labels | Yes/No labels have sufficient contrast | Pass | Pass |  |
+| Mermaid source | Source editor and syntax colors remain readable | Pass | Pass |  |
+| Mermaid focus | Editing border and handles are visible without duplicate outlines | Pass | Pass |  |
+| Mermaid overflow | Diagram stays inside the document frame | Pass | Pass |  |
 
 ### Build 5: Raw HTML And SVG
 
@@ -703,15 +703,15 @@ Use Sections 12 and 13. Enter raw-source editing mode where Typora permits it.
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| SVG sizing | SVG remains centered and contained within the writing frame | Pass |  | Raw SVG and figure canvases are centered and contained. |
-| SVG border | Only the intended border is visible; no duplicate editor border appears | Pass |  |  |
-| Figure caption | Caption alignment, spacing, contrast, and hover state are correct | Pass |  |  |
-| Raw HTML rendered | Rendered block uses theme surfaces and readable text | Pass |  |  |
-| Raw HTML editing | Opening and closing source are readable and visually contained | Pass |  |  |
-| Details rest state | Summary row is readable and the disclosure marker is aligned | Pass |  |  |
-| Details expanded | Hidden content opens cleanly without border collisions | Pass |  |  |
-| Keyboard tokens | `kbd` tokens are readable at rest and on hover | Pass |  |  |
-| Mark highlight | Highlighted text retains sufficient foreground contrast | Pass |  |  |
+| SVG sizing | SVG remains centered and contained within the writing frame | Pass | Pass | Raw SVG and figure canvases are centered and contained. |
+| SVG border | Only the intended border is visible; no duplicate editor border appears | Pass | Pass |  |
+| Figure caption | Caption alignment, spacing, contrast, and hover state are correct | Pass | Pass |  |
+| Raw HTML rendered | Rendered block uses theme surfaces and readable text | Pass | Pass |  |
+| Raw HTML editing | Opening and closing source are readable and visually contained | Pass | Pass |  |
+| Details rest state | Summary row is readable and the disclosure marker is aligned | Pass | Pass |  |
+| Details expanded | Hidden content opens cleanly without border collisions | Pass | Pass |  |
+| Keyboard tokens | `kbd` tokens are readable at rest and on hover | Pass | Pass |  |
+| Mark highlight | Highlighted text retains sufficient foreground contrast | Pass | Pass |  |
 
 ### Build 6: Code Blocks
 
@@ -719,16 +719,16 @@ Use all fixtures in Section 8. Click inside and outside each representative bloc
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| Rest state | Block surface, border, header dots, and code are readable | Pass |  |  |
-| Focus state | Focus treatment is visible without changing block width | Pass |  |  |
-| Syntax colors | JavaScript, CSS, JSON, HTML, Bash, Python, and Markdown remain distinct | Pass |  |  |
-| Language label | Each language label is readable and correctly named | Pass |  |  |
-| Language editor | Clicking the label exposes a usable language input | Pass |  |  |
-| Language-free label | Unspecified fenced block displays the accepted `TEXT` label | Pass |  |  |
-| Gutters | Line-number or code gutters align and do not crowd content | Pass |  |  |
-| Long-line overflow | Long code scrolls horizontally and does not widen the page | Pass |  |  |
-| Copy controls | Any visible block controls remain readable and correctly positioned | Pass |  |  |
-| Exported code | HTML and PDF preserve containment and readable syntax | Pass |  |  |
+| Rest state | Block surface, border, header dots, and code are readable | Pass | Pass |  |
+| Focus state | Focus treatment is visible without changing block width | Pass | Pass |  |
+| Syntax colors | JavaScript, CSS, JSON, HTML, Bash, Python, and Markdown remain distinct | Pass | Pass |  |
+| Language label | Each language label is readable and correctly named | Pass | Pass |  |
+| Language editor | Clicking the label exposes a usable language input | Pass | Pass |  |
+| Language-free label | Unspecified fenced block displays the accepted `TEXT` label | Pass | Pass |  |
+| Gutters | Line-number or code gutters align and do not crowd content | Pass | Pass |  |
+| Long-line overflow | Long code scrolls horizontally and does not widen the page | Pass | Pass |  |
+| Copy controls | Any visible block controls remain readable and correctly positioned | Pass | Pass |  |
+| Exported code | HTML and PDF preserve containment and readable syntax | Pass | Pass |  |
 
 ### Build 7: HTML And PDF Export
 
@@ -736,14 +736,14 @@ Export this complete document to HTML and PDF after editor validation passes.
 
 | Check | Expected result | Dark | Light | Notes |
 | --- | --- | --- | --- | --- |
-| HTML page background | Theme background covers the complete exported page | Pass |  |  |
-| HTML document frame | Writing surface, width, and borders remain intentional | Pass |  |  |
-| HTML components | Headings, alerts, tables, code, math, Mermaid, HTML, and SVG survive | Pass |  |  |
-| HTML navigation | Inline TOC links navigate to the correct headings | Pass |  |  |
+| HTML page background | Theme background covers the complete exported page | Pass | Pass |  |
+| HTML document frame | Writing surface, width, and borders remain intentional | Pass | Pass |  |
+| HTML components | Headings, alerts, tables, code, math, Mermaid, HTML, and SVG survive | Pass | Pass |  |
+| HTML navigation | Inline TOC links navigate to the correct headings | Pass | Pass |  |
 | PDF background | Page, document, and CSS-controlled component backgrounds print as `#FFFFFF` or transparent over white, with no colored page bars | Pass | Pass | Both verified exports use white page surfaces without colored top or bottom bands. |
-| PDF margins | Accepted `@page` margin of `1mm`, page padding of `0`, and printed `#write` padding of `3mm` remain tight | Pass | Pass | Dark v3.21 and Light v2.68 use the shared accepted print geometry. |
-| PDF scale | Text and components are not oversized or compressed | Pass | Pass | Both verified exports complete in 29 pages without rejected scaling overrides. |
-| PDF page breaks | Blocks do not split in visibly broken positions | Pass | Pass | The complete Mermaid diagram fits on page 12, its result table continues on page 13, and the final footnote remains on page 29. |
+| PDF margins | Accepted `@page` margin of `1mm`, page padding of `0`, and printed `#write` padding of `3mm` remain tight | Pass | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 use the shared accepted print geometry. |
+| PDF scale | Text and components are not oversized or compressed | Pass | Pass | Both verified exports complete in 30 pages without rejected scaling overrides. |
+| PDF page breaks | Blocks do not split in visibly broken positions | Pass | Pass | The complete Mermaid diagram fits on page 12, its result table continues on page 13, and the final footnote remains beneath the version history on page 30. |
 | PDF H2 panel | H2 surface exports without duplicate boxes or artifacts | Pass | Pass | Verified in both final PDF exports. |
 
 ### Build 8: General Document Elements
@@ -762,9 +762,9 @@ Review Sections 1 and 3 through 15 in editor view and on hover where applicable.
 | Task lists | Checked, unchecked, hover, and wrapped tasks align correctly | Pass | Pass |  |
 | Blockquotes | Marker, border, background, hover, and wrapped text remain readable | Pass | Pass |  |
 | Alerts | Note, Tip, Important, Warning, and Caution remain distinct and readable | Pass | Pass |  |
-| Tables | Header, cells, borders, hover, width, and alignment are correct | Pass | Pass | The v3.18 table correction produces connected rounded outer corners. |
-| Images | Images remain centered, contained, and correctly bordered | Pass | Pass | Raw SVG image and figure canvases are centered in the latest Dark export. |
-| Footnotes | Reference, hover, divider, and footnote body remain connected | Pass | Pass | Both final exports keep the footnote readable below the version-history table on page 29 without creating a trailing page. |
+| Tables | Header, cells, borders, hover, width, and alignment are correct | Pass | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 produce connected rounded outer corners with consistent frame weight. |
+| Images | Images remain centered, contained, and correctly bordered | Pass | Pass | Raw SVG image and figure canvases are centered in both final theme exports. |
+| Footnotes | Reference, hover, divider, and footnote body remain connected | Pass | Pass | Both final exports keep the footnote readable below the version-history table on page 30 without creating an isolated trailing page. |
 | Definition content | Terms, definitions, indentation, colors, and hover are correct | Pass | Pass |  |
 | Focus mode | Focused content is readable and dimmed content remains identifiable | Pass | Pass |  |
 
@@ -791,15 +791,15 @@ Perform these checks outside the document body.
 
 | Build | Scope | Dark | Light | Accepted / Date | Notes |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Headings | Pass | Pass |  |  |
-| 2 | Inline TOC | Pass | Pass |  |  |
-| 3 | Files, Outline, and Search tabs | Pass | Pass |  |  |
-| 4 | Math and Mermaid | Pass | Pass |  |  |
-| 5 | Raw HTML and SVG | Pass | Pass |  |  |
-| 6 | Code blocks | Pass | Pass |  |  |
-| 7 | HTML and PDF export | Pass | Pass | 2026-08-04 | Dark and Light PDF exports both pass at 29 pages with intact Mermaid and footnote pagination. |
-| 8 | General document elements | Pass | Pass |  | Table boundary rendering passed in the latest Dark editor and export review. |
-| 9 | Typora interface sweep | Pass | Pass |  |  |
+| 1 | Headings | Pass | Pass | 2026-08-04 |  |
+| 2 | Inline TOC | Pass | Pass | 2026-08-04 |  |
+| 3 | Files, Outline, and Search tabs | Pass | Pass | 2026-08-04 |  |
+| 4 | Math and Mermaid | Pass | Pass | 2026-08-04 |  |
+| 5 | Raw HTML and SVG | Pass | Pass | 2026-08-04 |  |
+| 6 | Code blocks | Pass | Pass | 2026-08-04 |  |
+| 7 | HTML and PDF export | Pass | Pass | 2026-08-04 | Night Command Umbra v3.23 and Smoke Command v2.70 both pass at 30 pages with intact Mermaid and footnote pagination. |
+| 8 | General document elements | Pass | Pass | 2026-08-04 | Rounded table boundaries and consistent frame weight pass in both final theme reviews. |
+| 9 | Typora interface sweep | Pass | Pass | 2026-08-04 |  |
 
 ---
 
@@ -819,7 +819,7 @@ Use this checklist after testing:
 
 | Output | Pass / Fail | Notes |
 | ------ | ----------- | ----- |
-| Final result | Pass | PDF export validation passes for Dark and Light. Remaining blank Light dashboard checks still require manual validation before final theme-round approval. |
+| Final result | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 pass all editor, interface, HTML, and PDF checks for this test round. Both final PDFs complete in 30 pages, with the version history and connected footnote together on page 30. |
 
 ---
 
@@ -832,7 +832,8 @@ Use this checklist after testing:
 | 1.4 | 2026-08-01 | Corrected the Dark export diagnosis and updated SVG, table-boundary, page-padding, and Mermaid validation records. |
 | 1.5 | 2026-08-01 | Replaced the disproven PDF-padding diagnosis with measured page-band evidence and updated the latest Mermaid pagination failure. |
 | 1.6 | 2026-08-01 | Recorded passing Dark table boundaries and Mermaid pagination while retaining the PDF background and margin failures. |
-| 1.7 | 2026-08-04 | Recorded passing Dark and Light PDF backgrounds, margins, scale, Mermaid pagination, and final-footnote pagination; retained unfinished Light manual checks as pending. |
+| 1.7 | 2026-08-04 | Recorded passing Dark and Light PDF backgrounds, margins, scale, Mermaid pagination, and final-footnote pagination. |
+| 1.8 | 2026-08-04 | Completed all Dark and Light dashboard checks; recorded Night Command Umbra v3.23 and Smoke Command v2.70 as the final passing versions; and accepted the complete 30-page PDF exports. |
 
 ---
 
