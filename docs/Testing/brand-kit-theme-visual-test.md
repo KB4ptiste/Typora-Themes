@@ -1,6 +1,6 @@
 # Baptiste Studios Brand Kit Theme Visual Test
 
-Version: 1.8
+Version: 1.9
 Date: 2026-08-04
 
 ## Test Instructions
@@ -247,7 +247,7 @@ The table should be centered and should not stretch awkwardly across the full pa
 | Line color | Pass |       |
 | Table width | Pass |       |
 | Table alignment | Pass |       |
-| Table line border | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 produce connected rounded boundaries with consistent 2px outer frames. |
+| Table line border | Pass | Night Command Umbra v3.24 and Smoke Command v2.70 produce connected rounded boundaries with consistent 2px outer frames. |
 
 ---
 
@@ -631,7 +631,7 @@ Expected result:
 | ------ | ----------- | ----- |
 | Editor | Pass |       |
 | HTML export | Pass |       |
-| PDF export | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 both complete in 30 pages with white print surfaces, intact Mermaid pagination, and the final footnote integrated beneath the version history on page 30. |
+| PDF export | Pass | Night Command Umbra v3.24 and Smoke Command v2.70 both complete in 30 pages with white print surfaces, intact Mermaid pagination, and the final footnote integrated beneath the version history on page 30. |
 
 ---
 
@@ -741,7 +741,7 @@ Export this complete document to HTML and PDF after editor validation passes.
 | HTML components | Headings, alerts, tables, code, math, Mermaid, HTML, and SVG survive | Pass | Pass |  |
 | HTML navigation | Inline TOC links navigate to the correct headings | Pass | Pass |  |
 | PDF background | Page, document, and CSS-controlled component backgrounds print as `#FFFFFF` or transparent over white, with no colored page bars | Pass | Pass | Both verified exports use white page surfaces without colored top or bottom bands. |
-| PDF margins | Accepted `@page` margin of `1mm`, page padding of `0`, and printed `#write` padding of `3mm` remain tight | Pass | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 use the shared accepted print geometry. |
+| PDF margins | Accepted `@page` margin of `1mm`, page padding of `0`, and printed `#write` padding of `3mm` remain tight | Pass | Pass | Night Command Umbra v3.24 and Smoke Command v2.70 use the shared accepted print geometry. |
 | PDF scale | Text and components are not oversized or compressed | Pass | Pass | Both verified exports complete in 30 pages without rejected scaling overrides. |
 | PDF page breaks | Blocks do not split in visibly broken positions | Pass | Pass | The complete Mermaid diagram fits on page 12, its result table continues on page 13, and the final footnote remains beneath the version history on page 30. |
 | PDF H2 panel | H2 surface exports without duplicate boxes or artifacts | Pass | Pass | Verified in both final PDF exports. |
@@ -760,9 +760,9 @@ Review Sections 1 and 3 through 15 in editor view and on hover where applicable.
 | Unordered lists | Ten nesting levels preserve glyph order, color, and alignment | Pass | Pass |  |
 | Ordered lists | Nested numbering aligns without connector artifacts | Pass | Pass |  |
 | Task lists | Checked, unchecked, hover, and wrapped tasks align correctly | Pass | Pass |  |
-| Blockquotes | Marker, border, background, hover, and wrapped text remain readable | Pass | Pass |  |
+| Blockquotes | Marker, border, background, hover, and wrapped text remain readable | Pass | Pass | Night Command Umbra v3.24 uses a purple quote marker at rest and a pink marker on hover; the exported HTML behavior was confirmed on 2026-08-04. |
 | Alerts | Note, Tip, Important, Warning, and Caution remain distinct and readable | Pass | Pass |  |
-| Tables | Header, cells, borders, hover, width, and alignment are correct | Pass | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 produce connected rounded outer corners with consistent frame weight. |
+| Tables | Header, cells, borders, hover, width, and alignment are correct | Pass | Pass | Night Command Umbra v3.24 and Smoke Command v2.70 produce connected rounded outer corners with consistent frame weight. |
 | Images | Images remain centered, contained, and correctly bordered | Pass | Pass | Raw SVG image and figure canvases are centered in both final theme exports. |
 | Footnotes | Reference, hover, divider, and footnote body remain connected | Pass | Pass | Both final exports keep the footnote readable below the version-history table on page 30 without creating an isolated trailing page. |
 | Definition content | Terms, definitions, indentation, colors, and hover are correct | Pass | Pass |  |
@@ -797,7 +797,7 @@ Perform these checks outside the document body.
 | 4 | Math and Mermaid | Pass | Pass | 2026-08-04 |  |
 | 5 | Raw HTML and SVG | Pass | Pass | 2026-08-04 |  |
 | 6 | Code blocks | Pass | Pass | 2026-08-04 |  |
-| 7 | HTML and PDF export | Pass | Pass | 2026-08-04 | Night Command Umbra v3.23 and Smoke Command v2.70 both pass at 30 pages with intact Mermaid and footnote pagination. |
+| 7 | HTML and PDF export | Pass | Pass | 2026-08-04 | Night Command Umbra v3.24 and Smoke Command v2.70 both pass; the accepted PDFs complete in 30 pages with intact Mermaid and footnote pagination, and the Night v3.24 HTML export confirms the corrected blockquote marker states. |
 | 8 | General document elements | Pass | Pass | 2026-08-04 | Rounded table boundaries and consistent frame weight pass in both final theme reviews. |
 | 9 | Typora interface sweep | Pass | Pass | 2026-08-04 |  |
 
@@ -819,7 +819,7 @@ Use this checklist after testing:
 
 | Output | Pass / Fail | Notes |
 | ------ | ----------- | ----- |
-| Final result | Pass | Night Command Umbra v3.23 and Smoke Command v2.70 pass all editor, interface, HTML, and PDF checks for this test round. Both final PDFs complete in 30 pages, with the version history and connected footnote together on page 30. |
+| Final result | Pass | Night Command Umbra v3.24 and Smoke Command v2.70 pass all editor, interface, HTML, and PDF checks for this test round. Both accepted PDFs complete in 30 pages, with the version history and connected footnote together on page 30; the Night v3.24 HTML export confirms a purple blockquote marker at rest and pink on hover. |
 
 ---
 
@@ -834,6 +834,7 @@ Use this checklist after testing:
 | 1.6 | 2026-08-01 | Recorded passing Dark table boundaries and Mermaid pagination while retaining the PDF background and margin failures. |
 | 1.7 | 2026-08-04 | Recorded passing Dark and Light PDF backgrounds, margins, scale, Mermaid pagination, and final-footnote pagination. |
 | 1.8 | 2026-08-04 | Completed all Dark and Light dashboard checks; recorded Night Command Umbra v3.23 and Smoke Command v2.70 as the final passing versions; and accepted the complete 30-page PDF exports. |
+| 1.9 | 2026-08-04 | Recorded Night Command Umbra v3.24 as the final passing Dark version after confirming its exported HTML blockquote marker is purple at rest and pink on hover; retained Smoke Command v2.70 as the final passing Light version. |
 
 ---
 
